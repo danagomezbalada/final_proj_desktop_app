@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Aplicació escriptori", "Aplicació escriptori\Aplicació escriptori.vbproj", "{DD969DCD-3AB5-46D2-866C-9E6B30D2BAEC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD969DCD-3AB5-46D2-866C-9E6B30D2BAEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD969DCD-3AB5-46D2-866C-9E6B30D2BAEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD969DCD-3AB5-46D2-866C-9E6B30D2BAEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD969DCD-3AB5-46D2-866C-9E6B30D2BAEC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {530758A0-03B4-4595-824C-32A7292F831C}
+	EndGlobalSection
+EndGlobal
