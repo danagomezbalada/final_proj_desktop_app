@@ -7,7 +7,6 @@ Public Class crear_categories
     End Sub
 
     Private Sub Crear_Click(sender As Object, e As EventArgs) Handles Crear.Click
-
         Insertar()
         MessageBox.Show("Valor afegit")
     End Sub

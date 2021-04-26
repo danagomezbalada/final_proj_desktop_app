@@ -29,9 +29,9 @@ Partial Class crear_ponents
         Me.Crear = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.email = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.cognom = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.telefon = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.inici = New System.Windows.Forms.Button()
         Me.SuspendLayout()
@@ -89,12 +89,12 @@ Partial Class crear_ponents
         Me.email.Size = New System.Drawing.Size(100, 20)
         Me.email.TabIndex = 8
         '
-        'TextBox1
+        'cognom
         '
-        Me.TextBox1.Location = New System.Drawing.Point(349, 70)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 10
+        Me.cognom.Location = New System.Drawing.Point(349, 70)
+        Me.cognom.Name = "cognom"
+        Me.cognom.Size = New System.Drawing.Size(100, 20)
+        Me.cognom.TabIndex = 10
         '
         'Label4
         '
@@ -106,12 +106,12 @@ Partial Class crear_ponents
         Me.Label4.TabIndex = 9
         Me.Label4.Text = "Cognom:"
         '
-        'TextBox2
+        'telefon
         '
-        Me.TextBox2.Location = New System.Drawing.Point(349, 110)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 12
+        Me.telefon.Location = New System.Drawing.Point(349, 110)
+        Me.telefon.Name = "telefon"
+        Me.telefon.Size = New System.Drawing.Size(100, 20)
+        Me.telefon.TabIndex = 12
         '
         'Label5
         '
@@ -140,9 +140,9 @@ Partial Class crear_ponents
         Me.BackColor = System.Drawing.Color.DodgerBlue
         Me.ClientSize = New System.Drawing.Size(499, 235)
         Me.Controls.Add(Me.inici)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.telefon)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.cognom)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.email)
         Me.Controls.Add(Me.Label3)
@@ -163,9 +163,9 @@ Partial Class crear_ponents
     Friend WithEvents Crear As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents email As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents cognom As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents telefon As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents inici As Button
 End Class

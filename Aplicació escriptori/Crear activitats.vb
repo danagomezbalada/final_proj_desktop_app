@@ -12,11 +12,8 @@ Public Class crear_activitat
     End Sub
 
     Private Sub crear_Click(sender As Object, e As EventArgs) Handles crear.Click
-
         Insertar()
         MessageBox.Show("Valor afegit")
-
-
     End Sub
 
     Function Insertar()
