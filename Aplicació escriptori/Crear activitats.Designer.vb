@@ -32,12 +32,9 @@ Partial Class crear_activitat
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.data = New System.Windows.Forms.TextBox()
         Me.descripcio = New System.Windows.Forms.TextBox()
         Me.preu = New System.Windows.Forms.TextBox()
         Me.places_totals = New System.Windows.Forms.TextBox()
-        Me.data_fi_mostra = New System.Windows.Forms.TextBox()
-        Me.data_inici_mostra = New System.Windows.Forms.TextBox()
         Me.crear = New System.Windows.Forms.Button()
         Me.inici = New System.Windows.Forms.Button()
         Me.id_esdeveniment = New System.Windows.Forms.TextBox()
@@ -46,6 +43,9 @@ Partial Class crear_activitat
         Me.Label10 = New System.Windows.Forms.Label()
         Me.id_departament = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
+        Me.data = New System.Windows.Forms.DateTimePicker()
+        Me.data_fi_mostra = New System.Windows.Forms.DateTimePicker()
+        Me.data_inici_mostra = New System.Windows.Forms.DateTimePicker()
         Me.SuspendLayout()
         '
         'Label1
@@ -109,7 +109,7 @@ Partial Class crear_activitat
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(306, 110)
+        Me.Label7.Location = New System.Drawing.Point(302, 110)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(110, 19)
         Me.Label7.TabIndex = 8
@@ -119,7 +119,7 @@ Partial Class crear_activitat
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(306, 150)
+        Me.Label8.Location = New System.Drawing.Point(302, 150)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(128, 19)
         Me.Label8.TabIndex = 9
@@ -129,18 +129,11 @@ Partial Class crear_activitat
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(306, 70)
+        Me.Label9.Location = New System.Drawing.Point(302, 70)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(98, 19)
         Me.Label9.TabIndex = 10
         Me.Label9.Text = "Places totals:"
-        '
-        'data
-        '
-        Me.data.Location = New System.Drawing.Point(99, 110)
-        Me.data.Name = "data"
-        Me.data.Size = New System.Drawing.Size(100, 20)
-        Me.data.TabIndex = 11
         '
         'descripcio
         '
@@ -158,24 +151,10 @@ Partial Class crear_activitat
         '
         'places_totals
         '
-        Me.places_totals.Location = New System.Drawing.Point(421, 70)
+        Me.places_totals.Location = New System.Drawing.Point(417, 70)
         Me.places_totals.Name = "places_totals"
         Me.places_totals.Size = New System.Drawing.Size(100, 20)
         Me.places_totals.TabIndex = 14
-        '
-        'data_fi_mostra
-        '
-        Me.data_fi_mostra.Location = New System.Drawing.Point(421, 110)
-        Me.data_fi_mostra.Name = "data_fi_mostra"
-        Me.data_fi_mostra.Size = New System.Drawing.Size(100, 20)
-        Me.data_fi_mostra.TabIndex = 15
-        '
-        'data_inici_mostra
-        '
-        Me.data_inici_mostra.Location = New System.Drawing.Point(441, 150)
-        Me.data_inici_mostra.Name = "data_inici_mostra"
-        Me.data_inici_mostra.Size = New System.Drawing.Size(100, 20)
-        Me.data_inici_mostra.TabIndex = 16
         '
         'crear
         '
@@ -198,7 +177,7 @@ Partial Class crear_activitat
         '
         'id_esdeveniment
         '
-        Me.id_esdeveniment.Location = New System.Drawing.Point(441, 190)
+        Me.id_esdeveniment.Location = New System.Drawing.Point(437, 190)
         Me.id_esdeveniment.Name = "id_esdeveniment"
         Me.id_esdeveniment.Size = New System.Drawing.Size(100, 20)
         Me.id_esdeveniment.TabIndex = 20
@@ -207,7 +186,7 @@ Partial Class crear_activitat
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(306, 190)
+        Me.Label6.Location = New System.Drawing.Point(302, 190)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(126, 19)
         Me.Label6.TabIndex = 19
@@ -232,7 +211,7 @@ Partial Class crear_activitat
         '
         'id_departament
         '
-        Me.id_departament.Location = New System.Drawing.Point(441, 230)
+        Me.id_departament.Location = New System.Drawing.Point(437, 230)
         Me.id_departament.Name = "id_departament"
         Me.id_departament.Size = New System.Drawing.Size(100, 20)
         Me.id_departament.TabIndex = 24
@@ -241,18 +220,48 @@ Partial Class crear_activitat
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(306, 230)
+        Me.Label11.Location = New System.Drawing.Point(302, 230)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(112, 19)
         Me.Label11.TabIndex = 23
         Me.Label11.Text = "Id Department:"
+        '
+        'data
+        '
+        Me.data.CalendarFont = New System.Drawing.Font("Times New Roman", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.data.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.data.Location = New System.Drawing.Point(99, 110)
+        Me.data.Name = "data"
+        Me.data.Size = New System.Drawing.Size(170, 18)
+        Me.data.TabIndex = 25
+        '
+        'data_fi_mostra
+        '
+        Me.data_fi_mostra.CalendarFont = New System.Drawing.Font("Times New Roman", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.data_fi_mostra.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.data_fi_mostra.Location = New System.Drawing.Point(417, 110)
+        Me.data_fi_mostra.Name = "data_fi_mostra"
+        Me.data_fi_mostra.Size = New System.Drawing.Size(170, 18)
+        Me.data_fi_mostra.TabIndex = 26
+        '
+        'data_inici_mostra
+        '
+        Me.data_inici_mostra.CalendarFont = New System.Drawing.Font("Times New Roman", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.data_inici_mostra.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.data_inici_mostra.Location = New System.Drawing.Point(428, 150)
+        Me.data_inici_mostra.Name = "data_inici_mostra"
+        Me.data_inici_mostra.Size = New System.Drawing.Size(168, 18)
+        Me.data_inici_mostra.TabIndex = 27
         '
         'crear_activitat
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DodgerBlue
-        Me.ClientSize = New System.Drawing.Size(598, 387)
+        Me.ClientSize = New System.Drawing.Size(609, 387)
+        Me.Controls.Add(Me.data_inici_mostra)
+        Me.Controls.Add(Me.data_fi_mostra)
+        Me.Controls.Add(Me.data)
         Me.Controls.Add(Me.id_departament)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.id_ubicacio)
@@ -261,12 +270,9 @@ Partial Class crear_activitat
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.inici)
         Me.Controls.Add(Me.crear)
-        Me.Controls.Add(Me.data_inici_mostra)
-        Me.Controls.Add(Me.data_fi_mostra)
         Me.Controls.Add(Me.places_totals)
         Me.Controls.Add(Me.preu)
         Me.Controls.Add(Me.descripcio)
-        Me.Controls.Add(Me.data)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
@@ -292,12 +298,9 @@ Partial Class crear_activitat
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents data As TextBox
     Friend WithEvents descripcio As TextBox
     Friend WithEvents preu As TextBox
     Friend WithEvents places_totals As TextBox
-    Friend WithEvents data_fi_mostra As TextBox
-    Friend WithEvents data_inici_mostra As TextBox
     Friend WithEvents crear As Button
     Friend WithEvents inici As Button
     Friend WithEvents id_esdeveniment As TextBox
@@ -306,4 +309,7 @@ Partial Class crear_activitat
     Friend WithEvents Label10 As Label
     Friend WithEvents id_departament As TextBox
     Friend WithEvents Label11 As Label
+    Friend WithEvents data As DateTimePicker
+    Friend WithEvents data_fi_mostra As DateTimePicker
+    Friend WithEvents data_inici_mostra As DateTimePicker
 End Class

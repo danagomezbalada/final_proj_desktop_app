@@ -151,6 +151,18 @@
     <Compile Include="Editar ponents.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="principal.Designer.vb">
+      <DependentUpon>principal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="principal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestio reserves.Designer.vb">
+      <DependentUpon>Gestio reserves.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gestio reserves.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Gestio esdeveniments.Designer.vb">
       <DependentUpon>Gestio esdeveniments.vb</DependentUpon>
     </Compile>
@@ -175,11 +187,11 @@
     <Compile Include="Gestio departaments.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="principal.vb">
+    <Compile Include="Administrar activitats.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="principal.Designer.vb">
-      <DependentUpon>principal.vb</DependentUpon>
+    <Compile Include="Administrar activitats.Designer.vb">
+      <DependentUpon>Administrar activitats.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Gestio activitats.Designer.vb">
@@ -247,6 +259,9 @@
     <EmbeddedResource Include="Editar ponents.resx">
       <DependentUpon>Editar ponents.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Gestio reserves.resx">
+      <DependentUpon>Gestio reserves.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Gestio esdeveniments.resx">
       <DependentUpon>Gestio esdeveniments.vb</DependentUpon>
     </EmbeddedResource>
@@ -259,8 +274,8 @@
     <EmbeddedResource Include="Gestio departaments.resx">
       <DependentUpon>Gestio departaments.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="principal.resx">
-      <DependentUpon>principal.vb</DependentUpon>
+    <EmbeddedResource Include="Administrar activitats.resx">
+      <DependentUpon>Administrar activitats.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gestio activitats.resx">
       <DependentUpon>Gestio activitats.vb</DependentUpon>
@@ -273,6 +288,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="principal.resx">
+      <DependentUpon>principal.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

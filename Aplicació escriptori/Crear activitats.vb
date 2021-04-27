@@ -30,12 +30,12 @@ Public Class crear_activitat
         Dim departament As Integer
 
         title = titol.Text
-        dates = data.Text
+        dates = data.Value.ToString("yyyy-MM-dd")
         price = preu.Text
         description = descripcio.Text
         total_places = places_totals.Text
-        data_fi = data_fi_mostra.Text
-        data_inici = data_inici_mostra.Text
+        data_fi = data_fi_mostra.Value.ToString("yyyy-MM-dd")
+        data_inici = data_inici_mostra.Value.ToString("yyyy-MM-dd")
         esdeveniment = id_esdeveniment.Text
         ubicacio = id_ubicacio.Text
         departament = id_departament.Text

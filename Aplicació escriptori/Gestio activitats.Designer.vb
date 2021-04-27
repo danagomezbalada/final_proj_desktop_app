@@ -37,14 +37,14 @@ Partial Class gestio_activitats
         '
         'Titol
         '
-        Me.Titol.Location = New System.Drawing.Point(91, 59)
+        Me.Titol.Location = New System.Drawing.Point(91, 62)
         Me.Titol.Name = "Titol"
         Me.Titol.Size = New System.Drawing.Size(100, 20)
         Me.Titol.TabIndex = 0
         '
         'Cercar
         '
-        Me.Cercar.Location = New System.Drawing.Point(208, 59)
+        Me.Cercar.Location = New System.Drawing.Point(208, 62)
         Me.Cercar.Name = "Cercar"
         Me.Cercar.Size = New System.Drawing.Size(75, 20)
         Me.Cercar.TabIndex = 5
