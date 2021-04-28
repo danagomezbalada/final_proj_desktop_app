@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form2
+Partial Class principal
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,14 +22,15 @@ Partial Class Form2
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form2))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(principal))
         Me.administrar_esdeveniments = New System.Windows.Forms.Button()
-        Me.administrar_activitats = New System.Windows.Forms.Button()
+        Me.activitats = New System.Windows.Forms.Button()
         Me.gestionar_activitats = New System.Windows.Forms.Button()
         Me.gestionar_reserves = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.generar_fitxer = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -42,14 +43,14 @@ Partial Class Form2
         Me.administrar_esdeveniments.Text = "Administrar Esdeveniments"
         Me.administrar_esdeveniments.UseVisualStyleBackColor = True
         '
-        'administrar_activitats
+        'activitats
         '
-        Me.administrar_activitats.Location = New System.Drawing.Point(496, 126)
-        Me.administrar_activitats.Name = "administrar_activitats"
-        Me.administrar_activitats.Size = New System.Drawing.Size(133, 23)
-        Me.administrar_activitats.TabIndex = 1
-        Me.administrar_activitats.Text = "Administrar Activitats"
-        Me.administrar_activitats.UseVisualStyleBackColor = True
+        Me.activitats.Location = New System.Drawing.Point(496, 126)
+        Me.activitats.Name = "activitats"
+        Me.activitats.Size = New System.Drawing.Size(133, 23)
+        Me.activitats.TabIndex = 1
+        Me.activitats.Text = "Administrar Activitats"
+        Me.activitats.UseVisualStyleBackColor = True
         '
         'gestionar_activitats
         '
@@ -99,21 +100,31 @@ Partial Class Form2
         Me.PictureBox1.TabIndex = 6
         Me.PictureBox1.TabStop = False
         '
-        'Form2
+        'generar_fitxer
+        '
+        Me.generar_fitxer.Location = New System.Drawing.Point(298, 368)
+        Me.generar_fitxer.Name = "generar_fitxer"
+        Me.generar_fitxer.Size = New System.Drawing.Size(102, 35)
+        Me.generar_fitxer.TabIndex = 7
+        Me.generar_fitxer.Text = "Generar Fitxer"
+        Me.generar_fitxer.UseVisualStyleBackColor = True
+        '
+        'principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DodgerBlue
         Me.ClientSize = New System.Drawing.Size(694, 450)
+        Me.Controls.Add(Me.generar_fitxer)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.gestionar_reserves)
         Me.Controls.Add(Me.gestionar_activitats)
-        Me.Controls.Add(Me.administrar_activitats)
+        Me.Controls.Add(Me.activitats)
         Me.Controls.Add(Me.administrar_esdeveniments)
-        Me.Name = "Form2"
-        Me.Text = "Form2"
+        Me.Name = "principal"
+        Me.Text = "Principal"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -121,10 +132,11 @@ Partial Class Form2
     End Sub
 
     Friend WithEvents administrar_esdeveniments As Button
-    Friend WithEvents administrar_activitats As Button
+    Friend WithEvents activitats As Button
     Friend WithEvents gestionar_activitats As Button
     Friend WithEvents gestionar_reserves As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents generar_fitxer As Button
 End Class

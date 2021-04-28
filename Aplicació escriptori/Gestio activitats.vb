@@ -17,7 +17,7 @@
 
     Private Sub inici_Click(sender As Object, e As EventArgs) Handles inici.Click
         Me.Hide()
-        Principal.Show()
+        principal.Show()
     End Sub
 
     Private Sub Afegir_Click(sender As Object, e As EventArgs) Handles Afegir.Click

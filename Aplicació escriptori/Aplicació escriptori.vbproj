@@ -151,6 +151,18 @@
     <Compile Include="Editar ponents.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Editar Reserves.Designer.vb">
+      <DependentUpon>Editar Reserves.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Editar Reserves.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestió Ponents Activitat.Designer.vb">
+      <DependentUpon>Gestió Ponents Activitat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gestió Ponents Activitat.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="principal.Designer.vb">
       <DependentUpon>principal.vb</DependentUpon>
     </Compile>
@@ -210,6 +222,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -253,11 +266,17 @@
     <EmbeddedResource Include="Editar departaments.resx">
       <DependentUpon>Editar departaments.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Editar Reserves.resx">
+      <DependentUpon>Editar Reserves.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Editar ubicacions.resx">
       <DependentUpon>Editar ubicacions.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Editar ponents.resx">
       <DependentUpon>Editar ponents.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestió Ponents Activitat.resx">
+      <DependentUpon>Gestió Ponents Activitat.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gestio reserves.resx">
       <DependentUpon>Gestio reserves.vb</DependentUpon>

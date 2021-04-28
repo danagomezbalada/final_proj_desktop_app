@@ -131,6 +131,8 @@ Partial Class gestio_esdeveniment
         '
         Me.inici.BackgroundImage = CType(resources.GetObject("inici.BackgroundImage"), System.Drawing.Image)
         Me.inici.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.inici.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
+        Me.inici.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.inici.Location = New System.Drawing.Point(602, 12)
         Me.inici.Name = "inici"
         Me.inici.Size = New System.Drawing.Size(40, 35)

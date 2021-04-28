@@ -24,10 +24,11 @@ Partial Class editar_ubicacions
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(editar_ubicacions))
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Crear = New System.Windows.Forms.Button()
+        Me.actualitzar = New System.Windows.Forms.Button()
         Me.Nom = New System.Windows.Forms.TextBox()
         Me.label1 = New System.Windows.Forms.Label()
         Me.inici = New System.Windows.Forms.Button()
+        Me.back = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label2
@@ -40,18 +41,18 @@ Partial Class editar_ubicacions
         Me.Label2.TabIndex = 8
         Me.Label2.Text = "Editar Ubicacions"
         '
-        'Crear
+        'actualitzar
         '
-        Me.Crear.Location = New System.Drawing.Point(124, 129)
-        Me.Crear.Name = "Crear"
-        Me.Crear.Size = New System.Drawing.Size(75, 23)
-        Me.Crear.TabIndex = 7
-        Me.Crear.Text = "Crear"
-        Me.Crear.UseVisualStyleBackColor = True
+        Me.actualitzar.Location = New System.Drawing.Point(136, 129)
+        Me.actualitzar.Name = "actualitzar"
+        Me.actualitzar.Size = New System.Drawing.Size(75, 23)
+        Me.actualitzar.TabIndex = 7
+        Me.actualitzar.Text = "Actualitzar"
+        Me.actualitzar.UseVisualStyleBackColor = True
         '
         'Nom
         '
-        Me.Nom.Location = New System.Drawing.Point(99, 71)
+        Me.Nom.Location = New System.Drawing.Point(158, 71)
         Me.Nom.Name = "Nom"
         Me.Nom.Size = New System.Drawing.Size(100, 20)
         Me.Nom.TabIndex = 6
@@ -60,7 +61,7 @@ Partial Class editar_ubicacions
         '
         Me.label1.AutoSize = True
         Me.label1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label1.Location = New System.Drawing.Point(43, 71)
+        Me.label1.Location = New System.Drawing.Point(102, 71)
         Me.label1.Name = "label1"
         Me.label1.Size = New System.Drawing.Size(50, 19)
         Me.label1.TabIndex = 5
@@ -70,21 +71,36 @@ Partial Class editar_ubicacions
         '
         Me.inici.BackgroundImage = CType(resources.GetObject("inici.BackgroundImage"), System.Drawing.Image)
         Me.inici.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.inici.Location = New System.Drawing.Point(271, 16)
+        Me.inici.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
+        Me.inici.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.inici.Location = New System.Drawing.Point(316, 16)
         Me.inici.Name = "inici"
         Me.inici.Size = New System.Drawing.Size(40, 35)
         Me.inici.TabIndex = 19
         Me.inici.UseVisualStyleBackColor = True
+        '
+        'back
+        '
+        Me.back.BackgroundImage = CType(resources.GetObject("back.BackgroundImage"), System.Drawing.Image)
+        Me.back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.back.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
+        Me.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.back.Location = New System.Drawing.Point(270, 16)
+        Me.back.Name = "back"
+        Me.back.Size = New System.Drawing.Size(40, 35)
+        Me.back.TabIndex = 21
+        Me.back.UseVisualStyleBackColor = True
         '
         'editar_ubicacions
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DodgerBlue
-        Me.ClientSize = New System.Drawing.Size(332, 192)
+        Me.ClientSize = New System.Drawing.Size(367, 192)
+        Me.Controls.Add(Me.back)
         Me.Controls.Add(Me.inici)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Crear)
+        Me.Controls.Add(Me.actualitzar)
         Me.Controls.Add(Me.Nom)
         Me.Controls.Add(Me.label1)
         Me.Name = "editar_ubicacions"
@@ -95,8 +111,9 @@ Partial Class editar_ubicacions
     End Sub
 
     Friend WithEvents Label2 As Label
-    Friend WithEvents Crear As Button
+    Friend WithEvents actualitzar As Button
     Friend WithEvents Nom As TextBox
     Friend WithEvents label1 As Label
     Friend WithEvents inici As Button
+    Friend WithEvents back As Button
 End Class

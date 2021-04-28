@@ -23,7 +23,7 @@ Partial Class gestio_activitats
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(gestio_activitats))
-        Me.Titol = New System.Windows.Forms.TextBox()
+        Me.nom = New System.Windows.Forms.TextBox()
         Me.Cercar = New System.Windows.Forms.Button()
         Me.Afegir = New System.Windows.Forms.Button()
         Me.Editar = New System.Windows.Forms.Button()
@@ -35,12 +35,12 @@ Partial Class gestio_activitats
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Titol
+        'nom
         '
-        Me.Titol.Location = New System.Drawing.Point(91, 62)
-        Me.Titol.Name = "Titol"
-        Me.Titol.Size = New System.Drawing.Size(100, 20)
-        Me.Titol.TabIndex = 0
+        Me.nom.Location = New System.Drawing.Point(91, 62)
+        Me.nom.Name = "nom"
+        Me.nom.Size = New System.Drawing.Size(100, 20)
+        Me.nom.TabIndex = 0
         '
         'Cercar
         '
@@ -102,14 +102,17 @@ Partial Class gestio_activitats
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(33, 62)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(45, 19)
+        Me.Label2.Size = New System.Drawing.Size(46, 19)
         Me.Label2.TabIndex = 14
-        Me.Label2.Text = "Títol:"
+        Me.Label2.Text = "Nom:"
         '
         'inici
         '
         Me.inici.BackgroundImage = CType(resources.GetObject("inici.BackgroundImage"), System.Drawing.Image)
         Me.inici.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.inici.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
+        Me.inici.FlatAppearance.BorderSize = 0
+        Me.inici.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.inici.Location = New System.Drawing.Point(602, 12)
         Me.inici.Name = "inici"
         Me.inici.Size = New System.Drawing.Size(40, 35)
@@ -130,7 +133,7 @@ Partial Class gestio_activitats
         Me.Controls.Add(Me.Editar)
         Me.Controls.Add(Me.Afegir)
         Me.Controls.Add(Me.Cercar)
-        Me.Controls.Add(Me.Titol)
+        Me.Controls.Add(Me.nom)
         Me.Name = "gestio_activitats"
         Me.Text = "Gestió Activitats"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -139,7 +142,7 @@ Partial Class gestio_activitats
 
     End Sub
 
-    Friend WithEvents Titol As TextBox
+    Friend WithEvents nom As TextBox
     Friend WithEvents Cercar As Button
     Friend WithEvents Afegir As Button
     Friend WithEvents Editar As Button

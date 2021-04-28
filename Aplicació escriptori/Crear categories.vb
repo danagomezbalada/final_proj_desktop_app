@@ -3,7 +3,7 @@ Public Class crear_categories
     Dim query As String
     Private Sub inici_Click(sender As Object, e As EventArgs) Handles inici.Click
         Me.Hide()
-        Principal.Show()
+        principal.Show()
     End Sub
 
     Private Sub Crear_Click(sender As Object, e As EventArgs) Handles Crear.Click
@@ -20,4 +20,10 @@ Public Class crear_categories
         comanda.ExecuteNonQuery()
         Connexions.desconnectar()
     End Function
+
+    Private Sub back_Click(sender As Object, e As EventArgs) Handles back.Click
+        Me.Hide()
+        gestio_categoria.Show()
+
+    End Sub
 End Class

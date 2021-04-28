@@ -28,6 +28,7 @@ Partial Class editar_departaments
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.inici = New System.Windows.Forms.Button()
+        Me.back = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'actualitzar
@@ -60,7 +61,7 @@ Partial Class editar_departaments
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(24, 13)
+        Me.Label1.Location = New System.Drawing.Point(11, 13)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(262, 31)
         Me.Label1.TabIndex = 6
@@ -70,11 +71,25 @@ Partial Class editar_departaments
         '
         Me.inici.BackgroundImage = CType(resources.GetObject("inici.BackgroundImage"), System.Drawing.Image)
         Me.inici.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.inici.Location = New System.Drawing.Point(304, 16)
+        Me.inici.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
+        Me.inici.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.inici.Location = New System.Drawing.Point(323, 11)
         Me.inici.Name = "inici"
         Me.inici.Size = New System.Drawing.Size(40, 35)
         Me.inici.TabIndex = 19
         Me.inici.UseVisualStyleBackColor = True
+        '
+        'back
+        '
+        Me.back.BackgroundImage = CType(resources.GetObject("back.BackgroundImage"), System.Drawing.Image)
+        Me.back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.back.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
+        Me.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.back.Location = New System.Drawing.Point(285, 13)
+        Me.back.Name = "back"
+        Me.back.Size = New System.Drawing.Size(40, 35)
+        Me.back.TabIndex = 29
+        Me.back.UseVisualStyleBackColor = True
         '
         'editar_departaments
         '
@@ -82,6 +97,7 @@ Partial Class editar_departaments
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DodgerBlue
         Me.ClientSize = New System.Drawing.Size(365, 192)
+        Me.Controls.Add(Me.back)
         Me.Controls.Add(Me.inici)
         Me.Controls.Add(Me.actualitzar)
         Me.Controls.Add(Me.nom)
@@ -99,4 +115,5 @@ Partial Class editar_departaments
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents inici As Button
+    Friend WithEvents back As Button
 End Class

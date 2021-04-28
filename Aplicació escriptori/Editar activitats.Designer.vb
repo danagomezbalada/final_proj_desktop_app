@@ -24,12 +24,9 @@ Partial Class editar_activitats
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(editar_activitats))
         Me.actualitzar = New System.Windows.Forms.Button()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.descripcio = New System.Windows.Forms.TextBox()
-        Me.data = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -40,12 +37,16 @@ Partial Class editar_activitats
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.inici = New System.Windows.Forms.Button()
-        Me.id_departament = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.id_esdeveniment = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.id_ubicacio = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
+        Me.back = New System.Windows.Forms.Button()
+        Me.data = New System.Windows.Forms.DateTimePicker()
+        Me.data_fi_mostra = New System.Windows.Forms.DateTimePicker()
+        Me.data_inici_mostra = New System.Windows.Forms.DateTimePicker()
+        Me.ubicacio = New System.Windows.Forms.ComboBox()
+        Me.esdeveniment = New System.Windows.Forms.ComboBox()
+        Me.departament = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'actualitzar
@@ -56,20 +57,6 @@ Partial Class editar_activitats
         Me.actualitzar.TabIndex = 33
         Me.actualitzar.Text = "Actualitzar"
         Me.actualitzar.UseVisualStyleBackColor = True
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(441, 150)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox4.TabIndex = 32
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(421, 110)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox3.TabIndex = 31
         '
         'TextBox2
         '
@@ -91,13 +78,6 @@ Partial Class editar_activitats
         Me.descripcio.Name = "descripcio"
         Me.descripcio.Size = New System.Drawing.Size(100, 20)
         Me.descripcio.TabIndex = 28
-        '
-        'data
-        '
-        Me.data.Location = New System.Drawing.Point(99, 110)
-        Me.data.Name = "data"
-        Me.data.Size = New System.Drawing.Size(100, 20)
-        Me.data.TabIndex = 27
         '
         'Label9
         '
@@ -190,18 +170,13 @@ Partial Class editar_activitats
         '
         Me.inici.BackgroundImage = CType(resources.GetObject("inici.BackgroundImage"), System.Drawing.Image)
         Me.inici.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.inici.Location = New System.Drawing.Point(546, 12)
+        Me.inici.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
+        Me.inici.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.inici.Location = New System.Drawing.Point(566, 12)
         Me.inici.Name = "inici"
         Me.inici.Size = New System.Drawing.Size(40, 35)
         Me.inici.TabIndex = 34
         Me.inici.UseVisualStyleBackColor = True
-        '
-        'id_departament
-        '
-        Me.id_departament.Location = New System.Drawing.Point(441, 230)
-        Me.id_departament.Name = "id_departament"
-        Me.id_departament.Size = New System.Drawing.Size(100, 20)
-        Me.id_departament.TabIndex = 38
         '
         'Label11
         '
@@ -209,16 +184,9 @@ Partial Class editar_activitats
         Me.Label11.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.Location = New System.Drawing.Point(306, 230)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(112, 19)
+        Me.Label11.Size = New System.Drawing.Size(94, 19)
         Me.Label11.TabIndex = 37
-        Me.Label11.Text = "Id Department:"
-        '
-        'id_esdeveniment
-        '
-        Me.id_esdeveniment.Location = New System.Drawing.Point(441, 190)
-        Me.id_esdeveniment.Name = "id_esdeveniment"
-        Me.id_esdeveniment.Size = New System.Drawing.Size(100, 20)
-        Me.id_esdeveniment.TabIndex = 36
+        Me.Label11.Text = "Department:"
         '
         'Label6
         '
@@ -226,16 +194,9 @@ Partial Class editar_activitats
         Me.Label6.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(306, 190)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(126, 19)
+        Me.Label6.Size = New System.Drawing.Size(108, 19)
         Me.Label6.TabIndex = 35
-        Me.Label6.Text = "Id Esdeveniment:"
-        '
-        'id_ubicacio
-        '
-        Me.id_ubicacio.Location = New System.Drawing.Point(140, 230)
-        Me.id_ubicacio.Name = "id_ubicacio"
-        Me.id_ubicacio.Size = New System.Drawing.Size(100, 20)
-        Me.id_ubicacio.TabIndex = 40
+        Me.Label6.Text = "Esdeveniment:"
         '
         'Label10
         '
@@ -243,30 +204,94 @@ Partial Class editar_activitats
         Me.Label10.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.Location = New System.Drawing.Point(43, 230)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(89, 19)
+        Me.Label10.Size = New System.Drawing.Size(71, 19)
         Me.Label10.TabIndex = 39
-        Me.Label10.Text = "Id Ubicacio:"
+        Me.Label10.Text = "Ubicació:"
+        '
+        'back
+        '
+        Me.back.BackgroundImage = CType(resources.GetObject("back.BackgroundImage"), System.Drawing.Image)
+        Me.back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.back.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
+        Me.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.back.Location = New System.Drawing.Point(521, 12)
+        Me.back.Name = "back"
+        Me.back.Size = New System.Drawing.Size(40, 35)
+        Me.back.TabIndex = 41
+        Me.back.UseVisualStyleBackColor = True
+        '
+        'data
+        '
+        Me.data.CalendarFont = New System.Drawing.Font("Times New Roman", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.data.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.data.Location = New System.Drawing.Point(99, 110)
+        Me.data.Name = "data"
+        Me.data.Size = New System.Drawing.Size(170, 18)
+        Me.data.TabIndex = 42
+        '
+        'data_fi_mostra
+        '
+        Me.data_fi_mostra.CalendarFont = New System.Drawing.Font("Times New Roman", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.data_fi_mostra.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.data_fi_mostra.Location = New System.Drawing.Point(421, 110)
+        Me.data_fi_mostra.Name = "data_fi_mostra"
+        Me.data_fi_mostra.Size = New System.Drawing.Size(170, 18)
+        Me.data_fi_mostra.TabIndex = 43
+        '
+        'data_inici_mostra
+        '
+        Me.data_inici_mostra.CalendarFont = New System.Drawing.Font("Times New Roman", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.data_inici_mostra.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.data_inici_mostra.Location = New System.Drawing.Point(433, 150)
+        Me.data_inici_mostra.Name = "data_inici_mostra"
+        Me.data_inici_mostra.Size = New System.Drawing.Size(170, 18)
+        Me.data_inici_mostra.TabIndex = 44
+        '
+        'ubicacio
+        '
+        Me.ubicacio.FormattingEnabled = True
+        Me.ubicacio.Location = New System.Drawing.Point(140, 230)
+        Me.ubicacio.Name = "ubicacio"
+        Me.ubicacio.Size = New System.Drawing.Size(121, 21)
+        Me.ubicacio.TabIndex = 45
+        '
+        'esdeveniment
+        '
+        Me.esdeveniment.FormattingEnabled = True
+        Me.esdeveniment.Location = New System.Drawing.Point(441, 190)
+        Me.esdeveniment.Name = "esdeveniment"
+        Me.esdeveniment.Size = New System.Drawing.Size(121, 21)
+        Me.esdeveniment.TabIndex = 46
+        '
+        'departament
+        '
+        Me.departament.FormattingEnabled = True
+        Me.departament.Location = New System.Drawing.Point(441, 230)
+        Me.departament.Name = "departament"
+        Me.departament.Size = New System.Drawing.Size(121, 21)
+        Me.departament.TabIndex = 47
         '
         'editar_activitats
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DodgerBlue
-        Me.ClientSize = New System.Drawing.Size(598, 387)
-        Me.Controls.Add(Me.id_ubicacio)
+        Me.ClientSize = New System.Drawing.Size(612, 387)
+        Me.Controls.Add(Me.departament)
+        Me.Controls.Add(Me.esdeveniment)
+        Me.Controls.Add(Me.ubicacio)
+        Me.Controls.Add(Me.data_inici_mostra)
+        Me.Controls.Add(Me.data_fi_mostra)
+        Me.Controls.Add(Me.data)
+        Me.Controls.Add(Me.back)
         Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.id_departament)
         Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.id_esdeveniment)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.inici)
         Me.Controls.Add(Me.actualitzar)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.descripcio)
-        Me.Controls.Add(Me.data)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
@@ -284,12 +309,9 @@ Partial Class editar_activitats
     End Sub
 
     Friend WithEvents actualitzar As Button
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents descripcio As TextBox
-    Friend WithEvents data As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
@@ -300,10 +322,14 @@ Partial Class editar_activitats
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents inici As Button
-    Friend WithEvents id_departament As TextBox
     Friend WithEvents Label11 As Label
-    Friend WithEvents id_esdeveniment As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents id_ubicacio As TextBox
     Friend WithEvents Label10 As Label
+    Friend WithEvents back As Button
+    Friend WithEvents data As DateTimePicker
+    Friend WithEvents data_fi_mostra As DateTimePicker
+    Friend WithEvents data_inici_mostra As DateTimePicker
+    Friend WithEvents ubicacio As ComboBox
+    Friend WithEvents esdeveniment As ComboBox
+    Friend WithEvents departament As ComboBox
 End Class

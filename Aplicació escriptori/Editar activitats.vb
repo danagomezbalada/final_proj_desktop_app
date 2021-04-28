@@ -5,6 +5,11 @@
 
     Private Sub inici_Click(sender As Object, e As EventArgs) Handles inici.Click
         Me.Hide()
-        Principal.Show()
+        principal.Show()
+    End Sub
+
+    Private Sub back_Click(sender As Object, e As EventArgs) Handles back.Click
+        Me.Hide()
+        gestio_activitats.Show()
     End Sub
 End Class

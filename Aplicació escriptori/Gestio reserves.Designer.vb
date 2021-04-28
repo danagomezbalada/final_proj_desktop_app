@@ -29,7 +29,6 @@ Partial Class gestio_reserves
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Eliminar = New System.Windows.Forms.Button()
         Me.Editar = New System.Windows.Forms.Button()
-        Me.Afegir = New System.Windows.Forms.Button()
         Me.Cercar = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
@@ -41,6 +40,8 @@ Partial Class gestio_reserves
         '
         Me.inici.BackgroundImage = CType(resources.GetObject("inici.BackgroundImage"), System.Drawing.Image)
         Me.inici.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.inici.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
+        Me.inici.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.inici.Location = New System.Drawing.Point(602, 12)
         Me.inici.Name = "inici"
         Me.inici.Size = New System.Drawing.Size(40, 35)
@@ -77,7 +78,7 @@ Partial Class gestio_reserves
         '
         'Eliminar
         '
-        Me.Eliminar.Location = New System.Drawing.Point(459, 413)
+        Me.Eliminar.Location = New System.Drawing.Point(373, 413)
         Me.Eliminar.Name = "Eliminar"
         Me.Eliminar.Size = New System.Drawing.Size(75, 23)
         Me.Eliminar.TabIndex = 20
@@ -86,21 +87,12 @@ Partial Class gestio_reserves
         '
         'Editar
         '
-        Me.Editar.Location = New System.Drawing.Point(295, 413)
+        Me.Editar.Location = New System.Drawing.Point(209, 413)
         Me.Editar.Name = "Editar"
         Me.Editar.Size = New System.Drawing.Size(75, 23)
         Me.Editar.TabIndex = 19
         Me.Editar.Text = "Editar"
         Me.Editar.UseVisualStyleBackColor = True
-        '
-        'Afegir
-        '
-        Me.Afegir.Location = New System.Drawing.Point(136, 413)
-        Me.Afegir.Name = "Afegir"
-        Me.Afegir.Size = New System.Drawing.Size(75, 23)
-        Me.Afegir.TabIndex = 18
-        Me.Afegir.Text = "Afegir"
-        Me.Afegir.UseVisualStyleBackColor = True
         '
         'Cercar
         '
@@ -150,7 +142,6 @@ Partial Class gestio_reserves
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Eliminar)
         Me.Controls.Add(Me.Editar)
-        Me.Controls.Add(Me.Afegir)
         Me.Controls.Add(Me.Cercar)
         Me.Name = "gestio_reserves"
         Me.Text = "Gestió Reserves"
@@ -166,7 +157,6 @@ Partial Class gestio_reserves
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Eliminar As Button
     Friend WithEvents Editar As Button
-    Friend WithEvents Afegir As Button
     Friend WithEvents Cercar As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents TextBox1 As TextBox

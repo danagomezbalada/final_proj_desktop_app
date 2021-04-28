@@ -34,6 +34,7 @@ Partial Class editar_ponents
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.inici = New System.Windows.Forms.Button()
+        Me.back = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'TextBox2
@@ -127,11 +128,25 @@ Partial Class editar_ponents
         '
         Me.inici.BackgroundImage = CType(resources.GetObject("inici.BackgroundImage"), System.Drawing.Image)
         Me.inici.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.inici.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
+        Me.inici.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.inici.Location = New System.Drawing.Point(438, 12)
         Me.inici.Name = "inici"
         Me.inici.Size = New System.Drawing.Size(40, 35)
         Me.inici.TabIndex = 23
         Me.inici.UseVisualStyleBackColor = True
+        '
+        'back
+        '
+        Me.back.BackgroundImage = CType(resources.GetObject("back.BackgroundImage"), System.Drawing.Image)
+        Me.back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.back.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
+        Me.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.back.Location = New System.Drawing.Point(392, 12)
+        Me.back.Name = "back"
+        Me.back.Size = New System.Drawing.Size(40, 35)
+        Me.back.TabIndex = 26
+        Me.back.UseVisualStyleBackColor = True
         '
         'editar_ponents
         '
@@ -139,6 +154,7 @@ Partial Class editar_ponents
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DodgerBlue
         Me.ClientSize = New System.Drawing.Size(499, 235)
+        Me.Controls.Add(Me.back)
         Me.Controls.Add(Me.inici)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.Label5)
@@ -168,4 +184,5 @@ Partial Class editar_ponents
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents inici As Button
+    Friend WithEvents back As Button
 End Class

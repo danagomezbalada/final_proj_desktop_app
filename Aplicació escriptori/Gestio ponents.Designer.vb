@@ -27,13 +27,14 @@ Partial Class gestio_ponent
         Me.Nom = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Cerca = New System.Windows.Forms.Button()
-        Me.Afegir = New System.Windows.Forms.Button()
         Me.Editar = New System.Windows.Forms.Button()
         Me.Eliminar = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Cognoms = New System.Windows.Forms.TextBox()
         Me.inici = New System.Windows.Forms.Button()
+        Me.back = New System.Windows.Forms.Button()
+        Me.Afegir = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -71,15 +72,6 @@ Partial Class gestio_ponent
         Me.Cerca.TabIndex = 15
         Me.Cerca.Text = "Cerca"
         Me.Cerca.UseVisualStyleBackColor = True
-        '
-        'Afegir
-        '
-        Me.Afegir.Location = New System.Drawing.Point(136, 413)
-        Me.Afegir.Name = "Afegir"
-        Me.Afegir.Size = New System.Drawing.Size(75, 23)
-        Me.Afegir.TabIndex = 16
-        Me.Afegir.Text = "Afegir"
-        Me.Afegir.UseVisualStyleBackColor = True
         '
         'Editar
         '
@@ -131,11 +123,34 @@ Partial Class gestio_ponent
         '
         Me.inici.BackgroundImage = CType(resources.GetObject("inici.BackgroundImage"), System.Drawing.Image)
         Me.inici.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.inici.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
+        Me.inici.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.inici.Location = New System.Drawing.Point(602, 12)
         Me.inici.Name = "inici"
         Me.inici.Size = New System.Drawing.Size(40, 35)
         Me.inici.TabIndex = 22
         Me.inici.UseVisualStyleBackColor = True
+        '
+        'back
+        '
+        Me.back.BackgroundImage = CType(resources.GetObject("back.BackgroundImage"), System.Drawing.Image)
+        Me.back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.back.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
+        Me.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.back.Location = New System.Drawing.Point(556, 12)
+        Me.back.Name = "back"
+        Me.back.Size = New System.Drawing.Size(40, 35)
+        Me.back.TabIndex = 29
+        Me.back.UseVisualStyleBackColor = True
+        '
+        'Afegir
+        '
+        Me.Afegir.Location = New System.Drawing.Point(136, 413)
+        Me.Afegir.Name = "Afegir"
+        Me.Afegir.Size = New System.Drawing.Size(75, 23)
+        Me.Afegir.TabIndex = 16
+        Me.Afegir.Text = "Afegir"
+        Me.Afegir.UseVisualStyleBackColor = True
         '
         'gestio_ponent
         '
@@ -143,6 +158,7 @@ Partial Class gestio_ponent
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DodgerBlue
         Me.ClientSize = New System.Drawing.Size(665, 450)
+        Me.Controls.Add(Me.back)
         Me.Controls.Add(Me.inici)
         Me.Controls.Add(Me.Cognoms)
         Me.Controls.Add(Me.Label2)
@@ -166,11 +182,12 @@ Partial Class gestio_ponent
     Friend WithEvents Nom As TextBox
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Cerca As Button
-    Friend WithEvents Afegir As Button
     Friend WithEvents Editar As Button
     Friend WithEvents Eliminar As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Cognoms As TextBox
     Friend WithEvents inici As Button
+    Friend WithEvents back As Button
+    Friend WithEvents Afegir As Button
 End Class

@@ -1,8 +1,8 @@
 ﻿Imports MySql.Data.MySqlClient
-Public Class Principal
+Public Class administrar_activitats
     Dim connexio As MySqlConnection
     Dim query As String
-    Private Sub Activitat_Click(sender As Object, e As EventArgs) Handles Activitats.Click
+    Private Sub Activitat_Click(sender As Object, e As EventArgs)
         Me.Hide()
         gestio_activitats.Show()
 
@@ -25,7 +25,7 @@ Public Class Principal
 
     End Sub
 
-    Private Sub Esdeveniment_Click(sender As Object, e As EventArgs) Handles Esdeveniments.Click
+    Private Sub Esdeveniment_Click(sender As Object, e As EventArgs)
         Me.Hide()
         gestio_esdeveniment.Show()
     End Sub
@@ -35,9 +35,14 @@ Public Class Principal
         gestio_ponent.Show()
     End Sub
 
-    Private Sub reserves_Click(sender As Object, e As EventArgs) Handles reserves.Click
+    Private Sub reserves_Click(sender As Object, e As EventArgs)
         Me.Hide()
         gestio_reserves.Show()
+    End Sub
+
+    Private Sub inici_Click(sender As Object, e As EventArgs) Handles inici.Click
+        Me.Hide()
+        principal.Show()
     End Sub
 End Class
 

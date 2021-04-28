@@ -8,7 +8,7 @@ Public Class crear_activitat
 
     Private Sub inici_Click(sender As Object, e As EventArgs) Handles inici.Click
         Me.Hide()
-        Principal.Show()
+        principal.Show()
     End Sub
 
     Private Sub crear_Click(sender As Object, e As EventArgs) Handles crear.Click
@@ -17,39 +17,48 @@ Public Class crear_activitat
     End Sub
 
     Function Insertar()
-        Connexions.connectar()
-        Dim title As String
-        Dim dates As String
-        Dim price As Double
-        Dim description As String
-        Dim total_places As Integer
-        Dim data_fi As String
-        Dim data_inici As String
-        Dim esdeveniment As Integer
-        Dim ubicacio As Integer
-        Dim departament As Integer
+        '''Connexions.connectar()
+        '''Dim title As String
+        '''Dim dates As String
+        '''Dim price As Double
+        ''' Dim description As String
+        ''' Dim total_places As Integer
+        '''Dim data_fi As String
+        '''Dim data_inici As String
+        '''Dim nomEsdeveniment As Integer
+        '''Dim nomUbicacio As Integer
+        '''Dim nomDepartament As Integer
 
-        title = titol.Text
-        dates = data.Value.ToString("yyyy-MM-dd")
-        price = preu.Text
-        description = descripcio.Text
-        total_places = places_totals.Text
-        data_fi = data_fi_mostra.Value.ToString("yyyy-MM-dd")
-        data_inici = data_inici_mostra.Value.ToString("yyyy-MM-dd")
-        esdeveniment = id_esdeveniment.Text
-        ubicacio = id_ubicacio.Text
-        departament = id_departament.Text
+        '''title = titol.Text
+        '''dates = data.Value.ToString("yyyy-MM-dd")
+        '''price = preu.Text
+        '''description = descripcio.Text
+        '''total_places = places_totals.Text
+        '''data_fi = data_fi_mostra.Value.ToString("yyyy-MM-dd")
+        '''data_inici = data_inici_mostra.Value.ToString("yyyy-MM-dd")
+        '''nomEsdeveniment = esdeveniment.Text
+        '''nomUbicacio = ubicacio.Text
+        '''nomD epartament = id_departament.Text
 
-        query = $"INSERT INTO `activitat` (`titol`,`data`,`descripcio`,`preu`,`places_totals`,`id_esdeveniment`,
-        `data_inici_mostra`,`data_fi_mostra`,`id_ubicacio`,`id_departament`) 
-        VALUES ('{title}','{dates}','{description}','{price}','{total_places}','{esdeveniment}','{data_inici}',
-        '{data_fi}','{ubicacio}','{departament}');"
-        Dim comanda = New MySqlCommand(query, Connexions.connexio)
-        comanda.ExecuteNonQuery()
-        Connexions.desconnectar()
+        '''query = $"INSERT INTO `activitat` (`titol`,`data`,`descripcio`,`preu`,`places_totals`,`id_esdeveniment`,
+        '''`data_inici_mostra`,`data_fi_mostra`,`id_ubicacio`,`id_departament`) 
+        '''VALUES ('{title}','{dates}','{description}','{price}','{total_places}','{esdeveniment}','{data_inici}',
+        ''''{data_fi}','{ubicacio}','{departament}');"
+        ''' Dim comanda = New MySqlCommand(query, Connexions.connexio)
+        '''comanda.ExecuteNonQuery()
+        '''Connexions.desconnectar()
     End Function
 
     Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
+
+    End Sub
+
+    Private Sub back_Click(sender As Object, e As EventArgs) Handles back.Click
+        Me.Hide()
+        gestio_activitats.Show()
+    End Sub
+
+    Private Sub crear_activitat_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class

@@ -28,6 +28,7 @@ Partial Class crear_categories
         Me.nom = New System.Windows.Forms.TextBox()
         Me.Crear = New System.Windows.Forms.Button()
         Me.inici = New System.Windows.Forms.Button()
+        Me.back = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -70,18 +71,33 @@ Partial Class crear_categories
         '
         Me.inici.BackgroundImage = CType(resources.GetObject("inici.BackgroundImage"), System.Drawing.Image)
         Me.inici.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.inici.Location = New System.Drawing.Point(268, 12)
+        Me.inici.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
+        Me.inici.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.inici.Location = New System.Drawing.Point(305, 12)
         Me.inici.Name = "inici"
         Me.inici.Size = New System.Drawing.Size(40, 35)
         Me.inici.TabIndex = 19
         Me.inici.UseVisualStyleBackColor = True
+        '
+        'back
+        '
+        Me.back.BackgroundImage = CType(resources.GetObject("back.BackgroundImage"), System.Drawing.Image)
+        Me.back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.back.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
+        Me.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.back.Location = New System.Drawing.Point(259, 12)
+        Me.back.Name = "back"
+        Me.back.Size = New System.Drawing.Size(40, 35)
+        Me.back.TabIndex = 21
+        Me.back.UseVisualStyleBackColor = True
         '
         'crear_categories
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DodgerBlue
-        Me.ClientSize = New System.Drawing.Size(330, 192)
+        Me.ClientSize = New System.Drawing.Size(352, 192)
+        Me.Controls.Add(Me.back)
         Me.Controls.Add(Me.inici)
         Me.Controls.Add(Me.Crear)
         Me.Controls.Add(Me.nom)
@@ -99,4 +115,5 @@ Partial Class crear_categories
     Friend WithEvents nom As TextBox
     Friend WithEvents Crear As Button
     Friend WithEvents inici As Button
+    Friend WithEvents back As Button
 End Class
