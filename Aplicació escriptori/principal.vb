@@ -1,4 +1,7 @@
 ﻿Public Class principal
+
+    ''' Prova
+
     Private Sub administrar_activitats_Click(sender As Object, e As EventArgs) Handles activitats.Click
         Me.Hide()
         administrar_activitats.Show()
