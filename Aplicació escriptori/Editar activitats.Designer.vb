@@ -47,11 +47,13 @@ Partial Class editar_activitats
         Me.ubicacio = New System.Windows.Forms.ComboBox()
         Me.esdeveniment = New System.Windows.Forms.ComboBox()
         Me.departament = New System.Windows.Forms.ComboBox()
+        Me.egstionar_categories_activitat = New System.Windows.Forms.Button()
+        Me.gestionar_ponents_activitat = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'actualitzar
         '
-        Me.actualitzar.Location = New System.Drawing.Point(232, 299)
+        Me.actualitzar.Location = New System.Drawing.Point(333, 313)
         Me.actualitzar.Name = "actualitzar"
         Me.actualitzar.Size = New System.Drawing.Size(97, 31)
         Me.actualitzar.TabIndex = 33
@@ -271,12 +273,32 @@ Partial Class editar_activitats
         Me.departament.Size = New System.Drawing.Size(121, 21)
         Me.departament.TabIndex = 47
         '
+        'egstionar_categories_activitat
+        '
+        Me.egstionar_categories_activitat.Location = New System.Drawing.Point(49, 285)
+        Me.egstionar_categories_activitat.Name = "egstionar_categories_activitat"
+        Me.egstionar_categories_activitat.Size = New System.Drawing.Size(127, 31)
+        Me.egstionar_categories_activitat.TabIndex = 52
+        Me.egstionar_categories_activitat.Text = "Gestionar Categories"
+        Me.egstionar_categories_activitat.UseVisualStyleBackColor = True
+        '
+        'gestionar_ponents_activitat
+        '
+        Me.gestionar_ponents_activitat.Location = New System.Drawing.Point(49, 338)
+        Me.gestionar_ponents_activitat.Name = "gestionar_ponents_activitat"
+        Me.gestionar_ponents_activitat.Size = New System.Drawing.Size(127, 31)
+        Me.gestionar_ponents_activitat.TabIndex = 51
+        Me.gestionar_ponents_activitat.Text = "Gestionar Ponents"
+        Me.gestionar_ponents_activitat.UseVisualStyleBackColor = True
+        '
         'editar_activitats
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DodgerBlue
-        Me.ClientSize = New System.Drawing.Size(612, 387)
+        Me.ClientSize = New System.Drawing.Size(609, 387)
+        Me.Controls.Add(Me.egstionar_categories_activitat)
+        Me.Controls.Add(Me.gestionar_ponents_activitat)
         Me.Controls.Add(Me.departament)
         Me.Controls.Add(Me.esdeveniment)
         Me.Controls.Add(Me.ubicacio)
@@ -332,4 +354,6 @@ Partial Class editar_activitats
     Friend WithEvents ubicacio As ComboBox
     Friend WithEvents esdeveniment As ComboBox
     Friend WithEvents departament As ComboBox
+    Friend WithEvents egstionar_categories_activitat As Button
+    Friend WithEvents gestionar_ponents_activitat As Button
 End Class

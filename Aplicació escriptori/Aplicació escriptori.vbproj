@@ -157,6 +157,12 @@
     <Compile Include="Editar Reserves.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Gestió Categories Activitats.Designer.vb">
+      <DependentUpon>Gestió Categories Activitats.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gestió Categories Activitats.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Gestió Ponents Activitat.Designer.vb">
       <DependentUpon>Gestió Ponents Activitat.vb</DependentUpon>
     </Compile>
@@ -274,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Editar ponents.resx">
       <DependentUpon>Editar ponents.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestió Categories Activitats.resx">
+      <DependentUpon>Gestió Categories Activitats.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gestió Ponents Activitat.resx">
       <DependentUpon>Gestió Ponents Activitat.vb</DependentUpon>
