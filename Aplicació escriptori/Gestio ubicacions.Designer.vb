@@ -26,14 +26,14 @@ Partial Class gestio_ubicacions
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Nom = New System.Windows.Forms.TextBox()
         Me.Cercar = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.taula_ubicacions = New System.Windows.Forms.DataGridView()
         Me.Afegir = New System.Windows.Forms.Button()
         Me.Editar = New System.Windows.Forms.Button()
         Me.Eliminar = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.inici = New System.Windows.Forms.Button()
         Me.back = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.taula_ubicacions, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -62,13 +62,15 @@ Partial Class gestio_ubicacions
         Me.Cercar.Text = "Cercar"
         Me.Cercar.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'taula_ubicacions
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(30, 100)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(600, 300)
-        Me.DataGridView1.TabIndex = 13
+        Me.taula_ubicacions.BackgroundColor = System.Drawing.Color.DodgerBlue
+        Me.taula_ubicacions.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.taula_ubicacions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.taula_ubicacions.Location = New System.Drawing.Point(30, 100)
+        Me.taula_ubicacions.Name = "taula_ubicacions"
+        Me.taula_ubicacions.Size = New System.Drawing.Size(600, 300)
+        Me.taula_ubicacions.TabIndex = 13
         '
         'Afegir
         '
@@ -143,13 +145,13 @@ Partial Class gestio_ubicacions
         Me.Controls.Add(Me.Eliminar)
         Me.Controls.Add(Me.Editar)
         Me.Controls.Add(Me.Afegir)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.taula_ubicacions)
         Me.Controls.Add(Me.Cercar)
         Me.Controls.Add(Me.Nom)
         Me.Controls.Add(Me.Label1)
         Me.Name = "gestio_ubicacions"
         Me.Text = "Gestio Ubicacions"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.taula_ubicacions, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -158,7 +160,7 @@ Partial Class gestio_ubicacions
     Friend WithEvents Label1 As Label
     Friend WithEvents Nom As TextBox
     Friend WithEvents Cercar As Button
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents taula_ubicacions As DataGridView
     Friend WithEvents Afegir As Button
     Friend WithEvents Editar As Button
     Friend WithEvents Eliminar As Button

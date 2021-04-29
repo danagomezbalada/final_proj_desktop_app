@@ -26,14 +26,14 @@ Partial Class gestio_departament
         Me.Gestio_departaments = New System.Windows.Forms.Label()
         Me.Nom = New System.Windows.Forms.TextBox()
         Me.Cerca = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.taula_departament = New System.Windows.Forms.DataGridView()
         Me.Afegir = New System.Windows.Forms.Button()
         Me.Editar = New System.Windows.Forms.Button()
         Me.Eliminar = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.inici = New System.Windows.Forms.Button()
         Me.back = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.taula_departament, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Gestio_departaments
@@ -62,13 +62,15 @@ Partial Class gestio_departament
         Me.Cerca.Text = "Cerca"
         Me.Cerca.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'taula_departament
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(30, 100)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(600, 300)
-        Me.DataGridView1.TabIndex = 13
+        Me.taula_departament.BackgroundColor = System.Drawing.Color.DodgerBlue
+        Me.taula_departament.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.taula_departament.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.taula_departament.Location = New System.Drawing.Point(30, 100)
+        Me.taula_departament.Name = "taula_departament"
+        Me.taula_departament.Size = New System.Drawing.Size(600, 300)
+        Me.taula_departament.TabIndex = 13
         '
         'Afegir
         '
@@ -143,13 +145,13 @@ Partial Class gestio_departament
         Me.Controls.Add(Me.Eliminar)
         Me.Controls.Add(Me.Editar)
         Me.Controls.Add(Me.Afegir)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.taula_departament)
         Me.Controls.Add(Me.Cerca)
         Me.Controls.Add(Me.Nom)
         Me.Controls.Add(Me.Gestio_departaments)
         Me.Name = "gestio_departament"
         Me.Text = "gestio departaments"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.taula_departament, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -158,7 +160,7 @@ Partial Class gestio_departament
     Friend WithEvents Gestio_departaments As Label
     Friend WithEvents Nom As TextBox
     Friend WithEvents Cerca As Button
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents taula_departament As DataGridView
     Friend WithEvents Afegir As Button
     Friend WithEvents Editar As Button
     Friend WithEvents Eliminar As Button

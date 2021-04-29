@@ -26,14 +26,14 @@ Partial Class gestio_categoria
         Me.Categories = New System.Windows.Forms.Label()
         Me.Nom = New System.Windows.Forms.TextBox()
         Me.Cercar = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.taula_categoria = New System.Windows.Forms.DataGridView()
         Me.Afegir = New System.Windows.Forms.Button()
         Me.Editar = New System.Windows.Forms.Button()
         Me.Eliminar = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.inici = New System.Windows.Forms.Button()
         Me.back = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.taula_categoria, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Categories
@@ -62,13 +62,15 @@ Partial Class gestio_categoria
         Me.Cercar.Text = "Cercar"
         Me.Cercar.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'taula_categoria
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(30, 100)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(600, 300)
-        Me.DataGridView1.TabIndex = 13
+        Me.taula_categoria.BackgroundColor = System.Drawing.Color.DodgerBlue
+        Me.taula_categoria.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.taula_categoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.taula_categoria.Location = New System.Drawing.Point(30, 100)
+        Me.taula_categoria.Name = "taula_categoria"
+        Me.taula_categoria.Size = New System.Drawing.Size(600, 300)
+        Me.taula_categoria.TabIndex = 13
         '
         'Afegir
         '
@@ -143,13 +145,13 @@ Partial Class gestio_categoria
         Me.Controls.Add(Me.Eliminar)
         Me.Controls.Add(Me.Editar)
         Me.Controls.Add(Me.Afegir)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.taula_categoria)
         Me.Controls.Add(Me.Cercar)
         Me.Controls.Add(Me.Nom)
         Me.Controls.Add(Me.Categories)
         Me.Name = "gestio_categoria"
         Me.Text = "gestio categories"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.taula_categoria, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -158,7 +160,7 @@ Partial Class gestio_categoria
     Friend WithEvents Categories As Label
     Friend WithEvents Nom As TextBox
     Friend WithEvents Cercar As Button
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents taula_categoria As DataGridView
     Friend WithEvents Afegir As Button
     Friend WithEvents Editar As Button
     Friend WithEvents Eliminar As Button

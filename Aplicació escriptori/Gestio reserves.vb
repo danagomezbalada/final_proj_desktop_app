@@ -12,4 +12,8 @@
         Me.Hide()
         editar_reserves.Show()
     End Sub
+
+    Private Sub Cercar_Click(sender As Object, e As EventArgs) Handles Cercar.Click
+
+    End Sub
 End Class

@@ -25,17 +25,17 @@ Partial Class gestio_ponent
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(gestio_ponent))
         Me.Gestio_ponents = New System.Windows.Forms.Label()
         Me.Nom = New System.Windows.Forms.TextBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.taula_ponent = New System.Windows.Forms.DataGridView()
         Me.Cerca = New System.Windows.Forms.Button()
         Me.Editar = New System.Windows.Forms.Button()
         Me.Eliminar = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Cognoms = New System.Windows.Forms.TextBox()
+        Me.Cognom = New System.Windows.Forms.TextBox()
         Me.inici = New System.Windows.Forms.Button()
         Me.back = New System.Windows.Forms.Button()
         Me.Afegir = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.taula_ponent, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Gestio_ponents
@@ -56,13 +56,13 @@ Partial Class gestio_ponent
         Me.Nom.Size = New System.Drawing.Size(100, 20)
         Me.Nom.TabIndex = 1
         '
-        'DataGridView1
+        'taula_ponent
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(30, 100)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(600, 300)
-        Me.DataGridView1.TabIndex = 14
+        Me.taula_ponent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.taula_ponent.Location = New System.Drawing.Point(30, 100)
+        Me.taula_ponent.Name = "taula_ponent"
+        Me.taula_ponent.Size = New System.Drawing.Size(600, 300)
+        Me.taula_ponent.TabIndex = 14
         '
         'Cerca
         '
@@ -111,13 +111,13 @@ Partial Class gestio_ponent
         Me.Label2.TabIndex = 20
         Me.Label2.Text = "Cognoms:"
         '
-        'Cognoms
+        'Cognom
         '
-        Me.Cognoms.CausesValidation = False
-        Me.Cognoms.Location = New System.Drawing.Point(302, 62)
-        Me.Cognoms.Name = "Cognoms"
-        Me.Cognoms.Size = New System.Drawing.Size(100, 20)
-        Me.Cognoms.TabIndex = 21
+        Me.Cognom.CausesValidation = False
+        Me.Cognom.Location = New System.Drawing.Point(302, 62)
+        Me.Cognom.Name = "Cognom"
+        Me.Cognom.Size = New System.Drawing.Size(100, 20)
+        Me.Cognom.TabIndex = 21
         '
         'inici
         '
@@ -160,19 +160,19 @@ Partial Class gestio_ponent
         Me.ClientSize = New System.Drawing.Size(665, 450)
         Me.Controls.Add(Me.back)
         Me.Controls.Add(Me.inici)
-        Me.Controls.Add(Me.Cognoms)
+        Me.Controls.Add(Me.Cognom)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Eliminar)
         Me.Controls.Add(Me.Editar)
         Me.Controls.Add(Me.Afegir)
         Me.Controls.Add(Me.Cerca)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.taula_ponent)
         Me.Controls.Add(Me.Nom)
         Me.Controls.Add(Me.Gestio_ponents)
         Me.Name = "gestio_ponent"
         Me.Text = "gestio ponents"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.taula_ponent, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -180,13 +180,13 @@ Partial Class gestio_ponent
 
     Friend WithEvents Gestio_ponents As Label
     Friend WithEvents Nom As TextBox
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents taula_ponent As DataGridView
     Friend WithEvents Cerca As Button
     Friend WithEvents Editar As Button
     Friend WithEvents Eliminar As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Cognoms As TextBox
+    Friend WithEvents Cognom As TextBox
     Friend WithEvents inici As Button
     Friend WithEvents back As Button
     Friend WithEvents Afegir As Button

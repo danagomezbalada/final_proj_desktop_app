@@ -1,4 +1,6 @@
-﻿Public Class gestio_activitats
+﻿Imports MySql.Data.MySqlClient
+Public Class gestio_activitats
+    Dim query As String
     Private Sub TextBoxBuscar_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
@@ -28,5 +30,9 @@
     Private Sub Editar_Click(sender As Object, e As EventArgs) Handles Editar.Click
         Me.Hide()
         editar_activitats.Show()
+    End Sub
+
+    Private Sub Cercar_Click(sender As Object, e As EventArgs)
+
     End Sub
 End Class
