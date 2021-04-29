@@ -45,9 +45,10 @@ Partial Class editar_reserves
         Me.back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.back.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
         Me.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.back.Location = New System.Drawing.Point(392, 12)
+        Me.back.Location = New System.Drawing.Point(523, 15)
+        Me.back.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.back.Name = "back"
-        Me.back.Size = New System.Drawing.Size(40, 35)
+        Me.back.Size = New System.Drawing.Size(50, 50)
         Me.back.TabIndex = 38
         Me.back.UseVisualStyleBackColor = True
         '
@@ -57,9 +58,10 @@ Partial Class editar_reserves
         Me.inici.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.inici.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
         Me.inici.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.inici.Location = New System.Drawing.Point(438, 12)
+        Me.inici.Location = New System.Drawing.Point(584, 15)
+        Me.inici.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.inici.Name = "inici"
-        Me.inici.Size = New System.Drawing.Size(40, 35)
+        Me.inici.Size = New System.Drawing.Size(50, 50)
         Me.inici.TabIndex = 37
         Me.inici.UseVisualStyleBackColor = True
         '
@@ -67,69 +69,84 @@ Partial Class editar_reserves
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(245, 110)
+        Me.Label5.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label5.Location = New System.Drawing.Point(327, 135)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(49, 19)
+        Me.Label5.Size = New System.Drawing.Size(62, 23)
         Me.Label5.TabIndex = 35
         Me.Label5.Text = "Estat:"
         '
         'codi_transaccio
         '
-        Me.codi_transaccio.Location = New System.Drawing.Point(370, 70)
+        Me.codi_transaccio.Location = New System.Drawing.Point(493, 86)
+        Me.codi_transaccio.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.codi_transaccio.Name = "codi_transaccio"
-        Me.codi_transaccio.Size = New System.Drawing.Size(100, 20)
+        Me.codi_transaccio.Size = New System.Drawing.Size(132, 22)
         Me.codi_transaccio.TabIndex = 34
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(245, 70)
+        Me.Label4.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label4.Location = New System.Drawing.Point(327, 86)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(121, 19)
+        Me.Label4.Size = New System.Drawing.Size(152, 23)
         Me.Label4.TabIndex = 33
         Me.Label4.Text = "Codi Transacció:"
         '
         'id_activitat
         '
-        Me.id_activitat.Location = New System.Drawing.Point(120, 110)
+        Me.id_activitat.Location = New System.Drawing.Point(160, 135)
+        Me.id_activitat.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.id_activitat.Name = "id_activitat"
-        Me.id_activitat.Size = New System.Drawing.Size(100, 20)
+        Me.id_activitat.Size = New System.Drawing.Size(132, 22)
         Me.id_activitat.TabIndex = 32
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(43, 110)
+        Me.Label3.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label3.Location = New System.Drawing.Point(57, 135)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(71, 19)
+        Me.Label3.Size = New System.Drawing.Size(91, 23)
         Me.Label3.TabIndex = 31
         Me.Label3.Text = "Activitat:"
         '
         'actualitzar
         '
-        Me.actualitzar.Location = New System.Drawing.Point(196, 198)
+        Me.actualitzar.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.actualitzar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.actualitzar.Font = New System.Drawing.Font("Calibri", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.actualitzar.Location = New System.Drawing.Point(263, 235)
+        Me.actualitzar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.actualitzar.Name = "actualitzar"
-        Me.actualitzar.Size = New System.Drawing.Size(75, 23)
+        Me.actualitzar.Size = New System.Drawing.Size(117, 54)
         Me.actualitzar.TabIndex = 30
         Me.actualitzar.Text = "Actualitzar"
-        Me.actualitzar.UseVisualStyleBackColor = True
+        Me.actualitzar.UseVisualStyleBackColor = False
         '
         'id_usuari
         '
-        Me.id_usuari.Location = New System.Drawing.Point(120, 70)
+        Me.id_usuari.Location = New System.Drawing.Point(160, 86)
+        Me.id_usuari.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.id_usuari.Name = "id_usuari"
-        Me.id_usuari.Size = New System.Drawing.Size(100, 20)
+        Me.id_usuari.Size = New System.Drawing.Size(132, 22)
         Me.id_usuari.TabIndex = 29
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(43, 70)
+        Me.Label2.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label2.Location = New System.Drawing.Point(57, 86)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(52, 19)
+        Me.Label2.Size = New System.Drawing.Size(65, 23)
         Me.Label2.TabIndex = 28
         Me.Label2.Text = "Email:"
         '
@@ -137,9 +154,11 @@ Partial Class editar_reserves
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(151, 9)
+        Me.Label1.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label1.Location = New System.Drawing.Point(201, 11)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(201, 31)
+        Me.Label1.Size = New System.Drawing.Size(247, 38)
         Me.Label1.TabIndex = 27
         Me.Label1.Text = "Editar Reserves"
         '
@@ -147,33 +166,37 @@ Partial Class editar_reserves
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(43, 149)
+        Me.Label6.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label6.Location = New System.Drawing.Point(57, 183)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(47, 19)
+        Me.Label6.Size = New System.Drawing.Size(58, 23)
         Me.Label6.TabIndex = 39
         Me.Label6.Text = "Data:"
         '
         'data
         '
-        Me.data.Location = New System.Drawing.Point(96, 147)
+        Me.data.Location = New System.Drawing.Point(160, 183)
+        Me.data.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.data.Name = "data"
-        Me.data.Size = New System.Drawing.Size(200, 20)
+        Me.data.Size = New System.Drawing.Size(265, 22)
         Me.data.TabIndex = 40
         '
         'estat
         '
         Me.estat.FormattingEnabled = True
-        Me.estat.Location = New System.Drawing.Point(300, 110)
+        Me.estat.Location = New System.Drawing.Point(465, 135)
+        Me.estat.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.estat.Name = "estat"
-        Me.estat.Size = New System.Drawing.Size(121, 21)
+        Me.estat.Size = New System.Drawing.Size(160, 24)
         Me.estat.TabIndex = 41
         '
         'editar_reserves
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.DodgerBlue
-        Me.ClientSize = New System.Drawing.Size(499, 235)
+        Me.BackColor = System.Drawing.Color.SteelBlue
+        Me.ClientSize = New System.Drawing.Size(665, 319)
         Me.Controls.Add(Me.estat)
         Me.Controls.Add(Me.data)
         Me.Controls.Add(Me.Label6)
@@ -188,6 +211,7 @@ Partial Class editar_reserves
         Me.Controls.Add(Me.id_usuari)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "editar_reserves"
         Me.Text = "Editar Reserves"
         Me.ResumeLayout(False)

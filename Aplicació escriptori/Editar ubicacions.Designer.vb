@@ -35,35 +35,44 @@ Partial Class editar_ubicacions
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(17, 13)
+        Me.Label2.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label2.Location = New System.Drawing.Point(23, 16)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(226, 31)
+        Me.Label2.Size = New System.Drawing.Size(277, 38)
         Me.Label2.TabIndex = 8
         Me.Label2.Text = "Editar Ubicacions"
         '
         'actualitzar
         '
-        Me.actualitzar.Location = New System.Drawing.Point(136, 129)
+        Me.actualitzar.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.actualitzar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.actualitzar.Font = New System.Drawing.Font("Calibri", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.actualitzar.Location = New System.Drawing.Point(185, 159)
+        Me.actualitzar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.actualitzar.Name = "actualitzar"
-        Me.actualitzar.Size = New System.Drawing.Size(75, 23)
+        Me.actualitzar.Size = New System.Drawing.Size(117, 54)
         Me.actualitzar.TabIndex = 7
         Me.actualitzar.Text = "Actualitzar"
-        Me.actualitzar.UseVisualStyleBackColor = True
+        Me.actualitzar.UseVisualStyleBackColor = False
         '
         'Nom
         '
-        Me.Nom.Location = New System.Drawing.Point(158, 71)
+        Me.Nom.Location = New System.Drawing.Point(212, 100)
+        Me.Nom.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Nom.Name = "Nom"
-        Me.Nom.Size = New System.Drawing.Size(100, 20)
+        Me.Nom.Size = New System.Drawing.Size(132, 22)
         Me.Nom.TabIndex = 6
         '
         'label1
         '
         Me.label1.AutoSize = True
         Me.label1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label1.Location = New System.Drawing.Point(102, 71)
+        Me.label1.ForeColor = System.Drawing.SystemColors.Control
+        Me.label1.Location = New System.Drawing.Point(137, 100)
+        Me.label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.label1.Name = "label1"
-        Me.label1.Size = New System.Drawing.Size(50, 19)
+        Me.label1.Size = New System.Drawing.Size(61, 23)
         Me.label1.TabIndex = 5
         Me.label1.Text = "Nom: "
         '
@@ -73,9 +82,10 @@ Partial Class editar_ubicacions
         Me.inici.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.inici.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
         Me.inici.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.inici.Location = New System.Drawing.Point(316, 16)
+        Me.inici.Location = New System.Drawing.Point(421, 20)
+        Me.inici.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.inici.Name = "inici"
-        Me.inici.Size = New System.Drawing.Size(40, 35)
+        Me.inici.Size = New System.Drawing.Size(50, 50)
         Me.inici.TabIndex = 19
         Me.inici.UseVisualStyleBackColor = True
         '
@@ -85,24 +95,26 @@ Partial Class editar_ubicacions
         Me.back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.back.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
         Me.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.back.Location = New System.Drawing.Point(270, 16)
+        Me.back.Location = New System.Drawing.Point(360, 20)
+        Me.back.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.back.Name = "back"
-        Me.back.Size = New System.Drawing.Size(40, 35)
+        Me.back.Size = New System.Drawing.Size(50, 50)
         Me.back.TabIndex = 21
         Me.back.UseVisualStyleBackColor = True
         '
         'editar_ubicacions
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.DodgerBlue
-        Me.ClientSize = New System.Drawing.Size(367, 192)
+        Me.BackColor = System.Drawing.Color.SteelBlue
+        Me.ClientSize = New System.Drawing.Size(489, 236)
         Me.Controls.Add(Me.back)
         Me.Controls.Add(Me.inici)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.actualitzar)
         Me.Controls.Add(Me.Nom)
         Me.Controls.Add(Me.label1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "editar_ubicacions"
         Me.Text = "Editar ubicacions"
         Me.ResumeLayout(False)

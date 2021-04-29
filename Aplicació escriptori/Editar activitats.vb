@@ -22,4 +22,8 @@
         Me.Hide()
         gestio_categories_activitat.Show()
     End Sub
+
+    Private Sub editar_activitats_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

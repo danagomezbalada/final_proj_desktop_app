@@ -39,18 +39,21 @@ Partial Class editar_esdeveniments
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(349, 110)
+        Me.TextBox2.Location = New System.Drawing.Point(465, 135)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox2.Size = New System.Drawing.Size(132, 22)
         Me.TextBox2.TabIndex = 32
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(263, 110)
+        Me.Label5.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label5.Location = New System.Drawing.Point(351, 135)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(85, 19)
+        Me.Label5.Size = New System.Drawing.Size(105, 23)
         Me.Label5.TabIndex = 31
         Me.Label5.Text = "Descripció:"
         '
@@ -58,52 +61,64 @@ Partial Class editar_esdeveniments
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(263, 70)
+        Me.Label4.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label4.Location = New System.Drawing.Point(351, 86)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(49, 19)
+        Me.Label4.Size = New System.Drawing.Size(62, 23)
         Me.Label4.TabIndex = 29
         Me.Label4.Text = "Actiu:"
         '
         'email
         '
-        Me.email.Location = New System.Drawing.Point(108, 110)
+        Me.email.Location = New System.Drawing.Point(144, 135)
+        Me.email.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.email.Name = "email"
-        Me.email.Size = New System.Drawing.Size(100, 20)
+        Me.email.Size = New System.Drawing.Size(132, 22)
         Me.email.TabIndex = 28
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(43, 110)
+        Me.Label3.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label3.Location = New System.Drawing.Point(57, 135)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(41, 19)
+        Me.Label3.Size = New System.Drawing.Size(51, 23)
         Me.Label3.TabIndex = 27
         Me.Label3.Text = "Any:"
         '
         'actualitzar
         '
-        Me.actualitzar.Location = New System.Drawing.Point(201, 175)
+        Me.actualitzar.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.actualitzar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.actualitzar.Font = New System.Drawing.Font("Calibri", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.actualitzar.Location = New System.Drawing.Point(268, 215)
+        Me.actualitzar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.actualitzar.Name = "actualitzar"
-        Me.actualitzar.Size = New System.Drawing.Size(75, 23)
+        Me.actualitzar.Size = New System.Drawing.Size(117, 54)
         Me.actualitzar.TabIndex = 26
         Me.actualitzar.Text = "Actualitzar"
-        Me.actualitzar.UseVisualStyleBackColor = True
+        Me.actualitzar.UseVisualStyleBackColor = False
         '
         'nom
         '
-        Me.nom.Location = New System.Drawing.Point(108, 70)
+        Me.nom.Location = New System.Drawing.Point(144, 86)
+        Me.nom.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.nom.Name = "nom"
-        Me.nom.Size = New System.Drawing.Size(100, 20)
+        Me.nom.Size = New System.Drawing.Size(132, 22)
         Me.nom.TabIndex = 25
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(43, 70)
+        Me.Label2.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label2.Location = New System.Drawing.Point(57, 86)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(46, 19)
+        Me.Label2.Size = New System.Drawing.Size(56, 23)
         Me.Label2.TabIndex = 24
         Me.Label2.Text = "Nom:"
         '
@@ -111,9 +126,11 @@ Partial Class editar_esdeveniments
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(123, 9)
+        Me.Label1.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label1.Location = New System.Drawing.Point(164, 11)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(271, 31)
+        Me.Label1.Size = New System.Drawing.Size(336, 38)
         Me.Label1.TabIndex = 23
         Me.Label1.Text = "Editar Esdeveniments"
         '
@@ -123,9 +140,10 @@ Partial Class editar_esdeveniments
         Me.inici.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.inici.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
         Me.inici.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.inici.Location = New System.Drawing.Point(456, 12)
+        Me.inici.Location = New System.Drawing.Point(608, 15)
+        Me.inici.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.inici.Name = "inici"
-        Me.inici.Size = New System.Drawing.Size(40, 35)
+        Me.inici.Size = New System.Drawing.Size(50, 50)
         Me.inici.TabIndex = 33
         Me.inici.UseVisualStyleBackColor = True
         '
@@ -135,27 +153,29 @@ Partial Class editar_esdeveniments
         Me.back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.back.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
         Me.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.back.Location = New System.Drawing.Point(410, 12)
+        Me.back.Location = New System.Drawing.Point(547, 15)
+        Me.back.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.back.Name = "back"
-        Me.back.Size = New System.Drawing.Size(40, 35)
+        Me.back.Size = New System.Drawing.Size(50, 50)
         Me.back.TabIndex = 34
         Me.back.UseVisualStyleBackColor = True
         '
         'actiu
         '
         Me.actiu.AutoSize = True
-        Me.actiu.Location = New System.Drawing.Point(349, 70)
+        Me.actiu.Location = New System.Drawing.Point(465, 86)
+        Me.actiu.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.actiu.Name = "actiu"
-        Me.actiu.Size = New System.Drawing.Size(15, 14)
+        Me.actiu.Size = New System.Drawing.Size(18, 17)
         Me.actiu.TabIndex = 35
         Me.actiu.UseVisualStyleBackColor = True
         '
         'editar_esdeveniments
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.DodgerBlue
-        Me.ClientSize = New System.Drawing.Size(499, 235)
+        Me.BackColor = System.Drawing.Color.SteelBlue
+        Me.ClientSize = New System.Drawing.Size(665, 289)
         Me.Controls.Add(Me.actiu)
         Me.Controls.Add(Me.back)
         Me.Controls.Add(Me.inici)
@@ -168,6 +188,7 @@ Partial Class editar_esdeveniments
         Me.Controls.Add(Me.nom)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "editar_esdeveniments"
         Me.Text = "Editar Esdeveniments"
         Me.ResumeLayout(False)
