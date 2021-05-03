@@ -18,7 +18,12 @@ Public Class crear_ubicacio
         Connexions.connectar()
         Dim name As String
         name = Nom.Text
-        query = $"INSERT INTO `ubicacio` (`nom`) VALUES ('{name}');"
+        If name.Contains("'") Then
+            name = Nom.Text.Replace("'", "’")
+            query = $"INSERT INTO `ubicacio` (`nom`) VALUES ('{name}');"
+        Else
+            query = $"INSERT INTO `ubicacio` (`nom`) VALUES ('{name}');"
+        End If
         Dim comanda = New MySqlCommand(query, Connexions.connexio)
         comanda.ExecuteNonQuery()
         Connexions.desconnectar()

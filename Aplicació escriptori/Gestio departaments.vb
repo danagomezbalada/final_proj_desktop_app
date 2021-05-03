@@ -14,6 +14,12 @@ Public Class gestio_departament
     Private Sub Editar_Click(sender As Object, e As EventArgs) Handles Editar.Click
         Me.Hide()
         editar_departaments.Show()
+        Dim Fila As Integer
+        Dim id As String
+        Fila = taula_departament.CurrentRow.Index
+        id = taula_departament.Rows(Fila).Cells(0).Value.ToString
+        editar_departaments.nom.Text = taula_departament.Rows(Fila).Cells(0).Value
+        editar_departaments.identificador.Text = Fila + 1
     End Sub
 
     Private Sub back_Click(sender As Object, e As EventArgs) Handles back.Click
@@ -28,7 +34,24 @@ Public Class gestio_departament
             query = $"SELECT nom FROM departament where nom LIKE '%{Nom.Text}%'"
         End If
         Connexions.connectar()
-        'PASSAR DADES DE LA BD A UNA TAULA DE DADES DE VB'
+        Dim comanda As New MySqlCommand(query, Connexions.connexio)
+        Dim adaptador As New MySqlDataAdapter(comanda)
+        Dim conjunt_dades As New DataTable()
+        adaptador.Fill(conjunt_dades)
+        taula_departament.AutoSizeColumnsMode = DataGridViewAutoSizeColumnMode.Fill
+        taula_departament.DataSource = conjunt_dades
+        Connexions.desconnectar()
+    End Sub
+
+    Private Sub Eliminar_Click(sender As Object, e As EventArgs) Handles Eliminar.Click
+        Dim nom As String
+        Dim Fila As Integer
+        Fila = taula_departament.CurrentRow.Index
+        nom = taula_departament.Rows(Fila).Cells(0).Value
+
+        query = $"DELETE FROM departament where nom = '{nom}'"
+
+        Connexions.connectar()
         Dim comanda As New MySqlCommand(query, Connexions.connexio)
         Dim adaptador As New MySqlDataAdapter(comanda)
         Dim conjunt_dades As New DataTable()

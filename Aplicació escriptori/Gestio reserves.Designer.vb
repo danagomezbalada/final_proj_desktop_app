@@ -31,8 +31,8 @@ Partial Class gestio_reserves
         Me.Editar = New System.Windows.Forms.Button()
         Me.Cercar = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.estat = New System.Windows.Forms.TextBox()
+        Me.data = New System.Windows.Forms.DateTimePicker()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -115,19 +115,19 @@ Partial Class gestio_reserves
         Me.Label3.TabIndex = 26
         Me.Label3.Text = "Estat:"
         '
-        'TextBox1
+        'estat
         '
-        Me.TextBox1.Location = New System.Drawing.Point(364, 62)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 25
+        Me.estat.Location = New System.Drawing.Point(364, 62)
+        Me.estat.Name = "estat"
+        Me.estat.Size = New System.Drawing.Size(100, 20)
+        Me.estat.TabIndex = 25
         '
-        'DateTimePicker1
+        'data
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(84, 62)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
-        Me.DateTimePicker1.TabIndex = 27
+        Me.data.Location = New System.Drawing.Point(84, 62)
+        Me.data.Name = "data"
+        Me.data.Size = New System.Drawing.Size(200, 20)
+        Me.data.TabIndex = 27
         '
         'gestio_reserves
         '
@@ -135,9 +135,9 @@ Partial Class gestio_reserves
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DodgerBlue
         Me.ClientSize = New System.Drawing.Size(665, 450)
-        Me.Controls.Add(Me.DateTimePicker1)
+        Me.Controls.Add(Me.data)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.estat)
         Me.Controls.Add(Me.inici)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -161,6 +161,6 @@ Partial Class gestio_reserves
     Friend WithEvents Editar As Button
     Friend WithEvents Cercar As Button
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents estat As TextBox
+    Friend WithEvents data As DateTimePicker
 End Class

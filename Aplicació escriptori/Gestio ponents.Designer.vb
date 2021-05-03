@@ -58,6 +58,8 @@ Partial Class gestio_ponent
         '
         'taula_ponent
         '
+        Me.taula_ponent.BackgroundColor = System.Drawing.Color.DodgerBlue
+        Me.taula_ponent.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.taula_ponent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.taula_ponent.Location = New System.Drawing.Point(30, 100)
         Me.taula_ponent.Name = "taula_ponent"

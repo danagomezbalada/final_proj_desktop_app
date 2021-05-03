@@ -23,10 +23,10 @@ Partial Class editar_esdeveniments
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(editar_esdeveniments))
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.descripcio = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.email = New System.Windows.Forms.TextBox()
+        Me.any = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.actualitzar = New System.Windows.Forms.Button()
         Me.nom = New System.Windows.Forms.TextBox()
@@ -35,14 +35,15 @@ Partial Class editar_esdeveniments
         Me.inici = New System.Windows.Forms.Button()
         Me.back = New System.Windows.Forms.Button()
         Me.actiu = New System.Windows.Forms.CheckBox()
+        Me.identificador = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
-        'TextBox2
+        'descripcio
         '
-        Me.TextBox2.Location = New System.Drawing.Point(349, 110)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 32
+        Me.descripcio.Location = New System.Drawing.Point(349, 110)
+        Me.descripcio.Name = "descripcio"
+        Me.descripcio.Size = New System.Drawing.Size(101, 20)
+        Me.descripcio.TabIndex = 32
         '
         'Label5
         '
@@ -64,12 +65,12 @@ Partial Class editar_esdeveniments
         Me.Label4.TabIndex = 29
         Me.Label4.Text = "Actiu:"
         '
-        'email
+        'any
         '
-        Me.email.Location = New System.Drawing.Point(108, 110)
-        Me.email.Name = "email"
-        Me.email.Size = New System.Drawing.Size(100, 20)
-        Me.email.TabIndex = 28
+        Me.any.Location = New System.Drawing.Point(108, 110)
+        Me.any.Name = "any"
+        Me.any.Size = New System.Drawing.Size(100, 20)
+        Me.any.TabIndex = 28
         '
         'Label3
         '
@@ -150,19 +151,28 @@ Partial Class editar_esdeveniments
         Me.actiu.TabIndex = 35
         Me.actiu.UseVisualStyleBackColor = True
         '
+        'identificador
+        '
+        Me.identificador.Location = New System.Drawing.Point(456, 203)
+        Me.identificador.Name = "identificador"
+        Me.identificador.Size = New System.Drawing.Size(31, 20)
+        Me.identificador.TabIndex = 36
+        Me.identificador.Visible = False
+        '
         'editar_esdeveniments
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DodgerBlue
         Me.ClientSize = New System.Drawing.Size(499, 235)
+        Me.Controls.Add(Me.identificador)
         Me.Controls.Add(Me.actiu)
         Me.Controls.Add(Me.back)
         Me.Controls.Add(Me.inici)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.descripcio)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.email)
+        Me.Controls.Add(Me.any)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.actualitzar)
         Me.Controls.Add(Me.nom)
@@ -174,11 +184,9 @@ Partial Class editar_esdeveniments
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents email As TextBox
+    Friend WithEvents any As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents actualitzar As Button
     Friend WithEvents nom As TextBox
@@ -187,4 +195,6 @@ Partial Class editar_esdeveniments
     Friend WithEvents inici As Button
     Friend WithEvents back As Button
     Friend WithEvents actiu As CheckBox
+    Friend WithEvents descripcio As TextBox
+    Friend WithEvents identificador As TextBox
 End Class

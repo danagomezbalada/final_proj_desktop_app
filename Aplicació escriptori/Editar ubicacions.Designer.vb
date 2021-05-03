@@ -29,6 +29,7 @@ Partial Class editar_ubicacions
         Me.label1 = New System.Windows.Forms.Label()
         Me.inici = New System.Windows.Forms.Button()
         Me.back = New System.Windows.Forms.Button()
+        Me.identificador = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'Label2
@@ -91,12 +92,21 @@ Partial Class editar_ubicacions
         Me.back.TabIndex = 21
         Me.back.UseVisualStyleBackColor = True
         '
+        'identificador
+        '
+        Me.identificador.Location = New System.Drawing.Point(338, 160)
+        Me.identificador.Name = "identificador"
+        Me.identificador.Size = New System.Drawing.Size(25, 20)
+        Me.identificador.TabIndex = 22
+        Me.identificador.Visible = False
+        '
         'editar_ubicacions
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DodgerBlue
         Me.ClientSize = New System.Drawing.Size(367, 192)
+        Me.Controls.Add(Me.identificador)
         Me.Controls.Add(Me.back)
         Me.Controls.Add(Me.inici)
         Me.Controls.Add(Me.Label2)
@@ -116,4 +126,5 @@ Partial Class editar_ubicacions
     Friend WithEvents label1 As Label
     Friend WithEvents inici As Button
     Friend WithEvents back As Button
+    Friend WithEvents identificador As TextBox
 End Class

@@ -23,30 +23,31 @@ Partial Class gestio_ponents_activitat
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(gestio_ponents_activitat))
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.taula_ponents_actuals = New System.Windows.Forms.DataGridView()
         Me.Eliminar = New System.Windows.Forms.Button()
         Me.Afegir = New System.Windows.Forms.Button()
         Me.Gestio_ponents = New System.Windows.Forms.Label()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.taula_ponents_disponibles = New System.Windows.Forms.DataGridView()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.back = New System.Windows.Forms.Button()
         Me.inici = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.veure_ponents = New System.Windows.Forms.Button()
+        CType(Me.taula_ponents_actuals, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.taula_ponents_disponibles, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'DataGridView1
+        'taula_ponents_actuals
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(22, 101)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(264, 300)
-        Me.DataGridView1.TabIndex = 15
+        Me.taula_ponents_actuals.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.taula_ponents_actuals.Location = New System.Drawing.Point(11, 101)
+        Me.taula_ponents_actuals.Name = "taula_ponents_actuals"
+        Me.taula_ponents_actuals.Size = New System.Drawing.Size(332, 300)
+        Me.taula_ponents_actuals.TabIndex = 15
         '
         'Eliminar
         '
-        Me.Eliminar.Location = New System.Drawing.Point(105, 415)
+        Me.Eliminar.Location = New System.Drawing.Point(124, 415)
         Me.Eliminar.Name = "Eliminar"
         Me.Eliminar.Size = New System.Drawing.Size(75, 23)
         Me.Eliminar.TabIndex = 21
@@ -55,7 +56,7 @@ Partial Class gestio_ponents_activitat
         '
         'Afegir
         '
-        Me.Afegir.Location = New System.Drawing.Point(515, 415)
+        Me.Afegir.Location = New System.Drawing.Point(496, 415)
         Me.Afegir.Name = "Afegir"
         Me.Afegir.Size = New System.Drawing.Size(75, 23)
         Me.Afegir.TabIndex = 19
@@ -72,19 +73,19 @@ Partial Class gestio_ponents_activitat
         Me.Gestio_ponents.TabIndex = 22
         Me.Gestio_ponents.Text = "Gestió Ponents de l'Activitat"
         '
-        'DataGridView2
+        'taula_ponents_disponibles
         '
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(411, 101)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(264, 300)
-        Me.DataGridView2.TabIndex = 23
+        Me.taula_ponents_disponibles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.taula_ponents_disponibles.Location = New System.Drawing.Point(368, 101)
+        Me.taula_ponents_disponibles.Name = "taula_ponents_disponibles"
+        Me.taula_ponents_disponibles.Size = New System.Drawing.Size(321, 300)
+        Me.taula_ponents_disponibles.TabIndex = 23
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(99, 67)
+        Me.Label1.Location = New System.Drawing.Point(116, 67)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(102, 31)
         Me.Label1.TabIndex = 24
@@ -94,7 +95,7 @@ Partial Class gestio_ponents_activitat
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(470, 67)
+        Me.Label2.Location = New System.Drawing.Point(458, 67)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(151, 31)
         Me.Label2.TabIndex = 25
@@ -124,37 +125,48 @@ Partial Class gestio_ponents_activitat
         Me.inici.TabIndex = 42
         Me.inici.UseVisualStyleBackColor = True
         '
+        'veure_ponents
+        '
+        Me.veure_ponents.Location = New System.Drawing.Point(301, 67)
+        Me.veure_ponents.Name = "veure_ponents"
+        Me.veure_ponents.Size = New System.Drawing.Size(105, 23)
+        Me.veure_ponents.TabIndex = 44
+        Me.veure_ponents.Text = "Veure ponents"
+        Me.veure_ponents.UseVisualStyleBackColor = True
+        '
         'gestio_ponents_activitat
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DodgerBlue
         Me.ClientSize = New System.Drawing.Size(699, 450)
+        Me.Controls.Add(Me.veure_ponents)
         Me.Controls.Add(Me.back)
         Me.Controls.Add(Me.inici)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.DataGridView2)
+        Me.Controls.Add(Me.taula_ponents_disponibles)
         Me.Controls.Add(Me.Gestio_ponents)
         Me.Controls.Add(Me.Eliminar)
         Me.Controls.Add(Me.Afegir)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.taula_ponents_actuals)
         Me.Name = "gestio_ponents_activitat"
         Me.Text = "Gestió Ponents Activitat"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.taula_ponents_actuals, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.taula_ponents_disponibles, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents taula_ponents_actuals As DataGridView
     Friend WithEvents Eliminar As Button
     Friend WithEvents Afegir As Button
     Friend WithEvents Gestio_ponents As Label
-    Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents taula_ponents_disponibles As DataGridView
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents back As Button
     Friend WithEvents inici As Button
+    Friend WithEvents veure_ponents As Button
 End Class

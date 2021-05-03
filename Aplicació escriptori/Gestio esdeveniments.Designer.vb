@@ -29,12 +29,12 @@ Partial Class gestio_esdeveniment
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Any = New System.Windows.Forms.TextBox()
         Me.Cerca = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.taula_esdeveniment = New System.Windows.Forms.DataGridView()
         Me.afegir = New System.Windows.Forms.Button()
         Me.Editar = New System.Windows.Forms.Button()
         Me.eliminar = New System.Windows.Forms.Button()
         Me.inici = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.taula_esdeveniment, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'gestio_esdeveniments
@@ -92,13 +92,15 @@ Partial Class gestio_esdeveniment
         Me.Cerca.Text = "Cerca"
         Me.Cerca.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'taula_esdeveniment
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(30, 100)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(600, 300)
-        Me.DataGridView1.TabIndex = 17
+        Me.taula_esdeveniment.BackgroundColor = System.Drawing.Color.DodgerBlue
+        Me.taula_esdeveniment.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.taula_esdeveniment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.taula_esdeveniment.Location = New System.Drawing.Point(30, 100)
+        Me.taula_esdeveniment.Name = "taula_esdeveniment"
+        Me.taula_esdeveniment.Size = New System.Drawing.Size(600, 300)
+        Me.taula_esdeveniment.TabIndex = 17
         '
         'afegir
         '
@@ -149,7 +151,7 @@ Partial Class gestio_esdeveniment
         Me.Controls.Add(Me.eliminar)
         Me.Controls.Add(Me.Editar)
         Me.Controls.Add(Me.afegir)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.taula_esdeveniment)
         Me.Controls.Add(Me.Cerca)
         Me.Controls.Add(Me.Any)
         Me.Controls.Add(Me.Label2)
@@ -158,7 +160,7 @@ Partial Class gestio_esdeveniment
         Me.Controls.Add(Me.gestio_esdeveniments)
         Me.Name = "gestio_esdeveniment"
         Me.Text = "gestio esdeveniments"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.taula_esdeveniment, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -170,7 +172,7 @@ Partial Class gestio_esdeveniment
     Friend WithEvents Label2 As Label
     Friend WithEvents Any As TextBox
     Friend WithEvents Cerca As Button
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents taula_esdeveniment As DataGridView
     Friend WithEvents afegir As Button
     Friend WithEvents Editar As Button
     Friend WithEvents eliminar As Button

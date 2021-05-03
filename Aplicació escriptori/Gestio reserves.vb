@@ -1,4 +1,7 @@
-﻿Public Class gestio_reserves
+﻿Imports MySql.Data.MySqlClient
+
+Public Class gestio_reserves
+    Dim query As String
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub

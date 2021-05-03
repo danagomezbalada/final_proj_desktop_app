@@ -23,9 +23,9 @@ Partial Class editar_ponents
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(editar_ponents))
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.telefon = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.cognom = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.email = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -35,14 +35,15 @@ Partial Class editar_ponents
         Me.Label1 = New System.Windows.Forms.Label()
         Me.inici = New System.Windows.Forms.Button()
         Me.back = New System.Windows.Forms.Button()
+        Me.identificador = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
-        'TextBox2
+        'telefon
         '
-        Me.TextBox2.Location = New System.Drawing.Point(349, 110)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 22
+        Me.telefon.Location = New System.Drawing.Point(349, 110)
+        Me.telefon.Name = "telefon"
+        Me.telefon.Size = New System.Drawing.Size(100, 20)
+        Me.telefon.TabIndex = 22
         '
         'Label5
         '
@@ -54,12 +55,12 @@ Partial Class editar_ponents
         Me.Label5.TabIndex = 21
         Me.Label5.Text = "Telèfon:"
         '
-        'TextBox1
+        'cognom
         '
-        Me.TextBox1.Location = New System.Drawing.Point(349, 70)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 20
+        Me.cognom.Location = New System.Drawing.Point(349, 70)
+        Me.cognom.Name = "cognom"
+        Me.cognom.Size = New System.Drawing.Size(100, 20)
+        Me.cognom.TabIndex = 20
         '
         'Label4
         '
@@ -148,17 +149,26 @@ Partial Class editar_ponents
         Me.back.TabIndex = 26
         Me.back.UseVisualStyleBackColor = True
         '
+        'identificador
+        '
+        Me.identificador.Location = New System.Drawing.Point(452, 203)
+        Me.identificador.Name = "identificador"
+        Me.identificador.Size = New System.Drawing.Size(35, 20)
+        Me.identificador.TabIndex = 27
+        Me.identificador.Visible = False
+        '
         'editar_ponents
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DodgerBlue
         Me.ClientSize = New System.Drawing.Size(499, 235)
+        Me.Controls.Add(Me.identificador)
         Me.Controls.Add(Me.back)
         Me.Controls.Add(Me.inici)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.telefon)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.cognom)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.email)
         Me.Controls.Add(Me.Label3)
@@ -173,9 +183,9 @@ Partial Class editar_ponents
 
     End Sub
 
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents telefon As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents cognom As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents email As TextBox
     Friend WithEvents Label3 As Label
@@ -185,4 +195,5 @@ Partial Class editar_ponents
     Friend WithEvents Label1 As Label
     Friend WithEvents inici As Button
     Friend WithEvents back As Button
+    Friend WithEvents identificador As TextBox
 End Class
