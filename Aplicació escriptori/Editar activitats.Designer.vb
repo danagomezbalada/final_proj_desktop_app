@@ -24,9 +24,8 @@ Partial Class editar_activitats
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(editar_activitats))
         Me.actualitzar = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.descripcio = New System.Windows.Forms.TextBox()
+        Me.places_totals = New System.Windows.Forms.TextBox()
+        Me.preu = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -39,47 +38,42 @@ Partial Class editar_activitats
         Me.inici = New System.Windows.Forms.Button()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.back = New System.Windows.Forms.Button()
         Me.data = New System.Windows.Forms.DateTimePicker()
         Me.data_fi_mostra = New System.Windows.Forms.DateTimePicker()
         Me.data_inici_mostra = New System.Windows.Forms.DateTimePicker()
-        Me.ubicacio = New System.Windows.Forms.ComboBox()
         Me.esdeveniment = New System.Windows.Forms.ComboBox()
         Me.departament = New System.Windows.Forms.ComboBox()
         Me.egstionar_categories_activitat = New System.Windows.Forms.Button()
         Me.gestionar_ponents_activitat = New System.Windows.Forms.Button()
+        Me.identificador = New System.Windows.Forms.TextBox()
+        Me.descripcio = New System.Windows.Forms.RichTextBox()
+        Me.ubicacio = New System.Windows.Forms.ComboBox()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'actualitzar
         '
-        Me.actualitzar.Location = New System.Drawing.Point(333, 313)
+        Me.actualitzar.Location = New System.Drawing.Point(410, 338)
         Me.actualitzar.Name = "actualitzar"
         Me.actualitzar.Size = New System.Drawing.Size(97, 31)
         Me.actualitzar.TabIndex = 33
         Me.actualitzar.Text = "Actualitzar"
         Me.actualitzar.UseVisualStyleBackColor = True
         '
-        'TextBox2
+        'places_totals
         '
-        Me.TextBox2.Location = New System.Drawing.Point(421, 70)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 30
+        Me.places_totals.Location = New System.Drawing.Point(421, 70)
+        Me.places_totals.Name = "places_totals"
+        Me.places_totals.Size = New System.Drawing.Size(100, 20)
+        Me.places_totals.TabIndex = 30
         '
-        'TextBox1
+        'preu
         '
-        Me.TextBox1.Location = New System.Drawing.Point(100, 150)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 29
-        '
-        'descripcio
-        '
-        Me.descripcio.Location = New System.Drawing.Point(140, 190)
-        Me.descripcio.Name = "descripcio"
-        Me.descripcio.Size = New System.Drawing.Size(100, 20)
-        Me.descripcio.TabIndex = 28
+        Me.preu.Location = New System.Drawing.Point(100, 150)
+        Me.preu.Name = "preu"
+        Me.preu.Size = New System.Drawing.Size(100, 20)
+        Me.preu.TabIndex = 29
         '
         'Label9
         '
@@ -125,7 +119,7 @@ Partial Class editar_activitats
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(43, 190)
+        Me.Label4.Location = New System.Drawing.Point(43, 243)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(85, 19)
         Me.Label4.TabIndex = 22
@@ -200,16 +194,6 @@ Partial Class editar_activitats
         Me.Label6.TabIndex = 35
         Me.Label6.Text = "Esdeveniment:"
         '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(43, 230)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(71, 19)
-        Me.Label10.TabIndex = 39
-        Me.Label10.Text = "Ubicació:"
-        '
         'back
         '
         Me.back.BackgroundImage = CType(resources.GetObject("back.BackgroundImage"), System.Drawing.Image)
@@ -249,14 +233,6 @@ Partial Class editar_activitats
         Me.data_inici_mostra.Size = New System.Drawing.Size(170, 18)
         Me.data_inici_mostra.TabIndex = 44
         '
-        'ubicacio
-        '
-        Me.ubicacio.FormattingEnabled = True
-        Me.ubicacio.Location = New System.Drawing.Point(140, 230)
-        Me.ubicacio.Name = "ubicacio"
-        Me.ubicacio.Size = New System.Drawing.Size(121, 21)
-        Me.ubicacio.TabIndex = 45
-        '
         'esdeveniment
         '
         Me.esdeveniment.FormattingEnabled = True
@@ -275,7 +251,7 @@ Partial Class editar_activitats
         '
         'egstionar_categories_activitat
         '
-        Me.egstionar_categories_activitat.Location = New System.Drawing.Point(49, 285)
+        Me.egstionar_categories_activitat.Location = New System.Drawing.Point(231, 338)
         Me.egstionar_categories_activitat.Name = "egstionar_categories_activitat"
         Me.egstionar_categories_activitat.Size = New System.Drawing.Size(127, 31)
         Me.egstionar_categories_activitat.TabIndex = 52
@@ -284,12 +260,46 @@ Partial Class editar_activitats
         '
         'gestionar_ponents_activitat
         '
-        Me.gestionar_ponents_activitat.Location = New System.Drawing.Point(49, 338)
+        Me.gestionar_ponents_activitat.Location = New System.Drawing.Point(72, 338)
         Me.gestionar_ponents_activitat.Name = "gestionar_ponents_activitat"
         Me.gestionar_ponents_activitat.Size = New System.Drawing.Size(127, 31)
         Me.gestionar_ponents_activitat.TabIndex = 51
         Me.gestionar_ponents_activitat.Text = "Gestionar Ponents"
         Me.gestionar_ponents_activitat.UseVisualStyleBackColor = True
+        '
+        'identificador
+        '
+        Me.identificador.Location = New System.Drawing.Point(566, 355)
+        Me.identificador.Name = "identificador"
+        Me.identificador.Size = New System.Drawing.Size(31, 20)
+        Me.identificador.TabIndex = 53
+        Me.identificador.Visible = False
+        '
+        'descripcio
+        '
+        Me.descripcio.Location = New System.Drawing.Point(134, 230)
+        Me.descripcio.Name = "descripcio"
+        Me.descripcio.Size = New System.Drawing.Size(155, 96)
+        Me.descripcio.TabIndex = 54
+        Me.descripcio.Text = ""
+        '
+        'ubicacio
+        '
+        Me.ubicacio.FormattingEnabled = True
+        Me.ubicacio.Location = New System.Drawing.Point(140, 189)
+        Me.ubicacio.Name = "ubicacio"
+        Me.ubicacio.Size = New System.Drawing.Size(121, 21)
+        Me.ubicacio.TabIndex = 56
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(43, 189)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(71, 19)
+        Me.Label10.TabIndex = 55
+        Me.Label10.Text = "Ubicació:"
         '
         'editar_activitats
         '
@@ -297,23 +307,24 @@ Partial Class editar_activitats
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DodgerBlue
         Me.ClientSize = New System.Drawing.Size(609, 387)
+        Me.Controls.Add(Me.ubicacio)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.descripcio)
+        Me.Controls.Add(Me.identificador)
         Me.Controls.Add(Me.egstionar_categories_activitat)
         Me.Controls.Add(Me.gestionar_ponents_activitat)
         Me.Controls.Add(Me.departament)
         Me.Controls.Add(Me.esdeveniment)
-        Me.Controls.Add(Me.ubicacio)
         Me.Controls.Add(Me.data_inici_mostra)
         Me.Controls.Add(Me.data_fi_mostra)
         Me.Controls.Add(Me.data)
         Me.Controls.Add(Me.back)
-        Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.inici)
         Me.Controls.Add(Me.actualitzar)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.descripcio)
+        Me.Controls.Add(Me.places_totals)
+        Me.Controls.Add(Me.preu)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
@@ -331,9 +342,8 @@ Partial Class editar_activitats
     End Sub
 
     Friend WithEvents actualitzar As Button
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents descripcio As TextBox
+    Friend WithEvents places_totals As TextBox
+    Friend WithEvents preu As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
@@ -346,14 +356,16 @@ Partial Class editar_activitats
     Friend WithEvents inici As Button
     Friend WithEvents Label11 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents Label10 As Label
     Friend WithEvents back As Button
     Friend WithEvents data As DateTimePicker
     Friend WithEvents data_fi_mostra As DateTimePicker
     Friend WithEvents data_inici_mostra As DateTimePicker
-    Friend WithEvents ubicacio As ComboBox
     Friend WithEvents esdeveniment As ComboBox
     Friend WithEvents departament As ComboBox
     Friend WithEvents egstionar_categories_activitat As Button
     Friend WithEvents gestionar_ponents_activitat As Button
+    Friend WithEvents identificador As TextBox
+    Friend WithEvents descripcio As RichTextBox
+    Friend WithEvents ubicacio As ComboBox
+    Friend WithEvents Label10 As Label
 End Class

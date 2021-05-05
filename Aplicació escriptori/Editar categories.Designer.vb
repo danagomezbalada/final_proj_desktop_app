@@ -94,9 +94,9 @@ Partial Class editar_categories
         '
         'identificador
         '
-        Me.identificador.Location = New System.Drawing.Point(271, 160)
+        Me.identificador.Location = New System.Drawing.Point(288, 160)
         Me.identificador.Name = "identificador"
-        Me.identificador.Size = New System.Drawing.Size(47, 20)
+        Me.identificador.Size = New System.Drawing.Size(30, 20)
         Me.identificador.TabIndex = 30
         Me.identificador.Visible = False
         '

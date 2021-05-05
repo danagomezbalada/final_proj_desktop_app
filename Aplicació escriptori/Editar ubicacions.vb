@@ -10,6 +10,7 @@ Public Class editar_ubicacions
     Private Sub back_Click(sender As Object, e As EventArgs) Handles back.Click
         Me.Hide()
         gestio_ubicacions.Show()
+        gestio_ubicacions.actualitzarTaula()
     End Sub
 
     Private Sub actualitzar_Click(sender As Object, e As EventArgs) Handles actualitzar.Click
@@ -28,5 +29,9 @@ Public Class editar_ubicacions
         Dim comanda As New MySqlCommand(query, Connexions.connexio)
         comanda.ExecuteNonQuery()
         Connexions.desconnectar()
+    End Sub
+
+    Private Sub editar_ubicacions_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

@@ -28,11 +28,11 @@ Partial Class gestio_activitats
         Me.Afegir = New System.Windows.Forms.Button()
         Me.Editar = New System.Windows.Forms.Button()
         Me.Eliminar = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.taula_activitats = New System.Windows.Forms.DataGridView()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.inici = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.taula_activitats, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'nom
@@ -78,13 +78,15 @@ Partial Class gestio_activitats
         Me.Eliminar.Text = "Eliminar"
         Me.Eliminar.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'taula_activitats
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(30, 100)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(600, 300)
-        Me.DataGridView1.TabIndex = 12
+        Me.taula_activitats.BackgroundColor = System.Drawing.Color.DodgerBlue
+        Me.taula_activitats.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.taula_activitats.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.taula_activitats.Location = New System.Drawing.Point(30, 100)
+        Me.taula_activitats.Name = "taula_activitats"
+        Me.taula_activitats.Size = New System.Drawing.Size(600, 300)
+        Me.taula_activitats.TabIndex = 12
         '
         'Label1
         '
@@ -128,7 +130,7 @@ Partial Class gestio_activitats
         Me.Controls.Add(Me.inici)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.taula_activitats)
         Me.Controls.Add(Me.Eliminar)
         Me.Controls.Add(Me.Editar)
         Me.Controls.Add(Me.Afegir)
@@ -136,7 +138,7 @@ Partial Class gestio_activitats
         Me.Controls.Add(Me.nom)
         Me.Name = "gestio_activitats"
         Me.Text = "Gestió Activitats"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.taula_activitats, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -147,7 +149,7 @@ Partial Class gestio_activitats
     Friend WithEvents Afegir As Button
     Friend WithEvents Editar As Button
     Friend WithEvents Eliminar As Button
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents taula_activitats As DataGridView
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents inici As Button

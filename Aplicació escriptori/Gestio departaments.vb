@@ -15,11 +15,11 @@ Public Class gestio_departament
         Me.Hide()
         editar_departaments.Show()
         Dim Fila As Integer
-        Dim id As String
+        Dim Id As String
         Fila = taula_departament.CurrentRow.Index
-        id = taula_departament.Rows(Fila).Cells(0).Value.ToString
-        editar_departaments.nom.Text = taula_departament.Rows(Fila).Cells(0).Value
-        editar_departaments.identificador.Text = Fila + 1
+        Id = taula_departament.Rows(Fila).Cells(0).Value.ToString
+        editar_departaments.nom.Text = taula_departament.Rows(Fila).Cells(1).Value
+        editar_departaments.identificador.Text = Id
     End Sub
 
     Private Sub back_Click(sender As Object, e As EventArgs) Handles back.Click
@@ -28,10 +28,33 @@ Public Class gestio_departament
     End Sub
 
     Private Sub Cerca_Click(sender As Object, e As EventArgs) Handles Cerca.Click
+        actualitzarTaula()
+    End Sub
+
+    Private Sub Eliminar_Click(sender As Object, e As EventArgs) Handles Eliminar.Click
+        Dim id As String
+        Dim Fila As Integer
+        Dim missatge As MsgBoxResult = MsgBox("Vols eliminar el registre?", MsgBoxStyle.OkCancel, "Eliminar")
+        If missatge = MsgBoxResult.Ok Then
+            Fila = taula_departament.CurrentRow.Index
+            id = taula_departament.Rows(Fila).Cells(0).Value
+            query = $"DELETE FROM departament where id = '{id}'"
+            Connexions.connectar()
+            Dim comanda As New MySqlCommand(query, Connexions.connexio)
+            comanda.ExecuteNonQuery()
+            Connexions.desconnectar()
+            actualitzarTaula()
+        End If
+    End Sub
+
+    Private Sub gestio_departament_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        actualitzarTaula()
+    End Sub
+    Function actualitzarTaula()
         If String.IsNullOrEmpty(Nom.Text) = True Then
-            query = $"SELECT nom FROM departament"
+            query = $"SELECT * FROM departament"
         Else
-            query = $"SELECT nom FROM departament where nom LIKE '%{Nom.Text}%'"
+            query = $"SELECT * FROM departament where nom LIKE '%{Nom.Text}%'"
         End If
         Connexions.connectar()
         Dim comanda As New MySqlCommand(query, Connexions.connexio)
@@ -40,24 +63,7 @@ Public Class gestio_departament
         adaptador.Fill(conjunt_dades)
         taula_departament.AutoSizeColumnsMode = DataGridViewAutoSizeColumnMode.Fill
         taula_departament.DataSource = conjunt_dades
+        taula_departament.Columns(0).Visible = False
         Connexions.desconnectar()
-    End Sub
-
-    Private Sub Eliminar_Click(sender As Object, e As EventArgs) Handles Eliminar.Click
-        Dim nom As String
-        Dim Fila As Integer
-        Fila = taula_departament.CurrentRow.Index
-        nom = taula_departament.Rows(Fila).Cells(0).Value
-
-        query = $"DELETE FROM departament where nom = '{nom}'"
-
-        Connexions.connectar()
-        Dim comanda As New MySqlCommand(query, Connexions.connexio)
-        Dim adaptador As New MySqlDataAdapter(comanda)
-        Dim conjunt_dades As New DataTable()
-        adaptador.Fill(conjunt_dades)
-        taula_departament.AutoSizeColumnsMode = DataGridViewAutoSizeColumnMode.Fill
-        taula_departament.DataSource = conjunt_dades
-        Connexions.desconnectar()
-    End Sub
+    End Function
 End Class

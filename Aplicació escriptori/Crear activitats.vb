@@ -2,6 +2,7 @@
 
 Public Class crear_activitat
     Public query As String
+    Public id As String
     Private Sub titol_TextChanged(sender As Object, e As EventArgs) Handles titol.TextChanged
 
     End Sub
@@ -49,22 +50,16 @@ Public Class crear_activitat
         '''Connexions.desconnectar()
     End Function
 
-    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
-
-    End Sub
-
     Private Sub back_Click(sender As Object, e As EventArgs) Handles back.Click
         Me.Hide()
         gestio_activitats.Show()
     End Sub
 
-    Private Sub crear_activitat_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
     Private Sub gestionar_ponents_activitat_Click(sender As Object, e As EventArgs) Handles gestionar_ponents_activitat.Click
         Me.Hide()
         gestio_ponents_activitat.Show()
+        editar_activitats.pantalla = "Crear"
+        'id = $"SELECT id from activitat"
     End Sub
 
     Private Sub egstionar_categories_activitat_Click(sender As Object, e As EventArgs) Handles egstionar_categories_activitat.Click

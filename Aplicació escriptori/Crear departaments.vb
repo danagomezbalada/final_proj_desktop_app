@@ -14,7 +14,12 @@ Public Class crear_departaments
         Connexions.connectar()
         Dim name As String
         name = nom.Text
-        query = $"INSERT INTO `departament` (`nom`) VALUES ('{name}');"
+        If name.Contains("'") Then
+            name = nom.Text.Replace("'", "’")
+            query = $"INSERT INTO `departament` (`nom`) VALUES ('{name}');"
+        Else
+            query = $"INSERT INTO `departament` (`nom`) VALUES ('{name}');"
+        End If
         Dim comanda = New MySqlCommand(query, Connexions.connexio)
         comanda.ExecuteNonQuery()
         Connexions.desconnectar()

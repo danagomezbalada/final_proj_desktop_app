@@ -15,7 +15,12 @@ Public Class crear_categories
         Connexions.connectar()
         Dim name As String
         name = nom.Text
-        query = $"INSERT INTO `categoria` (`nom`) VALUES ('{name}');"
+        If name.Contains("'") Then
+            name = nom.Text.Replace("'", "’")
+            query = $"INSERT INTO `categoria` (`nom`) VALUES ('{name}');"
+        Else
+            query = $"INSERT INTO `categoria` (`nom`) VALUES ('{name}');"
+        End If
         Dim comanda = New MySqlCommand(query, Connexions.connexio)
         comanda.ExecuteNonQuery()
         Connexions.desconnectar()
@@ -24,6 +29,6 @@ Public Class crear_categories
     Private Sub back_Click(sender As Object, e As EventArgs) Handles back.Click
         Me.Hide()
         gestio_categoria.Show()
-
+        gestio_categoria.actualitzarTaula()
     End Sub
 End Class

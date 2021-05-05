@@ -27,10 +27,25 @@ Public Class crear_esdeveniments
         Else
             active = 0
         End If
-
-
-        query = $"INSERT INTO `esdeveniment` (`any`,`nom`,`descripcio`,`actiu`)
+        If name.Contains("'") Then
+            name = nom.Text.Replace("'", "’")
+            query = $"INSERT INTO `esdeveniment` (`any`,`nom`,`descripcio`,`actiu`)
         VALUES ('{year}','{name}','{description}','{active}');"
+        Else
+            query = $"INSERT INTO `esdeveniment` (`any`,`nom`,`descripcio`,`actiu`)
+        VALUES ('{year}','{name}','{description}','{active}');"
+        End If
+
+        If description.Contains("'") Then
+            description = descripcio.Text.Replace("'", "’")
+            query = $"INSERT INTO `esdeveniment` (`any`,`nom`,`descripcio`,`actiu`)
+        VALUES ('{year}','{name}','{description}','{active}');"
+        Else
+            query = $"INSERT INTO `esdeveniment` (`any`,`nom`,`descripcio`,`actiu`)
+        VALUES ('{year}','{name}','{description}','{active}');"
+        End If
+
+
 
         Dim comanda = New MySqlCommand(query, Connexions.connexio)
         comanda.ExecuteNonQuery()

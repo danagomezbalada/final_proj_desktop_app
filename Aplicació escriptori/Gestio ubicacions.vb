@@ -15,13 +15,12 @@ Public Class gestio_ubicacions
     Private Sub Editar_Click(sender As Object, e As EventArgs) Handles Editar.Click
         Me.Hide()
         editar_ubicacions.Show()
-
         Dim Fila As Integer
         Dim id As String
         Fila = taula_ubicacions.CurrentRow.Index
         id = taula_ubicacions.Rows(Fila).Cells(0).Value.ToString
-        editar_ubicacions.Nom.Text = taula_ubicacions.Rows(Fila).Cells(0).Value
-        editar_ubicacions.identificador.Text = Fila + 1
+        editar_ubicacions.Nom.Text = taula_ubicacions.Rows(Fila).Cells(1).Value
+        editar_ubicacions.identificador.Text = id
     End Sub
 
     Private Sub back_Click(sender As Object, e As EventArgs) Handles back.Click
@@ -30,10 +29,30 @@ Public Class gestio_ubicacions
 
     End Sub
     Private Sub Cercar_Click(sender As Object, e As EventArgs) Handles Cercar.Click
+        actualitzarTaula()
+    End Sub
+
+    Private Sub Eliminar_Click(sender As Object, e As EventArgs) Handles Eliminar.Click
+        Dim id As String
+        Dim Fila As Integer
+        Dim missatge As MsgBoxResult = MsgBox("Vols eliminar el registre?", MsgBoxStyle.OkCancel, "Eliminar")
+        If missatge = MsgBoxResult.Ok Then
+            Fila = taula_ubicacions.CurrentRow.Index
+            id = taula_ubicacions.Rows(Fila).Cells(0).Value
+            query = $"DELETE FROM ubicacio where id = '{id}'"
+            Connexions.connectar()
+            Dim comanda As New MySqlCommand(query, Connexions.connexio)
+            comanda.ExecuteNonQuery()
+            Connexions.desconnectar()
+            actualitzarTaula()
+        End If
+    End Sub
+
+    Function actualitzarTaula()
         If String.IsNullOrEmpty(Nom.Text) = True Then
-            query = $"SELECT nom FROM ubicacio"
+            query = $"SELECT * FROM ubicacio"
         Else
-            query = $"SELECT nom FROM ubicacio where nom LIKE '%{Nom.Text}%'"
+            query = $"SELECT * FROM ubicacio where nom LIKE '%{Nom.Text}%'"
         End If
         Connexions.connectar()
         Dim comanda As New MySqlCommand(query, Connexions.connexio)
@@ -42,25 +61,10 @@ Public Class gestio_ubicacions
         adaptador.Fill(conjunt_dades)
         taula_ubicacions.AutoSizeColumnsMode = DataGridViewAutoSizeColumnMode.Fill
         taula_ubicacions.DataSource = conjunt_dades
+        taula_ubicacions.Columns(0).Visible = False
         Connexions.desconnectar()
-    End Sub
-    Private Sub Eliminar_Click(sender As Object, e As EventArgs) Handles Eliminar.Click
-        Dim nom As String
-        Dim Fila As Integer
-        Fila = taula_ubicacions.CurrentRow.Index
-        nom = taula_ubicacions.Rows(Fila).Cells(0).Value
-        query = $"DELETE FROM ubicacio where nom = '{nom}'"
-
-        Connexions.connectar()
-        Dim comanda As New MySqlCommand(query, Connexions.connexio)
-        Dim adaptador As New MySqlDataAdapter(comanda)
-        Dim conjunt_dades As New DataTable()
-        adaptador.Fill(conjunt_dades)
-        taula_ubicacions.AutoSizeColumnsMode = DataGridViewAutoSizeColumnMode.Fill
-        taula_ubicacions.DataSource = conjunt_dades
-        Connexions.desconnectar()
-    End Sub
-    Private Sub taula_ubicacions_CellContentClick(sender As Object, e As EventArgs) Handles taula_ubicacions.CellContentClick
-
+    End Function
+    Private Sub gestio_ubicacions_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        actualitzarTaula()
     End Sub
 End Class

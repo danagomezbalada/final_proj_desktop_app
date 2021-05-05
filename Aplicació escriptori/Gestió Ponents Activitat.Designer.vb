@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class gestio_ponents_activitat
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class gestio_ponents_activitat
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(gestio_ponents_activitat))
         Me.taula_ponents_actuals = New System.Windows.Forms.DataGridView()
@@ -32,7 +32,6 @@ Partial Class gestio_ponents_activitat
         Me.Label2 = New System.Windows.Forms.Label()
         Me.back = New System.Windows.Forms.Button()
         Me.inici = New System.Windows.Forms.Button()
-        Me.veure_ponents = New System.Windows.Forms.Button()
         CType(Me.taula_ponents_actuals, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.taula_ponents_disponibles, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -125,22 +124,12 @@ Partial Class gestio_ponents_activitat
         Me.inici.TabIndex = 42
         Me.inici.UseVisualStyleBackColor = True
         '
-        'veure_ponents
-        '
-        Me.veure_ponents.Location = New System.Drawing.Point(301, 67)
-        Me.veure_ponents.Name = "veure_ponents"
-        Me.veure_ponents.Size = New System.Drawing.Size(105, 23)
-        Me.veure_ponents.TabIndex = 44
-        Me.veure_ponents.Text = "Veure ponents"
-        Me.veure_ponents.UseVisualStyleBackColor = True
-        '
         'gestio_ponents_activitat
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DodgerBlue
         Me.ClientSize = New System.Drawing.Size(699, 450)
-        Me.Controls.Add(Me.veure_ponents)
         Me.Controls.Add(Me.back)
         Me.Controls.Add(Me.inici)
         Me.Controls.Add(Me.Label2)
@@ -168,5 +157,4 @@ Partial Class gestio_ponents_activitat
     Friend WithEvents Label2 As Label
     Friend WithEvents back As Button
     Friend WithEvents inici As Button
-    Friend WithEvents veure_ponents As Button
 End Class

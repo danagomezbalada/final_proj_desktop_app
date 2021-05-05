@@ -22,8 +22,24 @@ Public Class crear_ponents
         phone = telefon.Text
         mail = email.Text
 
-        query = $"INSERT INTO `ponent` (`nom`,`cognoms`,`telefon`,`email`)
+        If name.Contains("'") Then
+            name = nom.Text.Replace("'", "’")
+            query = $"INSERT INTO `ponent` (`nom`,`cognoms`,`telefon`,`email`)
         VALUES ('{name}','{lastname}','{phone}','{mail}');"
+        Else
+            query = $"INSERT INTO `ponent` (`nom`,`cognoms`,`telefon`,`email`)
+        VALUES ('{name}','{lastname}','{phone}','{mail}');"
+        End If
+        If lastname.Contains("'") Then
+            lastname = cognom.Text.Replace("'", "’")
+            query = $"INSERT INTO `ponent` (`nom`,`cognoms`,`telefon`,`email`)
+        VALUES ('{name}','{lastname}','{phone}','{mail}');"
+        Else
+            query = $"INSERT INTO `ponent` (`nom`,`cognoms`,`telefon`,`email`)
+        VALUES ('{name}','{lastname}','{phone}','{mail}');"
+        End If
+
+
 
         Dim comanda = New MySqlCommand(query, Connexions.connexio)
         comanda.ExecuteNonQuery()
