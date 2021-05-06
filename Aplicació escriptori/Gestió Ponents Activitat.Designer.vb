@@ -38,6 +38,8 @@ Partial Class gestio_ponents_activitat
         '
         'taula_ponents_actuals
         '
+        Me.taula_ponents_actuals.BackgroundColor = System.Drawing.Color.DodgerBlue
+        Me.taula_ponents_actuals.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.taula_ponents_actuals.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.taula_ponents_actuals.Location = New System.Drawing.Point(11, 101)
         Me.taula_ponents_actuals.Name = "taula_ponents_actuals"
@@ -74,6 +76,8 @@ Partial Class gestio_ponents_activitat
         '
         'taula_ponents_disponibles
         '
+        Me.taula_ponents_disponibles.BackgroundColor = System.Drawing.Color.DodgerBlue
+        Me.taula_ponents_disponibles.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.taula_ponents_disponibles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.taula_ponents_disponibles.Location = New System.Drawing.Point(368, 101)
         Me.taula_ponents_disponibles.Name = "taula_ponents_disponibles"

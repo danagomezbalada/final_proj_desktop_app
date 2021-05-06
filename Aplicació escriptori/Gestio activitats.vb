@@ -10,6 +10,7 @@ Public Class gestio_activitats
     Private Sub Afegir_Click(sender As Object, e As EventArgs) Handles Afegir.Click
         Me.Hide()
         crear_activitat.Show()
+        crear_activitat.emplenarCamps()
     End Sub
 
     Private Sub Editar_Click(sender As Object, e As EventArgs) Handles Editar.Click
@@ -21,8 +22,6 @@ Public Class gestio_activitats
         id = taula_activitats.Rows(Fila).Cells(0).Value.ToString
         editar_activitats.identificador.Text = id
         editar_activitats.emplenarCamps()
-        'editar_activitats.titol.Text = taula_activitats.Rows(Fila).Cells(1).Value.ToString
-        'editar_activitats.data.Text = taula_activitats.Rows(Fila).Cells(4).Value.ToString
     End Sub
 
     Private Sub Cercar_Click(sender As Object, e As EventArgs) Handles Cercar.Click
@@ -31,12 +30,12 @@ Public Class gestio_activitats
             query = $"SELECT a.id, a.titol, a.descripcio, a.preu, a.data, d.nom AS `Departament`, 
             e.nom AS `Esdeveniment`, u.nom AS `Ubicacio`FROM activitat a JOIN departament d ON 
             a.id_departament = d.id JOIN esdeveniment e ON a.id_esdeveniment = e.id JOIN ubicacio u ON 
-            a.id_ubicacio = u.id LEFT OUTER JOIN activitat_ponent ap ON a.id = ap.id_activitat"
+            a.id_ubicacio = u.id "
         Else
             query = $"SELECT a.id,a.titol, a.descripcio, a.preu, a.data, d.nom AS `Departament`, 
             e.nom AS `Esdeveniment`, u.nom AS `Ubicacio`FROM activitat a JOIN departament d ON 
             a.id_departament = d.id JOIN esdeveniment e ON a.id_esdeveniment = e.id JOIN ubicacio u ON 
-            a.id_ubicacio = u.id LEFT OUTER JOIN activitat_ponent ap ON a.id = ap.id_activitat 
+            a.id_ubicacio = u.id  
             where titol LIKE '%{nom.Text}%'"
         End If
 
