@@ -1,12 +1,10 @@
 ﻿Imports MySql.Data.MySqlClient
-
 Public Class gestio_reserves
     Dim query As String
     Private Sub inici_Click(sender As Object, e As EventArgs) Handles inici.Click
         Me.Hide()
         principal.Show()
     End Sub
-
     Private Sub Editar_Click(sender As Object, e As EventArgs) Handles Editar.Click
         Me.Hide()
         editar_reserves.Show()
@@ -15,9 +13,10 @@ Public Class gestio_reserves
         Fila = taula_reserves.CurrentRow.Index
         id = taula_reserves.Rows(Fila).Cells(0).Value.ToString
         editar_reserves.identificador.Text = id
+        editar_reserves.usuari.Text = taula_reserves.Rows(Fila).Cells(1).Value.ToString
+        editar_reserves.activitat.Text = taula_reserves.Rows(Fila).Cells(2).Value.ToString
         editar_reserves.emplenarCamps()
     End Sub
-
     Private Sub Cercar_Click(sender As Object, e As EventArgs) Handles Cercar.Click
 
         If cercar_per_data.Checked = True And String.IsNullOrEmpty(estat.Text) Then
