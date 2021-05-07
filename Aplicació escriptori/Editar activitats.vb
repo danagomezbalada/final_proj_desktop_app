@@ -59,7 +59,6 @@ Public Class editar_activitats
         Dim adaptador As New MySqlDataAdapter(comanda)
         Dim conjunt_dades As New DataTable()
         adaptador.Fill(conjunt_dades)
-
         Dim dt As New DataTable()
         dt.Load(comanda.ExecuteReader)
         esdeveniment.DataSource = dt
@@ -122,5 +121,6 @@ Public Class editar_activitats
         End If
         Dim comanda As New MySqlCommand(query, Connexions.connexio)
         comanda.ExecuteNonQuery()
+        Connexions.desconnectar()
     End Sub
 End Class
