@@ -3,10 +3,6 @@
 Public Class crear_activitat
     Public query As String
     Public id As String
-    Private Sub titol_TextChanged(sender As Object, e As EventArgs) Handles titol.TextChanged
-
-    End Sub
-
     Private Sub inici_Click(sender As Object, e As EventArgs) Handles inici.Click
         Me.Hide()
         principal.Show()
@@ -16,40 +12,29 @@ Public Class crear_activitat
         Insertar()
         MessageBox.Show("Valor afegit")
     End Sub
-
     Function Insertar()
-        '''Connexions.connectar()
-        '''Dim title As String
-        '''Dim dates As String
-        '''Dim price As Double
-        ''' Dim description As String
-        ''' Dim total_places As Integer
-        '''Dim data_fi As String
-        '''Dim data_inici As String
-        '''Dim nomEsdeveniment As Integer
-        '''Dim nomUbicacio As Integer
-        '''Dim nomDepartament As Integer
-
-        '''title = titol.Text
-        '''dates = data.Value.ToString("yyyy-MM-dd")
-        '''price = preu.Text
-        '''description = descripcio.Text
-        '''total_places = places_totals.Text
-        '''data_fi = data_fi_mostra.Value.ToString("yyyy-MM-dd")
-        '''data_inici = data_inici_mostra.Value.ToString("yyyy-MM-dd")
-        '''nomEsdeveniment = esdeveniment.Text
-        '''nomUbicacio = ubicacio.Text
-        '''nomD epartament = id_departament.Text
-
-        '''query = $"INSERT INTO `activitat` (`titol`,`data`,`descripcio`,`preu`,`places_totals`,`id_esdeveniment`,
-        '''`data_inici_mostra`,`data_fi_mostra`,`id_ubicacio`,`id_departament`) 
-        '''VALUES ('{title}','{dates}','{description}','{price}','{total_places}','{esdeveniment}','{data_inici}',
-        ''''{data_fi}','{ubicacio}','{departament}');"
-        ''' Dim comanda = New MySqlCommand(query, Connexions.connexio)
-        '''comanda.ExecuteNonQuery()
-        '''Connexions.desconnectar()
+        Connexions.connectar()
+        If titol.Text.Contains("'") Or descripcio.Text.Contains("'") Then
+            titol.Text = titol.Text.Replace("'", "’")
+            descripcio.Text = descripcio.Text.Replace("'", "’")
+            query = $"INSERT INTO `activitat`(`titol`, `data`, `descripcio`, `preu`, `places_totals`,`places_actuals`, 
+            `id_esdeveniment`, `data_inici_mostra`, `data_fi_mostra`, `id_ubicacio`, `id_departament`) 
+            VALUES ('{titol.Text}','{data.Value.ToString("yyyy-MM-dd")}','{descripcio.Text}','{preu.Text}',
+            '{places_totals.Text}','{places_actuals.Text}','{esdeveniment.SelectedValue}',
+            '{data_inici_mostra.Value.ToString("yyyy-MM-dd")}','{data_fi_mostra.Value.ToString("yyyy-MM-dd")}',
+            '{ubicacio.SelectedValue}','{departament.SelectedValue}')"
+        Else
+            query = $"INSERT INTO `activitat`(`titol`, `data`, `descripcio`, `preu`, `places_totals`,`places_actuals`, 
+            `id_esdeveniment`, `data_inici_mostra`, `data_fi_mostra`, `id_ubicacio`, `id_departament`) 
+            VALUES ('{titol.Text}','{data.Value.ToString("yyyy-MM-dd")}','{descripcio.Text}','{preu.Text}',
+            '{places_totals.Text}','{places_actuals.Text}','{esdeveniment.SelectedValue}',
+            '{data_inici_mostra.Value.ToString("yyyy-MM-dd")}','{data_fi_mostra.Value.ToString("yyyy-MM-dd")}',
+            '{ubicacio.SelectedValue}','{departament.SelectedValue}')"
+        End If
+        Dim comanda = New MySqlCommand(query, Connexions.connexio)
+        comanda.ExecuteNonQuery()
+        Connexions.desconnectar()
     End Function
-
     Private Sub back_Click(sender As Object, e As EventArgs) Handles back.Click
         Me.Hide()
         gestio_activitats.Show()
@@ -59,11 +44,61 @@ Public Class crear_activitat
         Me.Hide()
         gestio_ponents_activitat.Show()
         editar_activitats.pantalla = "Crear"
-        'id = $"SELECT id from activitat"
     End Sub
 
     Private Sub egstionar_categories_activitat_Click(sender As Object, e As EventArgs) Handles egstionar_categories_activitat.Click
         Me.Hide()
         gestio_categories_activitat.Show()
+        editar_activitats.pantalla = "Crear"
     End Sub
+    Function emplenarCamps()
+        carregarEsdeveniments()
+        carregarUbicacio()
+        carregarDepartament()
+    End Function
+    Function carregarEsdeveniments()
+        Connexions.connectar()
+        query = $"SELECT id,nom FROM esdeveniment"
+        Dim comanda As New MySqlCommand(query, Connexions.connexio)
+        Dim adaptador As New MySqlDataAdapter(comanda)
+        Dim conjunt_dades As New DataTable()
+        adaptador.Fill(conjunt_dades)
+
+        Dim dt As New DataTable()
+        dt.Load(comanda.ExecuteReader)
+        esdeveniment.DataSource = dt
+        esdeveniment.DisplayMember = "nom"
+        esdeveniment.ValueMember = "id"
+    End Function
+
+    Function carregarUbicacio()
+        Connexions.connectar()
+        query = $"SELECT id,nom FROM ubicacio"
+        Dim comanda As New MySqlCommand(query, Connexions.connexio)
+        Dim adaptador As New MySqlDataAdapter(comanda)
+        Dim conjunt_dades As New DataTable()
+        adaptador.Fill(conjunt_dades)
+
+        Dim dt As New DataTable()
+        dt.Load(comanda.ExecuteReader)
+        ubicacio.DataSource = dt
+        ubicacio.DisplayMember = "nom"
+        ubicacio.ValueMember = "id"
+    End Function
+
+    Function carregarDepartament()
+        Connexions.connectar()
+        query = $"SELECT id,nom FROM departament"
+        Dim comanda As New MySqlCommand(query, Connexions.connexio)
+        Dim adaptador As New MySqlDataAdapter(comanda)
+        Dim conjunt_dades As New DataTable()
+        adaptador.Fill(conjunt_dades)
+
+        Dim dt As New DataTable()
+        dt.Load(comanda.ExecuteReader)
+        departament.DataSource = dt
+        departament.DisplayMember = "nom"
+        departament.ValueMember = "id"
+
+    End Function
 End Class

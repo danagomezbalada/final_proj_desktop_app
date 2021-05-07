@@ -28,15 +28,16 @@ Partial Class editar_reserves
         Me.Label5 = New System.Windows.Forms.Label()
         Me.codi_transaccio = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.id_activitat = New System.Windows.Forms.TextBox()
+        Me.activitat = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.actualitzar = New System.Windows.Forms.Button()
-        Me.id_usuari = New System.Windows.Forms.TextBox()
+        Me.usuari = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.data = New System.Windows.Forms.DateTimePicker()
         Me.estat = New System.Windows.Forms.ComboBox()
+        Me.identificador = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'back
@@ -90,12 +91,12 @@ Partial Class editar_reserves
         Me.Label4.TabIndex = 33
         Me.Label4.Text = "Codi Transacció:"
         '
-        'id_activitat
+        'activitat
         '
-        Me.id_activitat.Location = New System.Drawing.Point(120, 110)
-        Me.id_activitat.Name = "id_activitat"
-        Me.id_activitat.Size = New System.Drawing.Size(100, 20)
-        Me.id_activitat.TabIndex = 32
+        Me.activitat.Location = New System.Drawing.Point(120, 110)
+        Me.activitat.Name = "activitat"
+        Me.activitat.Size = New System.Drawing.Size(100, 20)
+        Me.activitat.TabIndex = 32
         '
         'Label3
         '
@@ -116,12 +117,12 @@ Partial Class editar_reserves
         Me.actualitzar.Text = "Actualitzar"
         Me.actualitzar.UseVisualStyleBackColor = True
         '
-        'id_usuari
+        'usuari
         '
-        Me.id_usuari.Location = New System.Drawing.Point(120, 70)
-        Me.id_usuari.Name = "id_usuari"
-        Me.id_usuari.Size = New System.Drawing.Size(100, 20)
-        Me.id_usuari.TabIndex = 29
+        Me.usuari.Location = New System.Drawing.Point(120, 70)
+        Me.usuari.Name = "usuari"
+        Me.usuari.Size = New System.Drawing.Size(100, 20)
+        Me.usuari.TabIndex = 29
         '
         'Label2
         '
@@ -168,12 +169,21 @@ Partial Class editar_reserves
         Me.estat.Size = New System.Drawing.Size(121, 21)
         Me.estat.TabIndex = 41
         '
+        'identificador
+        '
+        Me.identificador.Location = New System.Drawing.Point(461, 203)
+        Me.identificador.Name = "identificador"
+        Me.identificador.Size = New System.Drawing.Size(26, 20)
+        Me.identificador.TabIndex = 42
+        Me.identificador.Visible = False
+        '
         'editar_reserves
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DodgerBlue
         Me.ClientSize = New System.Drawing.Size(499, 235)
+        Me.Controls.Add(Me.identificador)
         Me.Controls.Add(Me.estat)
         Me.Controls.Add(Me.data)
         Me.Controls.Add(Me.Label6)
@@ -182,10 +192,10 @@ Partial Class editar_reserves
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.codi_transaccio)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.id_activitat)
+        Me.Controls.Add(Me.activitat)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.actualitzar)
-        Me.Controls.Add(Me.id_usuari)
+        Me.Controls.Add(Me.usuari)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "editar_reserves"
@@ -200,13 +210,14 @@ Partial Class editar_reserves
     Friend WithEvents Label5 As Label
     Friend WithEvents codi_transaccio As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents id_activitat As TextBox
+    Friend WithEvents activitat As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents actualitzar As Button
-    Friend WithEvents id_usuari As TextBox
+    Friend WithEvents usuari As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents data As DateTimePicker
     Friend WithEvents estat As ComboBox
+    Friend WithEvents identificador As TextBox
 End Class

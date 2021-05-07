@@ -21,8 +21,8 @@ Public Class gestio_ponents_activitat
         Dim missatge As MsgBoxResult = MsgBox("Vols eliminar el registre?", MsgBoxStyle.OkCancel, "Eliminar")
         If missatge = MsgBoxResult.Ok Then
             Fila = taula_ponents_actuals.CurrentRow.Index
-            id = taula_ponents_actuals.Rows(Fila).Cells(0).Value
-            query = $"DELETE FROM activitat_ponent where id = '{id}'"
+            id = taula_ponents_actuals.Rows(Fila).Cells(1).Value
+            query = $"DELETE FROM activitat_ponent where id_ponent = '{id}'"
             Connexions.connectar()
             Dim comanda As New MySqlCommand(query, Connexions.connexio)
             comanda.ExecuteNonQuery()
@@ -30,15 +30,15 @@ Public Class gestio_ponents_activitat
             actualitzarTaula()
         End If
     End Sub
-    Private Sub gestio_ponents_activitat_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        actualitzarTaula()
-    End Sub
     Function actualitzarTaula()
         Connexions.connectar()
-        query = $"SELECT a.titol AS 'Nom_Activitat', p.nom AS `Nom_Ponent`, p.cognoms AS 'Cognoms_Ponent' 
+        query = $"SELECT a.id ,p.id, p.nom AS `Nom`, p.cognoms AS 'Cognoms' 
         FROM activitat a LEFT OUTER JOIN activitat_ponent ap ON 
-        a.id = ap.id_activitat LEFT OUTER JOIN ponent p ON ap.id_ponent = p.id "
-        query1 = $"SELECT nom AS 'Nom_Ponent',cognoms AS 'Cognoms_Ponent' FROM ponent"
+        a.id = ap.id_activitat LEFT OUTER JOIN ponent p ON ap.id_ponent = p.id 
+        where a.id='{editar_activitats.identificador.Text}'"
+
+        query1 = $"SELECT id,nom AS 'Nom',cognoms AS 'Cognoms' FROM ponent where id NOT IN 
+        (SELECT id_ponent FROM activitat_ponent where id_activitat ='{editar_activitats.identificador.Text}')"
         Dim comanda As New MySqlCommand(query, Connexions.connexio)
         Dim comanda1 As New MySqlCommand(query1, Connexions.connexio)
         Dim adaptador As New MySqlDataAdapter(comanda)
@@ -51,7 +51,20 @@ Public Class gestio_ponents_activitat
         taula_ponents_actuals.DataSource = conjunt_dades
         taula_ponents_disponibles.AutoSizeColumnsMode = DataGridViewAutoSizeColumnMode.Fill
         taula_ponents_disponibles.DataSource = conjunt_dades1
+        taula_ponents_disponibles.Columns(0).Visible = False
+        taula_ponents_actuals.Columns(0).Visible = False
+        taula_ponents_actuals.Columns(1).Visible = False
         Connexions.desconnectar()
     End Function
 
+    Private Sub Afegir_Click(sender As Object, e As EventArgs) Handles Afegir.Click
+        Connexions.connectar()
+        Dim Fila As Integer
+        Fila = taula_ponents_disponibles.CurrentRow.Index
+        query = $"INSERT INTO activitat_ponent (id_activitat,id_ponent) VALUES ('{editar_activitats.identificador.Text}', '{taula_ponents_disponibles.Rows(Fila).Cells(0).Value.ToString}')"
+        Dim comanda As New MySqlCommand(query, Connexions.connexio)
+        comanda.ExecuteNonQuery()
+        Connexions.desconnectar()
+        actualitzarTaula()
+    End Sub
 End Class

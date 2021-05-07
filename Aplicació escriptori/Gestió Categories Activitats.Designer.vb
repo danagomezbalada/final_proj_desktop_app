@@ -25,15 +25,15 @@ Partial Class gestio_categories_activitat
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(gestio_categories_activitat))
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.taula_categoria_disponibles = New System.Windows.Forms.DataGridView()
         Me.eliminar = New System.Windows.Forms.Button()
         Me.afegir = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.taula_categoria_actuals = New System.Windows.Forms.DataGridView()
         Me.Gestio_ponents = New System.Windows.Forms.Label()
         Me.back = New System.Windows.Forms.Button()
         Me.inici = New System.Windows.Forms.Button()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.taula_categoria_disponibles, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.taula_categoria_actuals, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label2
@@ -56,13 +56,15 @@ Partial Class gestio_categories_activitat
         Me.Label1.TabIndex = 30
         Me.Label1.Text = "Actuals"
         '
-        'DataGridView2
+        'taula_categoria_disponibles
         '
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(411, 101)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(264, 300)
-        Me.DataGridView2.TabIndex = 29
+        Me.taula_categoria_disponibles.BackgroundColor = System.Drawing.Color.DodgerBlue
+        Me.taula_categoria_disponibles.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.taula_categoria_disponibles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.taula_categoria_disponibles.Location = New System.Drawing.Point(411, 101)
+        Me.taula_categoria_disponibles.Name = "taula_categoria_disponibles"
+        Me.taula_categoria_disponibles.Size = New System.Drawing.Size(264, 300)
+        Me.taula_categoria_disponibles.TabIndex = 29
         '
         'eliminar
         '
@@ -82,13 +84,15 @@ Partial Class gestio_categories_activitat
         Me.afegir.Text = "Afegir"
         Me.afegir.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'taula_categoria_actuals
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(22, 101)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(264, 300)
-        Me.DataGridView1.TabIndex = 26
+        Me.taula_categoria_actuals.BackgroundColor = System.Drawing.Color.DodgerBlue
+        Me.taula_categoria_actuals.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.taula_categoria_actuals.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.taula_categoria_actuals.Location = New System.Drawing.Point(22, 101)
+        Me.taula_categoria_actuals.Name = "taula_categoria_actuals"
+        Me.taula_categoria_actuals.Size = New System.Drawing.Size(264, 300)
+        Me.taula_categoria_actuals.TabIndex = 26
         '
         'Gestio_ponents
         '
@@ -135,14 +139,14 @@ Partial Class gestio_categories_activitat
         Me.Controls.Add(Me.Gestio_ponents)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.DataGridView2)
+        Me.Controls.Add(Me.taula_categoria_disponibles)
         Me.Controls.Add(Me.eliminar)
         Me.Controls.Add(Me.afegir)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.taula_categoria_actuals)
         Me.Name = "gestio_categories_activitat"
         Me.Text = "Gestió Categories de l'Activitat"
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.taula_categoria_disponibles, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.taula_categoria_actuals, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -150,10 +154,10 @@ Partial Class gestio_categories_activitat
 
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents taula_categoria_disponibles As DataGridView
     Friend WithEvents eliminar As Button
     Friend WithEvents afegir As Button
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents taula_categoria_actuals As DataGridView
     Friend WithEvents Gestio_ponents As Label
     Friend WithEvents back As Button
     Friend WithEvents inici As Button

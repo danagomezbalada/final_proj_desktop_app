@@ -26,14 +26,15 @@ Partial Class gestio_reserves
         Me.inici = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.taula_reserves = New System.Windows.Forms.DataGridView()
         Me.Eliminar = New System.Windows.Forms.Button()
         Me.Editar = New System.Windows.Forms.Button()
         Me.Cercar = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.estat = New System.Windows.Forms.TextBox()
         Me.data = New System.Windows.Forms.DateTimePicker()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.cercar_per_data = New System.Windows.Forms.CheckBox()
+        CType(Me.taula_reserves, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'inici
@@ -68,15 +69,15 @@ Partial Class gestio_reserves
         Me.Label1.TabIndex = 22
         Me.Label1.Text = "Gestió Reserves"
         '
-        'DataGridView1
+        'taula_reserves
         '
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.DodgerBlue
-        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(30, 100)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(600, 300)
-        Me.DataGridView1.TabIndex = 21
+        Me.taula_reserves.BackgroundColor = System.Drawing.Color.DodgerBlue
+        Me.taula_reserves.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.taula_reserves.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.taula_reserves.Location = New System.Drawing.Point(30, 100)
+        Me.taula_reserves.Name = "taula_reserves"
+        Me.taula_reserves.Size = New System.Drawing.Size(600, 300)
+        Me.taula_reserves.TabIndex = 21
         '
         'Eliminar
         '
@@ -98,7 +99,7 @@ Partial Class gestio_reserves
         '
         'Cercar
         '
-        Me.Cercar.Location = New System.Drawing.Point(496, 62)
+        Me.Cercar.Location = New System.Drawing.Point(571, 62)
         Me.Cercar.Name = "Cercar"
         Me.Cercar.Size = New System.Drawing.Size(75, 20)
         Me.Cercar.TabIndex = 17
@@ -109,7 +110,7 @@ Partial Class gestio_reserves
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(304, 62)
+        Me.Label3.Location = New System.Drawing.Point(387, 62)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(49, 19)
         Me.Label3.TabIndex = 26
@@ -117,7 +118,7 @@ Partial Class gestio_reserves
         '
         'estat
         '
-        Me.estat.Location = New System.Drawing.Point(364, 62)
+        Me.estat.Location = New System.Drawing.Point(439, 62)
         Me.estat.Name = "estat"
         Me.estat.Size = New System.Drawing.Size(100, 20)
         Me.estat.TabIndex = 25
@@ -129,25 +130,37 @@ Partial Class gestio_reserves
         Me.data.Size = New System.Drawing.Size(200, 20)
         Me.data.TabIndex = 27
         '
+        'cercar_per_data
+        '
+        Me.cercar_per_data.AutoSize = True
+        Me.cercar_per_data.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cercar_per_data.Location = New System.Drawing.Point(291, 64)
+        Me.cercar_per_data.Name = "cercar_per_data"
+        Me.cercar_per_data.Size = New System.Drawing.Size(101, 18)
+        Me.cercar_per_data.TabIndex = 28
+        Me.cercar_per_data.Text = "Cercar per data?"
+        Me.cercar_per_data.UseVisualStyleBackColor = True
+        '
         'gestio_reserves
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DodgerBlue
         Me.ClientSize = New System.Drawing.Size(665, 450)
+        Me.Controls.Add(Me.cercar_per_data)
         Me.Controls.Add(Me.data)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.estat)
         Me.Controls.Add(Me.inici)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.taula_reserves)
         Me.Controls.Add(Me.Eliminar)
         Me.Controls.Add(Me.Editar)
         Me.Controls.Add(Me.Cercar)
         Me.Name = "gestio_reserves"
         Me.Text = "Gestió Reserves"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.taula_reserves, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -156,11 +169,12 @@ Partial Class gestio_reserves
     Friend WithEvents inici As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents taula_reserves As DataGridView
     Friend WithEvents Eliminar As Button
     Friend WithEvents Editar As Button
     Friend WithEvents Cercar As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents estat As TextBox
     Friend WithEvents data As DateTimePicker
+    Friend WithEvents cercar_per_data As CheckBox
 End Class

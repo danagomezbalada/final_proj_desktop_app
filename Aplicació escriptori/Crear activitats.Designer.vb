@@ -32,7 +32,6 @@ Partial Class crear_activitat
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.descripcio = New System.Windows.Forms.TextBox()
         Me.preu = New System.Windows.Forms.TextBox()
         Me.places_totals = New System.Windows.Forms.TextBox()
         Me.crear = New System.Windows.Forms.Button()
@@ -49,6 +48,9 @@ Partial Class crear_activitat
         Me.departament = New System.Windows.Forms.ComboBox()
         Me.gestionar_ponents_activitat = New System.Windows.Forms.Button()
         Me.egstionar_categories_activitat = New System.Windows.Forms.Button()
+        Me.places_actuals = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.descripcio = New System.Windows.Forms.RichTextBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -92,7 +94,7 @@ Partial Class crear_activitat
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(43, 190)
+        Me.Label4.Location = New System.Drawing.Point(43, 231)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(85, 19)
         Me.Label4.TabIndex = 5
@@ -112,7 +114,7 @@ Partial Class crear_activitat
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(302, 110)
+        Me.Label7.Location = New System.Drawing.Point(302, 149)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(128, 19)
         Me.Label7.TabIndex = 8
@@ -122,7 +124,7 @@ Partial Class crear_activitat
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(302, 150)
+        Me.Label8.Location = New System.Drawing.Point(302, 189)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(110, 19)
         Me.Label8.TabIndex = 9
@@ -137,13 +139,6 @@ Partial Class crear_activitat
         Me.Label9.Size = New System.Drawing.Size(98, 19)
         Me.Label9.TabIndex = 10
         Me.Label9.Text = "Places totals:"
-        '
-        'descripcio
-        '
-        Me.descripcio.Location = New System.Drawing.Point(140, 190)
-        Me.descripcio.Name = "descripcio"
-        Me.descripcio.Size = New System.Drawing.Size(100, 20)
-        Me.descripcio.TabIndex = 12
         '
         'preu
         '
@@ -161,7 +156,7 @@ Partial Class crear_activitat
         '
         'crear
         '
-        Me.crear.Location = New System.Drawing.Point(333, 313)
+        Me.crear.Location = New System.Drawing.Point(403, 338)
         Me.crear.Name = "crear"
         Me.crear.Size = New System.Drawing.Size(97, 31)
         Me.crear.TabIndex = 17
@@ -186,7 +181,7 @@ Partial Class crear_activitat
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(302, 190)
+        Me.Label6.Location = New System.Drawing.Point(302, 229)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(108, 19)
         Me.Label6.TabIndex = 19
@@ -196,7 +191,7 @@ Partial Class crear_activitat
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(43, 230)
+        Me.Label10.Location = New System.Drawing.Point(43, 189)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(71, 19)
         Me.Label10.TabIndex = 21
@@ -206,7 +201,7 @@ Partial Class crear_activitat
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(302, 230)
+        Me.Label11.Location = New System.Drawing.Point(302, 269)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(94, 19)
         Me.Label11.TabIndex = 23
@@ -225,7 +220,7 @@ Partial Class crear_activitat
         '
         Me.data_inici_mostra.CalendarFont = New System.Drawing.Font("Times New Roman", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.data_inici_mostra.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.data_inici_mostra.Location = New System.Drawing.Point(428, 110)
+        Me.data_inici_mostra.Location = New System.Drawing.Point(428, 149)
         Me.data_inici_mostra.Name = "data_inici_mostra"
         Me.data_inici_mostra.Size = New System.Drawing.Size(170, 18)
         Me.data_inici_mostra.TabIndex = 26
@@ -234,7 +229,7 @@ Partial Class crear_activitat
         '
         Me.data_fi_mostra.CalendarFont = New System.Drawing.Font("Times New Roman", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.data_fi_mostra.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.data_fi_mostra.Location = New System.Drawing.Point(428, 150)
+        Me.data_fi_mostra.Location = New System.Drawing.Point(428, 189)
         Me.data_fi_mostra.Name = "data_fi_mostra"
         Me.data_fi_mostra.Size = New System.Drawing.Size(168, 18)
         Me.data_fi_mostra.TabIndex = 27
@@ -254,7 +249,7 @@ Partial Class crear_activitat
         'ubicacio
         '
         Me.ubicacio.FormattingEnabled = True
-        Me.ubicacio.Location = New System.Drawing.Point(140, 230)
+        Me.ubicacio.Location = New System.Drawing.Point(140, 189)
         Me.ubicacio.Name = "ubicacio"
         Me.ubicacio.Size = New System.Drawing.Size(121, 21)
         Me.ubicacio.TabIndex = 46
@@ -262,7 +257,7 @@ Partial Class crear_activitat
         'esdeveniment
         '
         Me.esdeveniment.FormattingEnabled = True
-        Me.esdeveniment.Location = New System.Drawing.Point(437, 190)
+        Me.esdeveniment.Location = New System.Drawing.Point(437, 229)
         Me.esdeveniment.Name = "esdeveniment"
         Me.esdeveniment.Size = New System.Drawing.Size(121, 21)
         Me.esdeveniment.TabIndex = 47
@@ -270,7 +265,7 @@ Partial Class crear_activitat
         'departament
         '
         Me.departament.FormattingEnabled = True
-        Me.departament.Location = New System.Drawing.Point(437, 230)
+        Me.departament.Location = New System.Drawing.Point(437, 269)
         Me.departament.Name = "departament"
         Me.departament.Size = New System.Drawing.Size(121, 21)
         Me.departament.TabIndex = 48
@@ -286,12 +281,37 @@ Partial Class crear_activitat
         '
         'egstionar_categories_activitat
         '
-        Me.egstionar_categories_activitat.Location = New System.Drawing.Point(49, 285)
+        Me.egstionar_categories_activitat.Location = New System.Drawing.Point(182, 338)
         Me.egstionar_categories_activitat.Name = "egstionar_categories_activitat"
         Me.egstionar_categories_activitat.Size = New System.Drawing.Size(127, 31)
         Me.egstionar_categories_activitat.TabIndex = 50
         Me.egstionar_categories_activitat.Text = "Gestionar Categories"
         Me.egstionar_categories_activitat.UseVisualStyleBackColor = True
+        '
+        'places_actuals
+        '
+        Me.places_actuals.Location = New System.Drawing.Point(417, 109)
+        Me.places_actuals.Name = "places_actuals"
+        Me.places_actuals.Size = New System.Drawing.Size(100, 20)
+        Me.places_actuals.TabIndex = 52
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(302, 109)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(108, 19)
+        Me.Label12.TabIndex = 51
+        Me.Label12.Text = "Places actuals:"
+        '
+        'descripcio
+        '
+        Me.descripcio.Location = New System.Drawing.Point(134, 229)
+        Me.descripcio.Name = "descripcio"
+        Me.descripcio.Size = New System.Drawing.Size(155, 96)
+        Me.descripcio.TabIndex = 55
+        Me.descripcio.Text = ""
         '
         'crear_activitat
         '
@@ -299,6 +319,9 @@ Partial Class crear_activitat
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DodgerBlue
         Me.ClientSize = New System.Drawing.Size(609, 387)
+        Me.Controls.Add(Me.descripcio)
+        Me.Controls.Add(Me.places_actuals)
+        Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.egstionar_categories_activitat)
         Me.Controls.Add(Me.gestionar_ponents_activitat)
         Me.Controls.Add(Me.departament)
@@ -315,7 +338,6 @@ Partial Class crear_activitat
         Me.Controls.Add(Me.crear)
         Me.Controls.Add(Me.places_totals)
         Me.Controls.Add(Me.preu)
-        Me.Controls.Add(Me.descripcio)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
@@ -341,7 +363,6 @@ Partial Class crear_activitat
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents descripcio As TextBox
     Friend WithEvents preu As TextBox
     Friend WithEvents places_totals As TextBox
     Friend WithEvents crear As Button
@@ -358,4 +379,7 @@ Partial Class crear_activitat
     Friend WithEvents departament As ComboBox
     Friend WithEvents gestionar_ponents_activitat As Button
     Friend WithEvents egstionar_categories_activitat As Button
+    Friend WithEvents places_actuals As TextBox
+    Friend WithEvents Label12 As Label
+    Friend WithEvents descripcio As RichTextBox
 End Class
