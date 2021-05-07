@@ -3,10 +3,6 @@
 Public Class crear_activitat
     Public query As String
     Public id As String
-    Private Sub titol_TextChanged(sender As Object, e As EventArgs) Handles titol.TextChanged
-
-    End Sub
-
     Private Sub inici_Click(sender As Object, e As EventArgs) Handles inici.Click
         Me.Hide()
         principal.Show()
@@ -16,7 +12,6 @@ Public Class crear_activitat
         Insertar()
         MessageBox.Show("Valor afegit")
     End Sub
-
     Function Insertar()
         Connexions.connectar()
         If titol.Text.Contains("'") Or descripcio.Text.Contains("'") Then
@@ -40,7 +35,6 @@ Public Class crear_activitat
         comanda.ExecuteNonQuery()
         Connexions.desconnectar()
     End Function
-
     Private Sub back_Click(sender As Object, e As EventArgs) Handles back.Click
         Me.Hide()
         gestio_activitats.Show()

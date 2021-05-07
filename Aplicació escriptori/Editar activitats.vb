@@ -30,7 +30,6 @@ Public Class editar_activitats
         gestio_categories_activitat.actualitzarTaula()
     End Sub
     Function emplenarCamps()
-
         Connexions.connectar()
         query = $"Select * from activitat where id='{identificador.Text}'"
         Dim comanda As New MySqlCommand(query, Connexions.connexio)
@@ -99,12 +98,9 @@ Public Class editar_activitats
         departament.DisplayMember = "nom"
         departament.ValueMember = "id"
         departament.SelectedValue = departamentId
-
     End Function
     Private Sub actualitzar_Click(sender As Object, e As EventArgs) Handles actualitzar.Click
         Connexions.connectar()
-        Dim id As String
-        id = identificador.Text
         If titol.Text.Contains("'") Or descripcio.Text.Contains("'") Then
             titol.Text = titol.Text.Replace("'", "’")
             descripcio.Text = descripcio.Text.Replace("'", "’")
@@ -114,7 +110,7 @@ Public Class editar_activitats
             data_inici_mostra= ('{data_inici_mostra.Value.ToString("yyyy-MM-dd")}'),
             data_fi_mostra = ('{data_fi_mostra.Value.ToString("yyyy-MM-dd")}'),
             id_ubicacio = ('{ubicacio.SelectedValue}'),id_departament= ('{departament.SelectedValue}')
-            where id = ('{id}')"
+            where id = ('{identificador.Text}')"
         Else
             query = $"Update activitat SET titol = ('{titol.Text}'),data= ('{data.Value.ToString("yyyy-MM-dd")}'),
             descripcio = ('{descripcio.Text}'),preu = ('{preu.Text}'),places_totals = ('{places_totals.Text}'),
@@ -122,13 +118,9 @@ Public Class editar_activitats
             data_inici_mostra= ('{data_inici_mostra.Value.ToString("yyyy-MM-dd")}'),
             data_fi_mostra = ('{data_fi_mostra.Value.ToString("yyyy-MM-dd")}'),
             id_ubicacio = ('{ubicacio.SelectedValue}'),id_departament= ('{departament.SelectedValue}')
-            where id = ('{id}')"
+            where id = ('{identificador.Text}')"
         End If
         Dim comanda As New MySqlCommand(query, Connexions.connexio)
         comanda.ExecuteNonQuery()
     End Sub
 End Class
-
-'UPDATE `activitat` SET `titol`="hola",`data`="2021/12/10",`descripcio`="hola",`preu`=3,`places_totals`=90,
-'  `places_actuals`=46,`id_esdeveniment`=1,`data_inici_mostra`="2021/12/10",`data_fi_mostra`="2021/12/10",
-'   `id_ubicacio`=1,`id_departament`=1 WHERE id=1
