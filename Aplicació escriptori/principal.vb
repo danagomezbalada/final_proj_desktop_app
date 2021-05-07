@@ -7,7 +7,6 @@
     Private Sub gestionar_activitats_Click(sender As Object, e As EventArgs) Handles gestionar_activitats.Click
         Me.Hide()
         gestio_activitats.Show()
-
     End Sub
 
     Private Sub administrar_esdeveniments_Click(sender As Object, e As EventArgs) Handles administrar_esdeveniments.Click

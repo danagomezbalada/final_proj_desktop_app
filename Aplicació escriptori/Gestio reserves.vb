@@ -61,4 +61,20 @@ Public Class gestio_reserves
         taula_reserves.Columns(0).Visible = False
         Connexions.desconnectar()
     End Function
+
+    Private Sub Eliminar_Click(sender As Object, e As EventArgs) Handles Eliminar.Click
+        Dim id As String
+        Dim Fila As Integer
+        Dim missatge As MsgBoxResult = MsgBox("Vols eliminar el registre?", MsgBoxStyle.OkCancel, "Eliminar")
+        If missatge = MsgBoxResult.Ok Then
+            Fila = taula_reserves.CurrentRow.Index
+            id = taula_reserves.Rows(Fila).Cells(0).Value
+            query = $"DELETE FROM activitat where id = '{id}'"
+            Connexions.connectar()
+            Dim comanda As New MySqlCommand(query, Connexions.connexio)
+            comanda.ExecuteNonQuery()
+            Connexions.desconnectar()
+            actualitzarTaula()
+        End If
+    End Sub
 End Class
