@@ -41,7 +41,7 @@ Public Class gestio_ponent
         If missatge = MsgBoxResult.Ok Then
             Fila = taula_ponent.CurrentRow.Index
             id = taula_ponent.Rows(Fila).Cells(0).Value
-            query = $"DELETE FROM activitat_ponent where id = '{id}'"
+            query = $"DELETE FROM ponent where id = '{id}'"
             Connexions.connectar()
             Dim comanda As New MySqlCommand(query, Connexions.connexio)
             comanda.ExecuteNonQuery()

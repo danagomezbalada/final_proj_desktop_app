@@ -29,6 +29,7 @@ Public Class editar_categories
         Dim comanda = New MySqlCommand(query, Connexions.connexio)
         comanda.ExecuteNonQuery()
         Connexions.desconnectar()
+        MessageBox.Show("Categoria actualitzada")
     End Sub
 
     Private Sub editar_categories_Load(sender As Object, e As EventArgs) Handles MyBase.Load

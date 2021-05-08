@@ -29,6 +29,7 @@ Public Class editar_departaments
         Dim comanda As New MySqlCommand(query, Connexions.connexio)
         comanda.ExecuteNonQuery()
         Connexions.desconnectar()
+        MessageBox.Show("Departament actualitzat")
     End Sub
 
     Private Sub editar_departaments_Load(sender As Object, e As EventArgs) Handles MyBase.Load

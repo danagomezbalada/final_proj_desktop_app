@@ -41,11 +41,10 @@ Public Class editar_esdeveniments
             query = $"Update esdeveniment SET any = ('{any.Text}'),nom=('{nom.Text}'),  descripcio = ('{descripcio.Text}'),actiu = ('{active}') 
         where id = ('{id}')"
         End If
-
-
         Dim comanda As New MySqlCommand(query, Connexions.connexio)
         comanda.ExecuteNonQuery()
         Connexions.desconnectar()
+        MessageBox.Show("Esdeveniment actualitzat")
     End Sub
 
     Private Sub editar_esdeveniments_Load(sender As Object, e As EventArgs) Handles MyBase.Load
