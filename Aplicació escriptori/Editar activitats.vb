@@ -121,6 +121,7 @@ Public Class editar_activitats
         End If
         Dim comanda As New MySqlCommand(query, Connexions.connexio)
         comanda.ExecuteNonQuery()
+        MessageBox.Show("Activitat actualitzada")
         Connexions.desconnectar()
     End Sub
 End Class

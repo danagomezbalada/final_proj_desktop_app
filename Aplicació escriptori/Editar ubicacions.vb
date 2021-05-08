@@ -29,6 +29,7 @@ Public Class editar_ubicacions
         Dim comanda As New MySqlCommand(query, Connexions.connexio)
         comanda.ExecuteNonQuery()
         Connexions.desconnectar()
+        MessageBox.Show("Ubicació actualitzada")
     End Sub
 
     Private Sub editar_ubicacions_Load(sender As Object, e As EventArgs) Handles MyBase.Load

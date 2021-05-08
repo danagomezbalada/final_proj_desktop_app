@@ -27,7 +27,6 @@ Partial Class gestio_reserves
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.taula_reserves = New System.Windows.Forms.DataGridView()
-        Me.Eliminar = New System.Windows.Forms.Button()
         Me.Editar = New System.Windows.Forms.Button()
         Me.Cercar = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -79,18 +78,9 @@ Partial Class gestio_reserves
         Me.taula_reserves.Size = New System.Drawing.Size(600, 300)
         Me.taula_reserves.TabIndex = 21
         '
-        'Eliminar
-        '
-        Me.Eliminar.Location = New System.Drawing.Point(373, 413)
-        Me.Eliminar.Name = "Eliminar"
-        Me.Eliminar.Size = New System.Drawing.Size(75, 23)
-        Me.Eliminar.TabIndex = 20
-        Me.Eliminar.Text = "Eliminar"
-        Me.Eliminar.UseVisualStyleBackColor = True
-        '
         'Editar
         '
-        Me.Editar.Location = New System.Drawing.Point(209, 413)
+        Me.Editar.Location = New System.Drawing.Point(291, 415)
         Me.Editar.Name = "Editar"
         Me.Editar.Size = New System.Drawing.Size(75, 23)
         Me.Editar.TabIndex = 19
@@ -155,7 +145,6 @@ Partial Class gestio_reserves
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.taula_reserves)
-        Me.Controls.Add(Me.Eliminar)
         Me.Controls.Add(Me.Editar)
         Me.Controls.Add(Me.Cercar)
         Me.Name = "gestio_reserves"
@@ -170,7 +159,6 @@ Partial Class gestio_reserves
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents taula_reserves As DataGridView
-    Friend WithEvents Eliminar As Button
     Friend WithEvents Editar As Button
     Friend WithEvents Cercar As Button
     Friend WithEvents Label3 As Label

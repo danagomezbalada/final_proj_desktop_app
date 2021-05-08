@@ -44,7 +44,7 @@ Public Class editar_ponents
         Dim comanda As New MySqlCommand(query, Connexions.connexio)
         comanda.ExecuteNonQuery()
         Connexions.desconnectar()
-
+        MessageBox.Show("Ponent actualitzat/da")
     End Sub
 
     Private Sub editar_ponents_Load(sender As Object, e As EventArgs) Handles MyBase.Load

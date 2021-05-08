@@ -29,6 +29,7 @@ Public Class editar_reserves
         Dim comanda As New MySqlCommand(query, Connexions.connexio)
         comanda.ExecuteNonQuery()
         Connexions.desconnectar()
+        MessageBox.Show("Reserva actualitzada")
     End Sub
     Function emplenarCamps()
         Connexions.connectar()

@@ -253,7 +253,7 @@ Partial Class editar_activitats
         '
         'identificador
         '
-        Me.identificador.Location = New System.Drawing.Point(566, 355)
+        Me.identificador.Location = New System.Drawing.Point(574, 364)
         Me.identificador.Name = "identificador"
         Me.identificador.Size = New System.Drawing.Size(31, 20)
         Me.identificador.TabIndex = 53
@@ -323,10 +323,11 @@ Partial Class editar_activitats
         '
         'test
         '
-        Me.test.Location = New System.Drawing.Point(560, 306)
+        Me.test.Location = New System.Drawing.Point(574, 338)
         Me.test.Name = "test"
         Me.test.Size = New System.Drawing.Size(31, 20)
         Me.test.TabIndex = 63
+        Me.test.Visible = False
         '
         'editar_activitats
         '

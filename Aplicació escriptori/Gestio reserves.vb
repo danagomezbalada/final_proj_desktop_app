@@ -19,6 +19,9 @@ Public Class gestio_reserves
     End Sub
     Private Sub Cercar_Click(sender As Object, e As EventArgs) Handles Cercar.Click
 
+        actualitzarTaula()
+    End Sub
+    Function actualitzarTaula()
         If cercar_per_data.Checked = True And String.IsNullOrEmpty(estat.Text) Then
             query = $"SELECT r.id, u.email As `USUARI` , a.titol AS `ACTIVITAT`, r.data, r.codi_transaccio, 
             r.estat From reserva r Join activitat a ON r.id_activitat = a.id Join usuari u ON r.id_usuari = u.id
@@ -34,22 +37,6 @@ Public Class gestio_reserves
         Else
             query = $"SELECT r.id, u.email As `USUARI` , a.titol AS `ACTIVITAT`, r.data, r.codi_transaccio, 
             r.estat From reserva r Join activitat a ON r.id_activitat = a.id Join usuari u ON r.id_usuari = u.id"
-        End If
-        Connexions.connectar()
-        Dim comanda As New MySqlCommand(query, Connexions.connexio)
-        Dim adaptador As New MySqlDataAdapter(comanda)
-        Dim conjunt_dades As New DataTable()
-        adaptador.Fill(conjunt_dades)
-        taula_reserves.AutoSizeColumnsMode = DataGridViewAutoSizeColumnMode.Fill
-        taula_reserves.DataSource = conjunt_dades
-        taula_reserves.Columns(0).Visible = False
-        Connexions.desconnectar()
-    End Sub
-    Function actualitzarTaula()
-        If String.IsNullOrEmpty(estat.Text) = True Then
-            query = $"SELECT * FROM reserva"
-        Else
-            query = $"SELECT * FROM reserva where estat='{estat.Text}'"
         End If
         Connexions.connectar()
         Dim comanda As New MySqlCommand(query, Connexions.connexio)
