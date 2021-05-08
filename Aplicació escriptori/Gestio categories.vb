@@ -61,6 +61,7 @@ Public Class gestio_categoria
         taula_categoria.DataSource = conjunt_dades
         taula_categoria.Columns(0).Visible = False
         Connexions.desconnectar()
+        taula_categoria.Columns(1).HeaderCell.Value = "NOM"
     End Function
     Private Sub gestio_categoria_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         actualitzarTaula()
