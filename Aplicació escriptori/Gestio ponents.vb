@@ -41,7 +41,7 @@ Public Class gestio_ponent
         If missatge = MsgBoxResult.Ok Then
             Fila = taula_ponent.CurrentRow.Index
             id = taula_ponent.Rows(Fila).Cells(0).Value
-            query = $"DELETE FROM aponent where id = '{id}'"
+            query = $"DELETE FROM ponent where id = '{id}'"
             Connexions.connectar()
             Dim comanda As New MySqlCommand(query, Connexions.connexio)
             comanda.ExecuteNonQuery()
@@ -69,12 +69,7 @@ Public Class gestio_ponent
         taula_ponent.Columns(0).Visible = False
         Connexions.desconnectar()
     End Function
-
     Private Sub gestio_ponents_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         actualitzarTaula()
-    End Sub
-
-    Private Sub taula_ponent_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles taula_ponent.CellContentClick
-
     End Sub
 End Class

@@ -46,8 +46,6 @@ Partial Class crear_activitat
         Me.ubicacio = New System.Windows.Forms.ComboBox()
         Me.esdeveniment = New System.Windows.Forms.ComboBox()
         Me.departament = New System.Windows.Forms.ComboBox()
-        Me.gestionar_ponents_activitat = New System.Windows.Forms.Button()
-        Me.egstionar_categories_activitat = New System.Windows.Forms.Button()
         Me.places_actuals = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.descripcio = New System.Windows.Forms.RichTextBox()
@@ -156,7 +154,7 @@ Partial Class crear_activitat
         '
         'crear
         '
-        Me.crear.Location = New System.Drawing.Point(403, 338)
+        Me.crear.Location = New System.Drawing.Point(393, 334)
         Me.crear.Name = "crear"
         Me.crear.Size = New System.Drawing.Size(97, 31)
         Me.crear.TabIndex = 17
@@ -270,24 +268,6 @@ Partial Class crear_activitat
         Me.departament.Size = New System.Drawing.Size(121, 21)
         Me.departament.TabIndex = 48
         '
-        'gestionar_ponents_activitat
-        '
-        Me.gestionar_ponents_activitat.Location = New System.Drawing.Point(49, 338)
-        Me.gestionar_ponents_activitat.Name = "gestionar_ponents_activitat"
-        Me.gestionar_ponents_activitat.Size = New System.Drawing.Size(127, 31)
-        Me.gestionar_ponents_activitat.TabIndex = 49
-        Me.gestionar_ponents_activitat.Text = "Gestionar Ponents"
-        Me.gestionar_ponents_activitat.UseVisualStyleBackColor = True
-        '
-        'egstionar_categories_activitat
-        '
-        Me.egstionar_categories_activitat.Location = New System.Drawing.Point(182, 338)
-        Me.egstionar_categories_activitat.Name = "egstionar_categories_activitat"
-        Me.egstionar_categories_activitat.Size = New System.Drawing.Size(127, 31)
-        Me.egstionar_categories_activitat.TabIndex = 50
-        Me.egstionar_categories_activitat.Text = "Gestionar Categories"
-        Me.egstionar_categories_activitat.UseVisualStyleBackColor = True
-        '
         'places_actuals
         '
         Me.places_actuals.Location = New System.Drawing.Point(417, 109)
@@ -322,8 +302,6 @@ Partial Class crear_activitat
         Me.Controls.Add(Me.descripcio)
         Me.Controls.Add(Me.places_actuals)
         Me.Controls.Add(Me.Label12)
-        Me.Controls.Add(Me.egstionar_categories_activitat)
-        Me.Controls.Add(Me.gestionar_ponents_activitat)
         Me.Controls.Add(Me.departament)
         Me.Controls.Add(Me.esdeveniment)
         Me.Controls.Add(Me.ubicacio)
@@ -377,8 +355,6 @@ Partial Class crear_activitat
     Friend WithEvents ubicacio As ComboBox
     Friend WithEvents esdeveniment As ComboBox
     Friend WithEvents departament As ComboBox
-    Friend WithEvents gestionar_ponents_activitat As Button
-    Friend WithEvents egstionar_categories_activitat As Button
     Friend WithEvents places_actuals As TextBox
     Friend WithEvents Label12 As Label
     Friend WithEvents descripcio As RichTextBox

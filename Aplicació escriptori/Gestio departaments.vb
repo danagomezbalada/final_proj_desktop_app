@@ -65,5 +65,6 @@ Public Class gestio_departament
         taula_departament.DataSource = conjunt_dades
         taula_departament.Columns(0).Visible = False
         Connexions.desconnectar()
+        taula_departament.Columns(1).HeaderCell.Value = "NOM"
     End Function
 End Class

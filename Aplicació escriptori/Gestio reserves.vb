@@ -18,7 +18,6 @@ Public Class gestio_reserves
         editar_reserves.emplenarCamps()
     End Sub
     Private Sub Cercar_Click(sender As Object, e As EventArgs) Handles Cercar.Click
-
         actualitzarTaula()
     End Sub
     Function actualitzarTaula()
@@ -48,4 +47,5 @@ Public Class gestio_reserves
         taula_reserves.Columns(0).Visible = False
         Connexions.desconnectar()
     End Function
+
 End Class

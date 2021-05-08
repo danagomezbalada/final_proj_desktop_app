@@ -39,18 +39,6 @@ Public Class crear_activitat
         Me.Hide()
         gestio_activitats.Show()
     End Sub
-
-    Private Sub gestionar_ponents_activitat_Click(sender As Object, e As EventArgs) Handles gestionar_ponents_activitat.Click
-        Me.Hide()
-        gestio_ponents_activitat.Show()
-        editar_activitats.pantalla = "Crear"
-    End Sub
-
-    Private Sub egstionar_categories_activitat_Click(sender As Object, e As EventArgs) Handles egstionar_categories_activitat.Click
-        Me.Hide()
-        gestio_categories_activitat.Show()
-        editar_activitats.pantalla = "Crear"
-    End Sub
     Function emplenarCamps()
         carregarEsdeveniments()
         carregarUbicacio()
@@ -101,4 +89,8 @@ Public Class crear_activitat
         departament.ValueMember = "id"
 
     End Function
+
+    Private Sub crear_activitat_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class
