@@ -34,27 +34,34 @@ Partial Class editar_departaments
         '
         'actualitzar
         '
-        Me.actualitzar.Location = New System.Drawing.Point(114, 136)
+        Me.actualitzar.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.actualitzar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.actualitzar.Font = New System.Drawing.Font("Calibri", 7.8!)
+        Me.actualitzar.Location = New System.Drawing.Point(152, 167)
+        Me.actualitzar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.actualitzar.Name = "actualitzar"
-        Me.actualitzar.Size = New System.Drawing.Size(75, 23)
+        Me.actualitzar.Size = New System.Drawing.Size(115, 37)
         Me.actualitzar.TabIndex = 9
         Me.actualitzar.Text = "Actualitzar"
-        Me.actualitzar.UseVisualStyleBackColor = True
+        Me.actualitzar.UseVisualStyleBackColor = False
         '
         'nom
         '
-        Me.nom.Location = New System.Drawing.Point(99, 71)
+        Me.nom.Location = New System.Drawing.Point(132, 87)
+        Me.nom.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.nom.Name = "nom"
-        Me.nom.Size = New System.Drawing.Size(100, 20)
+        Me.nom.Size = New System.Drawing.Size(132, 22)
         Me.nom.TabIndex = 8
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(43, 71)
+        Me.Label2.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label2.Location = New System.Drawing.Point(57, 87)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(46, 19)
+        Me.Label2.Size = New System.Drawing.Size(56, 23)
         Me.Label2.TabIndex = 7
         Me.Label2.Text = "Nom:"
         '
@@ -62,9 +69,11 @@ Partial Class editar_departaments
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(11, 13)
+        Me.Label1.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label1.Location = New System.Drawing.Point(15, 16)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(262, 31)
+        Me.Label1.Size = New System.Drawing.Size(325, 38)
         Me.Label1.TabIndex = 6
         Me.Label1.Text = "Editar Departaments"
         '
@@ -74,9 +83,10 @@ Partial Class editar_departaments
         Me.inici.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.inici.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
         Me.inici.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.inici.Location = New System.Drawing.Point(323, 11)
+        Me.inici.Location = New System.Drawing.Point(431, 14)
+        Me.inici.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.inici.Name = "inici"
-        Me.inici.Size = New System.Drawing.Size(40, 35)
+        Me.inici.Size = New System.Drawing.Size(50, 50)
         Me.inici.TabIndex = 19
         Me.inici.UseVisualStyleBackColor = True
         '
@@ -86,26 +96,28 @@ Partial Class editar_departaments
         Me.back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.back.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
         Me.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.back.Location = New System.Drawing.Point(285, 13)
+        Me.back.Location = New System.Drawing.Point(380, 16)
+        Me.back.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.back.Name = "back"
-        Me.back.Size = New System.Drawing.Size(40, 35)
+        Me.back.Size = New System.Drawing.Size(50, 50)
         Me.back.TabIndex = 29
         Me.back.UseVisualStyleBackColor = True
         '
         'identificador
         '
-        Me.identificador.Location = New System.Drawing.Point(323, 160)
+        Me.identificador.Location = New System.Drawing.Point(431, 197)
+        Me.identificador.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.identificador.Name = "identificador"
-        Me.identificador.Size = New System.Drawing.Size(30, 20)
+        Me.identificador.Size = New System.Drawing.Size(39, 22)
         Me.identificador.TabIndex = 30
         Me.identificador.Visible = False
         '
         'editar_departaments
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.DodgerBlue
-        Me.ClientSize = New System.Drawing.Size(365, 192)
+        Me.BackColor = System.Drawing.Color.SteelBlue
+        Me.ClientSize = New System.Drawing.Size(487, 236)
         Me.Controls.Add(Me.identificador)
         Me.Controls.Add(Me.back)
         Me.Controls.Add(Me.inici)
@@ -113,6 +125,7 @@ Partial Class editar_departaments
         Me.Controls.Add(Me.nom)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "editar_departaments"
         Me.Text = "Editar departaments"
         Me.ResumeLayout(False)
