@@ -41,9 +41,11 @@ Partial Class gestio_esdeveniment
         '
         Me.gestio_esdeveniments.AutoSize = True
         Me.gestio_esdeveniments.Font = New System.Drawing.Font("Times New Roman", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gestio_esdeveniments.Location = New System.Drawing.Point(30, 13)
+        Me.gestio_esdeveniments.ForeColor = System.Drawing.SystemColors.Control
+        Me.gestio_esdeveniments.Location = New System.Drawing.Point(40, 16)
+        Me.gestio_esdeveniments.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.gestio_esdeveniments.Name = "gestio_esdeveniments"
-        Me.gestio_esdeveniments.Size = New System.Drawing.Size(270, 31)
+        Me.gestio_esdeveniments.Size = New System.Drawing.Size(334, 38)
         Me.gestio_esdeveniments.TabIndex = 0
         Me.gestio_esdeveniments.Text = "Gestió Esdeveniments"
         '
@@ -51,83 +53,107 @@ Partial Class gestio_esdeveniment
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(33, 62)
+        Me.Label1.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label1.Location = New System.Drawing.Point(44, 76)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(46, 19)
+        Me.Label1.Size = New System.Drawing.Size(56, 23)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Nom:"
         '
         'Nom
         '
         Me.Nom.CausesValidation = False
-        Me.Nom.Location = New System.Drawing.Point(91, 62)
+        Me.Nom.Location = New System.Drawing.Point(121, 76)
+        Me.Nom.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Nom.Name = "Nom"
-        Me.Nom.Size = New System.Drawing.Size(100, 20)
+        Me.Nom.Size = New System.Drawing.Size(132, 22)
         Me.Nom.TabIndex = 2
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(220, 62)
+        Me.Label2.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label2.Location = New System.Drawing.Point(293, 76)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(41, 19)
+        Me.Label2.Size = New System.Drawing.Size(51, 23)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Any:"
         '
         'Any
         '
         Me.Any.CausesValidation = False
-        Me.Any.Location = New System.Drawing.Point(276, 62)
+        Me.Any.Location = New System.Drawing.Point(368, 76)
+        Me.Any.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Any.Name = "Any"
-        Me.Any.Size = New System.Drawing.Size(100, 20)
+        Me.Any.Size = New System.Drawing.Size(132, 22)
         Me.Any.TabIndex = 4
         '
         'Cerca
         '
-        Me.Cerca.Location = New System.Drawing.Point(440, 62)
+        Me.Cerca.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.Cerca.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Cerca.Font = New System.Drawing.Font("Calibri", 7.8!)
+        Me.Cerca.Location = New System.Drawing.Point(588, 72)
+        Me.Cerca.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Cerca.Name = "Cerca"
-        Me.Cerca.Size = New System.Drawing.Size(75, 23)
+        Me.Cerca.Size = New System.Drawing.Size(97, 30)
         Me.Cerca.TabIndex = 16
         Me.Cerca.Text = "Cerca"
-        Me.Cerca.UseVisualStyleBackColor = True
+        Me.Cerca.UseVisualStyleBackColor = False
         '
         'taula_esdeveniment
         '
-        Me.taula_esdeveniment.BackgroundColor = System.Drawing.Color.DodgerBlue
+        Me.taula_esdeveniment.BackgroundColor = System.Drawing.Color.SteelBlue
         Me.taula_esdeveniment.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.taula_esdeveniment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.taula_esdeveniment.Location = New System.Drawing.Point(30, 100)
+        Me.taula_esdeveniment.Location = New System.Drawing.Point(40, 123)
+        Me.taula_esdeveniment.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.taula_esdeveniment.Name = "taula_esdeveniment"
-        Me.taula_esdeveniment.Size = New System.Drawing.Size(600, 300)
+        Me.taula_esdeveniment.RowHeadersWidth = 51
+        Me.taula_esdeveniment.Size = New System.Drawing.Size(800, 369)
         Me.taula_esdeveniment.TabIndex = 17
         '
         'afegir
         '
-        Me.afegir.Location = New System.Drawing.Point(136, 413)
+        Me.afegir.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.afegir.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.afegir.Font = New System.Drawing.Font("Calibri", 7.8!)
+        Me.afegir.Location = New System.Drawing.Point(181, 508)
+        Me.afegir.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.afegir.Name = "afegir"
-        Me.afegir.Size = New System.Drawing.Size(75, 23)
+        Me.afegir.Size = New System.Drawing.Size(111, 33)
         Me.afegir.TabIndex = 18
         Me.afegir.Text = "Afegir"
-        Me.afegir.UseVisualStyleBackColor = True
+        Me.afegir.UseVisualStyleBackColor = False
         '
         'Editar
         '
-        Me.Editar.Location = New System.Drawing.Point(295, 413)
+        Me.Editar.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.Editar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Editar.Font = New System.Drawing.Font("Calibri", 7.8!)
+        Me.Editar.Location = New System.Drawing.Point(393, 508)
+        Me.Editar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Editar.Name = "Editar"
-        Me.Editar.Size = New System.Drawing.Size(75, 23)
+        Me.Editar.Size = New System.Drawing.Size(111, 33)
         Me.Editar.TabIndex = 19
         Me.Editar.Text = "Editar"
-        Me.Editar.UseVisualStyleBackColor = True
+        Me.Editar.UseVisualStyleBackColor = False
         '
         'eliminar
         '
-        Me.eliminar.Location = New System.Drawing.Point(459, 413)
+        Me.eliminar.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.eliminar.Font = New System.Drawing.Font("Calibri", 7.8!)
+        Me.eliminar.Location = New System.Drawing.Point(612, 508)
+        Me.eliminar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.eliminar.Name = "eliminar"
-        Me.eliminar.Size = New System.Drawing.Size(75, 23)
+        Me.eliminar.Size = New System.Drawing.Size(111, 33)
         Me.eliminar.TabIndex = 20
         Me.eliminar.Text = "Eliminar"
-        Me.eliminar.UseVisualStyleBackColor = True
+        Me.eliminar.UseVisualStyleBackColor = False
         '
         'inici
         '
@@ -135,18 +161,19 @@ Partial Class gestio_esdeveniment
         Me.inici.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.inici.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
         Me.inici.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.inici.Location = New System.Drawing.Point(602, 12)
+        Me.inici.Location = New System.Drawing.Point(803, 15)
+        Me.inici.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.inici.Name = "inici"
-        Me.inici.Size = New System.Drawing.Size(40, 35)
+        Me.inici.Size = New System.Drawing.Size(50, 50)
         Me.inici.TabIndex = 24
         Me.inici.UseVisualStyleBackColor = True
         '
         'gestio_esdeveniment
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.DodgerBlue
-        Me.ClientSize = New System.Drawing.Size(665, 450)
+        Me.BackColor = System.Drawing.Color.SteelBlue
+        Me.ClientSize = New System.Drawing.Size(887, 554)
         Me.Controls.Add(Me.inici)
         Me.Controls.Add(Me.eliminar)
         Me.Controls.Add(Me.Editar)
@@ -158,6 +185,7 @@ Partial Class gestio_esdeveniment
         Me.Controls.Add(Me.Nom)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.gestio_esdeveniments)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "gestio_esdeveniment"
         Me.Text = "gestio esdeveniments"
         CType(Me.taula_esdeveniment, System.ComponentModel.ISupportInitialize).EndInit()

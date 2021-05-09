@@ -40,78 +40,94 @@ Partial Class editar_ponents
         '
         'telefon
         '
-        Me.telefon.Location = New System.Drawing.Point(349, 110)
+        Me.telefon.Location = New System.Drawing.Point(465, 135)
+        Me.telefon.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.telefon.Name = "telefon"
-        Me.telefon.Size = New System.Drawing.Size(100, 20)
+        Me.telefon.Size = New System.Drawing.Size(132, 22)
         Me.telefon.TabIndex = 22
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(263, 110)
+        Me.Label5.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label5.Location = New System.Drawing.Point(351, 135)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(64, 19)
+        Me.Label5.Size = New System.Drawing.Size(79, 23)
         Me.Label5.TabIndex = 21
         Me.Label5.Text = "Telèfon:"
         '
         'cognom
         '
-        Me.cognom.Location = New System.Drawing.Point(349, 70)
+        Me.cognom.Location = New System.Drawing.Point(465, 86)
+        Me.cognom.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cognom.Name = "cognom"
-        Me.cognom.Size = New System.Drawing.Size(100, 20)
+        Me.cognom.Size = New System.Drawing.Size(132, 22)
         Me.cognom.TabIndex = 20
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(263, 70)
+        Me.Label4.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label4.Location = New System.Drawing.Point(351, 86)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(69, 19)
+        Me.Label4.Size = New System.Drawing.Size(86, 23)
         Me.Label4.TabIndex = 19
         Me.Label4.Text = "Cognom:"
         '
         'email
         '
-        Me.email.Location = New System.Drawing.Point(108, 110)
+        Me.email.Location = New System.Drawing.Point(144, 135)
+        Me.email.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.email.Name = "email"
-        Me.email.Size = New System.Drawing.Size(100, 20)
+        Me.email.Size = New System.Drawing.Size(132, 22)
         Me.email.TabIndex = 18
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(43, 110)
+        Me.Label3.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label3.Location = New System.Drawing.Point(57, 135)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(52, 19)
+        Me.Label3.Size = New System.Drawing.Size(65, 23)
         Me.Label3.TabIndex = 17
         Me.Label3.Text = "Email:"
         '
         'actualitzar
         '
-        Me.actualitzar.Location = New System.Drawing.Point(201, 175)
+        Me.actualitzar.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.actualitzar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.actualitzar.Font = New System.Drawing.Font("Calibri", 7.8!)
+        Me.actualitzar.Location = New System.Drawing.Point(268, 215)
+        Me.actualitzar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.actualitzar.Name = "actualitzar"
-        Me.actualitzar.Size = New System.Drawing.Size(75, 23)
+        Me.actualitzar.Size = New System.Drawing.Size(115, 37)
         Me.actualitzar.TabIndex = 16
         Me.actualitzar.Text = "Actualitzar"
-        Me.actualitzar.UseVisualStyleBackColor = True
+        Me.actualitzar.UseVisualStyleBackColor = False
         '
         'nom
         '
-        Me.nom.Location = New System.Drawing.Point(108, 70)
+        Me.nom.Location = New System.Drawing.Point(144, 86)
+        Me.nom.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.nom.Name = "nom"
-        Me.nom.Size = New System.Drawing.Size(100, 20)
+        Me.nom.Size = New System.Drawing.Size(132, 22)
         Me.nom.TabIndex = 15
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(43, 70)
+        Me.Label2.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label2.Location = New System.Drawing.Point(57, 86)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(46, 19)
+        Me.Label2.Size = New System.Drawing.Size(56, 23)
         Me.Label2.TabIndex = 14
         Me.Label2.Text = "Nom:"
         '
@@ -119,9 +135,11 @@ Partial Class editar_ponents
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(151, 9)
+        Me.Label1.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label1.Location = New System.Drawing.Point(201, 11)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(190, 31)
+        Me.Label1.Size = New System.Drawing.Size(234, 38)
         Me.Label1.TabIndex = 13
         Me.Label1.Text = "Editar Ponents"
         '
@@ -131,9 +149,10 @@ Partial Class editar_ponents
         Me.inici.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.inici.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
         Me.inici.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.inici.Location = New System.Drawing.Point(438, 12)
+        Me.inici.Location = New System.Drawing.Point(584, 15)
+        Me.inici.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.inici.Name = "inici"
-        Me.inici.Size = New System.Drawing.Size(40, 35)
+        Me.inici.Size = New System.Drawing.Size(50, 50)
         Me.inici.TabIndex = 23
         Me.inici.UseVisualStyleBackColor = True
         '
@@ -143,26 +162,28 @@ Partial Class editar_ponents
         Me.back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.back.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
         Me.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.back.Location = New System.Drawing.Point(392, 12)
+        Me.back.Location = New System.Drawing.Point(523, 15)
+        Me.back.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.back.Name = "back"
-        Me.back.Size = New System.Drawing.Size(40, 35)
+        Me.back.Size = New System.Drawing.Size(50, 50)
         Me.back.TabIndex = 26
         Me.back.UseVisualStyleBackColor = True
         '
         'identificador
         '
-        Me.identificador.Location = New System.Drawing.Point(452, 203)
+        Me.identificador.Location = New System.Drawing.Point(603, 250)
+        Me.identificador.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.identificador.Name = "identificador"
-        Me.identificador.Size = New System.Drawing.Size(35, 20)
+        Me.identificador.Size = New System.Drawing.Size(45, 22)
         Me.identificador.TabIndex = 27
         Me.identificador.Visible = False
         '
         'editar_ponents
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.DodgerBlue
-        Me.ClientSize = New System.Drawing.Size(499, 235)
+        Me.BackColor = System.Drawing.Color.SteelBlue
+        Me.ClientSize = New System.Drawing.Size(665, 289)
         Me.Controls.Add(Me.identificador)
         Me.Controls.Add(Me.back)
         Me.Controls.Add(Me.inici)
@@ -176,6 +197,7 @@ Partial Class editar_ponents
         Me.Controls.Add(Me.nom)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "editar_ponents"
         Me.Text = "Editar Ponents"
         Me.ResumeLayout(False)
