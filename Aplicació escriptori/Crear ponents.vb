@@ -9,6 +9,7 @@ Public Class crear_ponents
     Private Sub Crear_Click(sender As Object, e As EventArgs) Handles Crear.Click
         Insertar()
         MessageBox.Show("Valor afegit")
+        gestio_ponent.actualitzarTaula()
     End Sub
     Function Insertar()
         Connexions.connectar()
@@ -16,7 +17,6 @@ Public Class crear_ponents
         Dim lastname As String
         Dim phone As Int32
         Dim mail As String
-
         name = nom.Text
         lastname = cognom.Text
         phone = telefon.Text
@@ -38,9 +38,6 @@ Public Class crear_ponents
             query = $"INSERT INTO `ponent` (`nom`,`cognoms`,`telefon`,`email`)
         VALUES ('{name}','{lastname}','{phone}','{mail}');"
         End If
-
-
-
         Dim comanda = New MySqlCommand(query, Connexions.connexio)
         comanda.ExecuteNonQuery()
         Connexions.desconnectar()

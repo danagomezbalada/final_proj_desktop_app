@@ -11,6 +11,7 @@ Public Class crear_activitat
     Private Sub crear_Click(sender As Object, e As EventArgs) Handles crear.Click
         Insertar()
         MessageBox.Show("Valor afegit")
+        gestio_activitats.actualitzarTaula()
     End Sub
     Function Insertar()
         Connexions.connectar()

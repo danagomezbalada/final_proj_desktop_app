@@ -123,5 +123,6 @@ Public Class editar_activitats
         comanda.ExecuteNonQuery()
         MessageBox.Show("Activitat actualitzada")
         Connexions.desconnectar()
+        gestio_activitats.actualitzarTaula()
     End Sub
 End Class

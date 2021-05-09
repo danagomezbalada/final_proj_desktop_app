@@ -30,6 +30,7 @@ Public Class editar_reserves
         comanda.ExecuteNonQuery()
         Connexions.desconnectar()
         MessageBox.Show("Reserva actualitzada")
+        gestio_reserves.actualitzarTaula()
     End Sub
     Function emplenarCamps()
         Connexions.connectar()

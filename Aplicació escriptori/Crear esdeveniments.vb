@@ -9,6 +9,7 @@ Public Class crear_esdeveniments
     Private Sub Crear_Click(sender As Object, e As EventArgs) Handles Crear.Click
         Insertar()
         MessageBox.Show("Valor afegit")
+        gestio_esdeveniment.actualitzarTaula()
     End Sub
 
     Function Insertar()

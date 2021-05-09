@@ -63,6 +63,7 @@ Public Class gestio_ubicacions
         taula_ubicacions.DataSource = conjunt_dades
         taula_ubicacions.Columns(0).Visible = False
         Connexions.desconnectar()
+        taula_ubicacions.Columns(1).HeaderCell.Value = "NOM"
     End Function
     Private Sub gestio_ubicacions_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         actualitzarTaula()

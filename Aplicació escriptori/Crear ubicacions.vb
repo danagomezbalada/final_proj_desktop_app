@@ -13,6 +13,7 @@ Public Class crear_ubicacio
     Private Sub Crear_Click(sender As Object, e As EventArgs) Handles Crear.Click
         Insertar()
         MessageBox.Show("Valor afegit")
+        gestio_ubicacions.actualitzarTaula()
     End Sub
     Function Insertar()
         Connexions.connectar()

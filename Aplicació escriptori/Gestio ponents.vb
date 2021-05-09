@@ -68,6 +68,10 @@ Public Class gestio_ponent
         taula_ponent.DataSource = conjunt_dades
         taula_ponent.Columns(0).Visible = False
         Connexions.desconnectar()
+        taula_ponent.Columns(1).HeaderCell.Value = "NOM"
+        taula_ponent.Columns(2).HeaderCell.Value = "COGNOMS"
+        taula_ponent.Columns(3).HeaderCell.Value = "TELEFON"
+        taula_ponent.Columns(4).HeaderCell.Value = "EMAIL"
     End Function
     Private Sub gestio_ponents_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         actualitzarTaula()

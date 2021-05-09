@@ -46,6 +46,12 @@ Public Class gestio_reserves
         taula_reserves.DataSource = conjunt_dades
         taula_reserves.Columns(0).Visible = False
         Connexions.desconnectar()
+        taula_reserves.Columns(3).HeaderCell.Value = "DATA"
+        taula_reserves.Columns(4).HeaderCell.Value = "CODI TRANSACCIÓ"
+        taula_reserves.Columns(5).HeaderCell.Value = "ESTAT"
     End Function
 
+    Private Sub gestio_reserves_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        actualitzarTaula()
+    End Sub
 End Class

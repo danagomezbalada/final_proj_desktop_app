@@ -46,8 +46,4 @@ Public Class editar_esdeveniments
         Connexions.desconnectar()
         MessageBox.Show("Esdeveniment actualitzat")
     End Sub
-
-    Private Sub editar_esdeveniments_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class

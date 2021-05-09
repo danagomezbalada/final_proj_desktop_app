@@ -65,6 +65,10 @@ Public Class gestio_esdeveniment
         taula_esdeveniment.DataSource = conjunt_dades
         taula_esdeveniment.Columns(0).Visible = False
         Connexions.desconnectar()
+        taula_esdeveniment.Columns(1).HeaderCell.Value = "ANY"
+        taula_esdeveniment.Columns(2).HeaderCell.Value = "NOM"
+        taula_esdeveniment.Columns(3).HeaderCell.Value = "DESCRIPCIÓ"
+        taula_esdeveniment.Columns(4).HeaderCell.Value = "ACTIU"
     End Function
     Private Sub gestio_esdeveniment_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         actualitzarTaula()
