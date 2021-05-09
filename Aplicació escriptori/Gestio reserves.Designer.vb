@@ -42,9 +42,10 @@ Partial Class gestio_reserves
         Me.inici.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.inici.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
         Me.inici.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.inici.Location = New System.Drawing.Point(602, 12)
+        Me.inici.Location = New System.Drawing.Point(803, 15)
+        Me.inici.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.inici.Name = "inici"
-        Me.inici.Size = New System.Drawing.Size(40, 35)
+        Me.inici.Size = New System.Drawing.Size(50, 50)
         Me.inici.TabIndex = 24
         Me.inici.UseVisualStyleBackColor = True
         '
@@ -52,9 +53,11 @@ Partial Class gestio_reserves
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(33, 62)
+        Me.Label2.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label2.Location = New System.Drawing.Point(44, 76)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(47, 19)
+        Me.Label2.Size = New System.Drawing.Size(58, 23)
         Me.Label2.TabIndex = 23
         Me.Label2.Text = "Data:"
         '
@@ -62,81 +65,99 @@ Partial Class gestio_reserves
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(30, 13)
+        Me.Label1.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label1.Location = New System.Drawing.Point(40, 16)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(200, 31)
+        Me.Label1.Size = New System.Drawing.Size(245, 38)
         Me.Label1.TabIndex = 22
         Me.Label1.Text = "Gestió Reserves"
         '
         'taula_reserves
         '
-        Me.taula_reserves.BackgroundColor = System.Drawing.Color.DodgerBlue
+        Me.taula_reserves.BackgroundColor = System.Drawing.Color.SteelBlue
         Me.taula_reserves.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.taula_reserves.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.taula_reserves.Location = New System.Drawing.Point(30, 100)
+        Me.taula_reserves.Location = New System.Drawing.Point(40, 123)
+        Me.taula_reserves.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.taula_reserves.Name = "taula_reserves"
-        Me.taula_reserves.Size = New System.Drawing.Size(600, 300)
+        Me.taula_reserves.RowHeadersWidth = 51
+        Me.taula_reserves.Size = New System.Drawing.Size(800, 369)
         Me.taula_reserves.TabIndex = 21
         '
         'Editar
         '
-        Me.Editar.Location = New System.Drawing.Point(291, 415)
+        Me.Editar.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.Editar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Editar.Font = New System.Drawing.Font("Calibri", 7.8!)
+        Me.Editar.Location = New System.Drawing.Point(388, 511)
+        Me.Editar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Editar.Name = "Editar"
-        Me.Editar.Size = New System.Drawing.Size(75, 23)
+        Me.Editar.Size = New System.Drawing.Size(111, 33)
         Me.Editar.TabIndex = 19
         Me.Editar.Text = "Editar"
-        Me.Editar.UseVisualStyleBackColor = True
+        Me.Editar.UseVisualStyleBackColor = False
         '
         'Cercar
         '
-        Me.Cercar.Location = New System.Drawing.Point(571, 62)
+        Me.Cercar.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.Cercar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Cercar.Font = New System.Drawing.Font("Calibri", 7.8!)
+        Me.Cercar.Location = New System.Drawing.Point(761, 76)
+        Me.Cercar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Cercar.Name = "Cercar"
-        Me.Cercar.Size = New System.Drawing.Size(75, 20)
+        Me.Cercar.Size = New System.Drawing.Size(97, 30)
         Me.Cercar.TabIndex = 17
         Me.Cercar.Text = "Cercar"
-        Me.Cercar.UseVisualStyleBackColor = True
+        Me.Cercar.UseVisualStyleBackColor = False
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(387, 62)
+        Me.Label3.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label3.Location = New System.Drawing.Point(516, 76)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(49, 19)
+        Me.Label3.Size = New System.Drawing.Size(62, 23)
         Me.Label3.TabIndex = 26
         Me.Label3.Text = "Estat:"
         '
         'estat
         '
-        Me.estat.Location = New System.Drawing.Point(439, 62)
+        Me.estat.Location = New System.Drawing.Point(585, 76)
+        Me.estat.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.estat.Name = "estat"
-        Me.estat.Size = New System.Drawing.Size(100, 20)
+        Me.estat.Size = New System.Drawing.Size(132, 22)
         Me.estat.TabIndex = 25
         '
         'data
         '
-        Me.data.Location = New System.Drawing.Point(84, 62)
+        Me.data.Location = New System.Drawing.Point(112, 76)
+        Me.data.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.data.Name = "data"
-        Me.data.Size = New System.Drawing.Size(200, 20)
+        Me.data.Size = New System.Drawing.Size(265, 22)
         Me.data.TabIndex = 27
         '
         'cercar_per_data
         '
         Me.cercar_per_data.AutoSize = True
         Me.cercar_per_data.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cercar_per_data.Location = New System.Drawing.Point(291, 64)
+        Me.cercar_per_data.ForeColor = System.Drawing.SystemColors.Control
+        Me.cercar_per_data.Location = New System.Drawing.Point(388, 79)
+        Me.cercar_per_data.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cercar_per_data.Name = "cercar_per_data"
-        Me.cercar_per_data.Size = New System.Drawing.Size(101, 18)
+        Me.cercar_per_data.Size = New System.Drawing.Size(123, 20)
         Me.cercar_per_data.TabIndex = 28
         Me.cercar_per_data.Text = "Cercar per data?"
         Me.cercar_per_data.UseVisualStyleBackColor = True
         '
         'gestio_reserves
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.DodgerBlue
-        Me.ClientSize = New System.Drawing.Size(665, 450)
+        Me.BackColor = System.Drawing.Color.SteelBlue
+        Me.ClientSize = New System.Drawing.Size(887, 554)
         Me.Controls.Add(Me.cercar_per_data)
         Me.Controls.Add(Me.data)
         Me.Controls.Add(Me.Label3)
@@ -147,6 +168,7 @@ Partial Class gestio_reserves
         Me.Controls.Add(Me.taula_reserves)
         Me.Controls.Add(Me.Editar)
         Me.Controls.Add(Me.Cercar)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "gestio_reserves"
         Me.Text = "Gestió Reserves"
         CType(Me.taula_reserves, System.ComponentModel.ISupportInitialize).EndInit()
