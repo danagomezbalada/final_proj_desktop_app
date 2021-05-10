@@ -15,24 +15,24 @@ Public Class editar_ubicacions
 
     Private Sub actualitzar_Click(sender As Object, e As EventArgs) Handles actualitzar.Click
         Connexions.connectar()
-        Dim id As String
-        id = identificador.Text
-        Dim name As String
-        name = Nom.Text
-        If name.Contains("'") Then
-            name = Nom.Text.Replace("'", "’")
-            query = $"Update ubicacio SET nom=('{name}') where id = ('{id}')"
+        If String.IsNullOrEmpty(Nom.Text) = True Then
+            MessageBox.Show("No hi poden haver-hi camps buits")
         Else
-            query = $"Update ubicacio SET nom=('{name}') where id = ('{id}')"
+            Dim id As String
+            id = identificador.Text
+            Dim name As String
+            name = Nom.Text
+            If name.Contains("'") Then
+                name = Nom.Text.Replace("'", "’")
+                query = $"Update ubicacio SET nom=('{name}') where id = ('{id}')"
+            Else
+                query = $"Update ubicacio SET nom=('{name}') where id = ('{id}')"
+            End If
+
+            Dim comanda As New MySqlCommand(query, Connexions.connexio)
+            comanda.ExecuteNonQuery()
+            MessageBox.Show("Ubicació actualitzada")
         End If
-
-        Dim comanda As New MySqlCommand(query, Connexions.connexio)
-        comanda.ExecuteNonQuery()
         Connexions.desconnectar()
-        MessageBox.Show("Ubicació actualitzada")
-    End Sub
-
-    Private Sub editar_ubicacions_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
     End Sub
 End Class

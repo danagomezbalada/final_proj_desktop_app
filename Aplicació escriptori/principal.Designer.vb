@@ -39,10 +39,9 @@ Partial Class principal
         Me.administrar_esdeveniments.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.administrar_esdeveniments.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.administrar_esdeveniments.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.administrar_esdeveniments.Location = New System.Drawing.Point(59, 155)
-        Me.administrar_esdeveniments.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.administrar_esdeveniments.Location = New System.Drawing.Point(44, 126)
         Me.administrar_esdeveniments.Name = "administrar_esdeveniments"
-        Me.administrar_esdeveniments.Size = New System.Drawing.Size(206, 54)
+        Me.administrar_esdeveniments.Size = New System.Drawing.Size(154, 44)
         Me.administrar_esdeveniments.TabIndex = 0
         Me.administrar_esdeveniments.Text = "Administrar Esdeveniments"
         Me.administrar_esdeveniments.UseVisualStyleBackColor = False
@@ -52,10 +51,9 @@ Partial Class principal
         Me.activitats.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.activitats.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.activitats.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.activitats.Location = New System.Drawing.Point(661, 155)
-        Me.activitats.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.activitats.Location = New System.Drawing.Point(496, 126)
         Me.activitats.Name = "activitats"
-        Me.activitats.Size = New System.Drawing.Size(206, 54)
+        Me.activitats.Size = New System.Drawing.Size(154, 44)
         Me.activitats.TabIndex = 1
         Me.activitats.Text = "Administrar Activitats"
         Me.activitats.UseVisualStyleBackColor = False
@@ -65,10 +63,9 @@ Partial Class principal
         Me.gestionar_activitats.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.gestionar_activitats.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.gestionar_activitats.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gestionar_activitats.Location = New System.Drawing.Point(59, 347)
-        Me.gestionar_activitats.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gestionar_activitats.Location = New System.Drawing.Point(44, 282)
         Me.gestionar_activitats.Name = "gestionar_activitats"
-        Me.gestionar_activitats.Size = New System.Drawing.Size(206, 54)
+        Me.gestionar_activitats.Size = New System.Drawing.Size(154, 44)
         Me.gestionar_activitats.TabIndex = 2
         Me.gestionar_activitats.Text = "Gestionar Activitats"
         Me.gestionar_activitats.UseVisualStyleBackColor = False
@@ -78,10 +75,9 @@ Partial Class principal
         Me.gestionar_reserves.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.gestionar_reserves.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.gestionar_reserves.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gestionar_reserves.Location = New System.Drawing.Point(661, 347)
-        Me.gestionar_reserves.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gestionar_reserves.Location = New System.Drawing.Point(496, 282)
         Me.gestionar_reserves.Name = "gestionar_reserves"
-        Me.gestionar_reserves.Size = New System.Drawing.Size(206, 54)
+        Me.gestionar_reserves.Size = New System.Drawing.Size(154, 44)
         Me.gestionar_reserves.TabIndex = 3
         Me.gestionar_reserves.Text = "Gestionar Reserves"
         Me.gestionar_reserves.UseVisualStyleBackColor = False
@@ -91,10 +87,9 @@ Partial Class principal
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label1.Location = New System.Drawing.Point(211, 25)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(158, 20)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(482, 38)
+        Me.Label1.Size = New System.Drawing.Size(385, 31)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Ajuntament de La Seu d'Urgell "
         '
@@ -103,20 +98,18 @@ Partial Class principal
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label2.Location = New System.Drawing.Point(349, 63)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(262, 51)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(240, 31)
+        Me.Label2.Size = New System.Drawing.Size(183, 24)
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "Agenda d'activitats"
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(287, 95)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox1.Location = New System.Drawing.Point(215, 77)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(350, 350)
+        Me.PictureBox1.Size = New System.Drawing.Size(262, 284)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 6
         Me.PictureBox1.TabStop = False
@@ -126,20 +119,19 @@ Partial Class principal
         Me.generar_fitxer.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.generar_fitxer.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.generar_fitxer.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.generar_fitxer.Location = New System.Drawing.Point(355, 453)
-        Me.generar_fitxer.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.generar_fitxer.Location = New System.Drawing.Point(266, 368)
         Me.generar_fitxer.Name = "generar_fitxer"
-        Me.generar_fitxer.Size = New System.Drawing.Size(206, 54)
+        Me.generar_fitxer.Size = New System.Drawing.Size(154, 44)
         Me.generar_fitxer.TabIndex = 7
         Me.generar_fitxer.Text = "Generar Fitxer"
         Me.generar_fitxer.UseVisualStyleBackColor = False
         '
         'principal
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SteelBlue
-        Me.ClientSize = New System.Drawing.Size(925, 554)
+        Me.ClientSize = New System.Drawing.Size(694, 450)
         Me.Controls.Add(Me.generar_fitxer)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label2)
@@ -148,7 +140,6 @@ Partial Class principal
         Me.Controls.Add(Me.gestionar_activitats)
         Me.Controls.Add(Me.activitats)
         Me.Controls.Add(Me.administrar_esdeveniments)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "principal"
         Me.Text = "Principal"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

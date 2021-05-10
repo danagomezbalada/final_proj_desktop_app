@@ -19,31 +19,42 @@ Public Class editar_esdeveniments
         Dim active As Int32
         Dim name = nom.Text
         Dim description = descripcio.Text
-        If actiu.Checked = True Then
-            active = 1
+
+        If IsNumeric(any.Text) = False Then
+            MessageBox.Show("El camp any ha de ser numèric")
         Else
-            active = 0
-        End If
-        If nom.Text.Contains("'") Then
-            nom.Text = nom.Text.Replace("'", "’")
-            query = $"Update esdeveniment SET any = ('{any.Text}'),nom=('{nom.Text}'),  descripcio = ('{descripcio.Text}'),actiu = ('{active}') 
+            If String.IsNullOrEmpty(nom.Text) = True Or String.IsNullOrEmpty(any.Text) = True Or String.IsNullOrEmpty(descripcio.Text) = True Then
+                MessageBox.Show("No hi poden haver-hi camps buits")
+            Else
+                If actiu.Checked = True Then
+                    active = 1
+                Else
+                    active = 0
+                End If
+                If nom.Text.Contains("'") Then
+                    nom.Text = nom.Text.Replace("'", "’")
+                    query = $"Update esdeveniment SET any = ('{any.Text}'),nom=('{nom.Text}'),  descripcio = ('{descripcio.Text}'),actiu = ('{active}') 
         where id = ('{id}')"
-        Else
-            query = $"Update esdeveniment SET any = ('{any.Text}'),nom=('{nom.Text}'),  descripcio = ('{descripcio.Text}'),actiu = ('{active}') 
+                Else
+                    query = $"Update esdeveniment SET any = ('{any.Text}'),nom=('{nom.Text}'),  descripcio = ('{descripcio.Text}'),actiu = ('{active}') 
         where id = ('{id}')"
+                End If
+
+                If descripcio.Text.Contains("'") Then
+                    descripcio.Text = descripcio.Text.Replace("'", "’")
+                    query = $"Update esdeveniment SET any = ('{any.Text}'),nom=('{nom.Text}'),  descripcio = ('{descripcio.Text}'),actiu = ('{active}') 
+        where id = ('{id}')"
+                Else
+                    query = $"Update esdeveniment SET any = ('{any.Text}'),nom=('{nom.Text}'),  descripcio = ('{descripcio.Text}'),actiu = ('{active}') 
+        where id = ('{id}')"
+                End If
+                Dim comanda As New MySqlCommand(query, Connexions.connexio)
+                comanda.ExecuteNonQuery()
+                Connexions.desconnectar()
+                MessageBox.Show("Esdeveniment actualitzat")
+            End If
         End If
 
-        If descripcio.Text.Contains("'") Then
-            descripcio.Text = descripcio.Text.Replace("'", "’")
-            query = $"Update esdeveniment SET any = ('{any.Text}'),nom=('{nom.Text}'),  descripcio = ('{descripcio.Text}'),actiu = ('{active}') 
-        where id = ('{id}')"
-        Else
-            query = $"Update esdeveniment SET any = ('{any.Text}'),nom=('{nom.Text}'),  descripcio = ('{descripcio.Text}'),actiu = ('{active}') 
-        where id = ('{id}')"
-        End If
-        Dim comanda As New MySqlCommand(query, Connexions.connexio)
-        comanda.ExecuteNonQuery()
-        Connexions.desconnectar()
-        MessageBox.Show("Esdeveniment actualitzat")
+
     End Sub
 End Class

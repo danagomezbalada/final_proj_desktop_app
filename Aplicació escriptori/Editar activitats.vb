@@ -100,28 +100,36 @@ Public Class editar_activitats
     End Function
     Private Sub actualitzar_Click(sender As Object, e As EventArgs) Handles actualitzar.Click
         Connexions.connectar()
-        If titol.Text.Contains("'") Or descripcio.Text.Contains("'") Then
-            titol.Text = titol.Text.Replace("'", "’")
-            descripcio.Text = descripcio.Text.Replace("'", "’")
-            query = $"UPDATE activitat SET titol = ('{titol.Text}'),data= ('{data.Value.ToString("yyyy-MM-dd")}'),
-            descripcio = ('{descripcio.Text}'),preu = ('{preu.Text}'),places_totals = ('{places_totals.Text}'),
-            places_actuals= ('{places_actuals.Text}'),id_esdeveniment= ('{esdeveniment.SelectedValue}'),
-            data_inici_mostra= ('{data_inici_mostra.Value.ToString("yyyy-MM-dd")}'),
-            data_fi_mostra = ('{data_fi_mostra.Value.ToString("yyyy-MM-dd")}'),
-            id_ubicacio = ('{ubicacio.SelectedValue}'),id_departament= ('{departament.SelectedValue}')
-            where id = ('{identificador.Text}')"
+        If String.IsNullOrEmpty(titol.Text) = True Or String.IsNullOrEmpty(preu.Text) = True Or String.IsNullOrEmpty(descripcio.Text) = True Or String.IsNullOrEmpty(places_totals.Text) = True Or String.IsNullOrEmpty(places_actuals.Text) = True Then
+            MessageBox.Show("No hi poden haver-hi camps buits")
         Else
-            query = $"Update activitat SET titol = ('{titol.Text}'),data= ('{data.Value.ToString("yyyy-MM-dd")}'),
+            If IsNumeric(preu.Text) = False Or IsNumeric(places_totals.Text) = False Or IsNumeric(places_actuals.Text) = False Then
+                MessageBox.Show("Els camps preu, places totals i places actuals han de ser numèrics")
+            Else
+                If titol.Text.Contains("'") Or descripcio.Text.Contains("'") Then
+                    titol.Text = titol.Text.Replace("'", "’")
+                    descripcio.Text = descripcio.Text.Replace("'", "’")
+                    query = $"UPDATE activitat SET titol = ('{titol.Text}'),data= ('{data.Value.ToString("yyyy-MM-dd")}'),
             descripcio = ('{descripcio.Text}'),preu = ('{preu.Text}'),places_totals = ('{places_totals.Text}'),
             places_actuals= ('{places_actuals.Text}'),id_esdeveniment= ('{esdeveniment.SelectedValue}'),
             data_inici_mostra= ('{data_inici_mostra.Value.ToString("yyyy-MM-dd")}'),
             data_fi_mostra = ('{data_fi_mostra.Value.ToString("yyyy-MM-dd")}'),
             id_ubicacio = ('{ubicacio.SelectedValue}'),id_departament= ('{departament.SelectedValue}')
             where id = ('{identificador.Text}')"
+                Else
+                    query = $"Update activitat SET titol = ('{titol.Text}'),data= ('{data.Value.ToString("yyyy-MM-dd")}'),
+            descripcio = ('{descripcio.Text}'),preu = ('{preu.Text}'),places_totals = ('{places_totals.Text}'),
+            places_actuals= ('{places_actuals.Text}'),id_esdeveniment= ('{esdeveniment.SelectedValue}'),
+            data_inici_mostra= ('{data_inici_mostra.Value.ToString("yyyy-MM-dd")}'),
+            data_fi_mostra = ('{data_fi_mostra.Value.ToString("yyyy-MM-dd")}'),
+            id_ubicacio = ('{ubicacio.SelectedValue}'),id_departament= ('{departament.SelectedValue}')
+            where id = ('{identificador.Text}')"
+                End If
+                Dim comanda As New MySqlCommand(query, Connexions.connexio)
+                comanda.ExecuteNonQuery()
+                MessageBox.Show("Activitat actualitzada")
+            End If
         End If
-        Dim comanda As New MySqlCommand(query, Connexions.connexio)
-        comanda.ExecuteNonQuery()
-        MessageBox.Show("Activitat actualitzada")
         Connexions.desconnectar()
         gestio_activitats.actualitzarTaula()
     End Sub

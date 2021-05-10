@@ -22,20 +22,20 @@ Public Class gestio_reserves
     End Sub
     Function actualitzarTaula()
         If cercar_per_data.Checked = True And String.IsNullOrEmpty(estat.Text) Then
-            query = $"SELECT r.id, u.email As `USUARI` , a.titol AS `ACTIVITAT`, r.data, r.codi_transaccio, 
-            r.estat From reserva r Join activitat a ON r.id_activitat = a.id Join usuari u ON r.id_usuari = u.id
+            query = $"SELECT r.id, r.email As `USUARI` , a.titol AS `ACTIVITAT`, r.data, r.codi_transaccio, 
+            r.estat From reserva r Join activitat a ON r.id_activitat = a.id
             WHERE r.data='{data.Value.ToString("yyyy-MM-dd")}'"
         ElseIf cercar_per_data.Checked = False And Not String.IsNullOrEmpty(estat.Text) Then
-            query = $"SELECT r.id, u.email As `USUARI` , a.titol AS `ACTIVITAT`, r.data, r.codi_transaccio, 
-            r.estat From reserva r Join activitat a ON r.id_activitat = a.id Join usuari u ON r.id_usuari = u.id
+            query = $"SELECT r.id, r.email As `USUARI` , a.titol AS `ACTIVITAT`, r.data, r.codi_transaccio, 
+            r.estat From reserva r Join activitat a ON r.id_activitat = a.id 
             WHERE r.estat='{estat.Text}'"
         ElseIf cercar_per_data.Checked = True And Not String.IsNullOrEmpty(estat.Text) Then
-            query = $"SELECT r.id, u.email As `USUARI` , a.titol AS `ACTIVITAT`, r.data, r.codi_transaccio, 
-            r.estat From reserva r Join activitat a ON r.id_activitat = a.id Join usuari u ON r.id_usuari = u.id 
+            query = $"SELECT r.id, r.email As `USUARI` , a.titol AS `ACTIVITAT`, r.data, r.codi_transaccio, 
+            r.estat From reserva r Join activitat a ON r.id_activitat = a.id 
             WHERE r.data='{data.Value.ToString("yyyy-MM-dd")}' AND r.estat='{estat.Text}'"
         Else
-            query = $"SELECT r.id, u.email As `USUARI` , a.titol AS `ACTIVITAT`, r.data, r.codi_transaccio, 
-            r.estat From reserva r Join activitat a ON r.id_activitat = a.id Join usuari u ON r.id_usuari = u.id"
+            query = $"SELECT r.id, r.email As `USUARI` , a.titol AS `ACTIVITAT`, r.data, r.codi_transaccio, 
+            r.estat From reserva r Join activitat a ON r.id_activitat = a.id "
         End If
         Connexions.connectar()
         Dim comanda As New MySqlCommand(query, Connexions.connexio)

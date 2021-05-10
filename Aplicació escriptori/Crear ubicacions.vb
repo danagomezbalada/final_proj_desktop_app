@@ -12,21 +12,25 @@ Public Class crear_ubicacio
 
     Private Sub Crear_Click(sender As Object, e As EventArgs) Handles Crear.Click
         Insertar()
-        MessageBox.Show("Valor afegit")
         gestio_ubicacions.actualitzarTaula()
     End Sub
     Function Insertar()
         Connexions.connectar()
-        Dim name As String
-        name = Nom.Text
-        If name.Contains("'") Then
-            name = Nom.Text.Replace("'", "’")
-            query = $"INSERT INTO `ubicacio` (`nom`) VALUES ('{name}');"
+        If String.IsNullOrEmpty(Nom.Text) = True Then
+            MessageBox.Show("No hi poden haver-hi camps buits")
         Else
-            query = $"INSERT INTO `ubicacio` (`nom`) VALUES ('{name}');"
+            Dim name As String
+            name = Nom.Text
+            If name.Contains("'") Then
+                name = Nom.Text.Replace("'", "’")
+                query = $"INSERT INTO `ubicacio` (`nom`) VALUES ('{name}');"
+            Else
+                query = $"INSERT INTO `ubicacio` (`nom`) VALUES ('{name}');"
+            End If
+            Dim comanda = New MySqlCommand(query, Connexions.connexio)
+            comanda.ExecuteNonQuery()
+            MessageBox.Show("Valor afegit")
         End If
-        Dim comanda = New MySqlCommand(query, Connexions.connexio)
-        comanda.ExecuteNonQuery()
         Connexions.desconnectar()
     End Function
 

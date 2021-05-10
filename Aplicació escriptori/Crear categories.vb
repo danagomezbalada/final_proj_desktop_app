@@ -8,21 +8,24 @@ Public Class crear_categories
 
     Private Sub Crear_Click(sender As Object, e As EventArgs) Handles Crear.Click
         Insertar()
-        MessageBox.Show("Valor afegit")
+
     End Sub
 
     Function Insertar()
         Connexions.connectar()
-        Dim name As String
-        name = nom.Text
-        If name.Contains("'") Then
-            name = nom.Text.Replace("'", "’")
-            query = $"INSERT INTO `categoria` (`nom`) VALUES ('{name}');"
+        If String.IsNullOrEmpty(nom.Text) = True Then
+            MessageBox.Show("No hi poden haver-hi camps buits")
         Else
-            query = $"INSERT INTO `categoria` (`nom`) VALUES ('{name}');"
+            If name.Contains("'") Then
+                name = nom.Text.Replace("'", "’")
+                query = $"INSERT INTO `categoria` (`nom`) VALUES ('{name}');"
+            Else
+                query = $"INSERT INTO `categoria` (`nom`) VALUES ('{name}');"
+            End If
+            Dim comanda = New MySqlCommand(query, Connexions.connexio)
+            comanda.ExecuteNonQuery()
+            MessageBox.Show("Valor afegit")
         End If
-        Dim comanda = New MySqlCommand(query, Connexions.connexio)
-        comanda.ExecuteNonQuery()
         Connexions.desconnectar()
     End Function
 

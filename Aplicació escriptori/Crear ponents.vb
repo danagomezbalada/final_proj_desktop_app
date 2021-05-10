@@ -8,38 +8,44 @@ Public Class crear_ponents
 
     Private Sub Crear_Click(sender As Object, e As EventArgs) Handles Crear.Click
         Insertar()
-        MessageBox.Show("Valor afegit")
+
         gestio_ponent.actualitzarTaula()
     End Sub
     Function Insertar()
         Connexions.connectar()
         Dim name As String
         Dim lastname As String
-        Dim phone As Int32
-        Dim mail As String
         name = nom.Text
         lastname = cognom.Text
-        phone = telefon.Text
-        mail = email.Text
 
-        If name.Contains("'") Then
-            name = nom.Text.Replace("'", "’")
-            query = $"INSERT INTO `ponent` (`nom`,`cognoms`,`telefon`,`email`)
-        VALUES ('{name}','{lastname}','{phone}','{mail}');"
+        Connexions.connectar()
+        If String.IsNullOrEmpty(name) = True Or String.IsNullOrEmpty(lastname) = True Or String.IsNullOrEmpty(email.Text) = True Or String.IsNullOrEmpty(telefon.Text) = True Then
+            MessageBox.Show("No hi poden haver-hi camps buits")
         Else
-            query = $"INSERT INTO `ponent` (`nom`,`cognoms`,`telefon`,`email`)
-        VALUES ('{name}','{lastname}','{phone}','{mail}');"
+            If IsNumeric(telefon.Text) = False Then
+                MessageBox.Show("El camp telèfon ha de ser numèric")
+            Else
+                If name.Contains("'") Then
+                    name = nom.Text.Replace("'", "’")
+                    query = $"INSERT INTO `ponent` (`nom`,`cognoms`,`telefon`,`email`)
+        VALUES ('{name}','{lastname}','{telefon.Text}','{email.Text}');"
+                Else
+                    query = $"INSERT INTO `ponent` (`nom`,`cognoms`,`telefon`,`email`)
+        VALUES ('{name}','{lastname}','{telefon.Text}','{email.Text}');"
+                End If
+                If lastname.Contains("'") Then
+                    lastname = cognom.Text.Replace("'", "’")
+                    query = $"INSERT INTO `ponent` (`nom`,`cognoms`,`telefon`,`email`)
+        VALUES ('{name}','{lastname}','{telefon.Text}','{email.Text}');"
+                Else
+                    query = $"INSERT INTO `ponent` (`nom`,`cognoms`,`telefon`,`email`)
+        VALUES ('{name}','{lastname}','{telefon.Text}','{email.Text}');"
+                End If
+                Dim comanda = New MySqlCommand(query, Connexions.connexio)
+                comanda.ExecuteNonQuery()
+                MessageBox.Show("Valor afegit")
+            End If
         End If
-        If lastname.Contains("'") Then
-            lastname = cognom.Text.Replace("'", "’")
-            query = $"INSERT INTO `ponent` (`nom`,`cognoms`,`telefon`,`email`)
-        VALUES ('{name}','{lastname}','{phone}','{mail}');"
-        Else
-            query = $"INSERT INTO `ponent` (`nom`,`cognoms`,`telefon`,`email`)
-        VALUES ('{name}','{lastname}','{phone}','{mail}');"
-        End If
-        Dim comanda = New MySqlCommand(query, Connexions.connexio)
-        comanda.ExecuteNonQuery()
         Connexions.desconnectar()
     End Function
 

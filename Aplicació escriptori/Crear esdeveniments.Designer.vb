@@ -39,10 +39,9 @@ Partial Class crear_esdeveniments
         '
         'descripcio
         '
-        Me.descripcio.Location = New System.Drawing.Point(465, 135)
-        Me.descripcio.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.descripcio.Location = New System.Drawing.Point(349, 110)
         Me.descripcio.Name = "descripcio"
-        Me.descripcio.Size = New System.Drawing.Size(132, 22)
+        Me.descripcio.Size = New System.Drawing.Size(100, 20)
         Me.descripcio.TabIndex = 22
         '
         'Label5
@@ -50,10 +49,9 @@ Partial Class crear_esdeveniments
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label5.Location = New System.Drawing.Point(351, 135)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(263, 110)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(105, 23)
+        Me.Label5.Size = New System.Drawing.Size(85, 19)
         Me.Label5.TabIndex = 21
         Me.Label5.Text = "Descripció:"
         '
@@ -62,19 +60,17 @@ Partial Class crear_esdeveniments
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label4.Location = New System.Drawing.Point(351, 86)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(263, 70)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(62, 23)
+        Me.Label4.Size = New System.Drawing.Size(49, 19)
         Me.Label4.TabIndex = 19
         Me.Label4.Text = "Actiu:"
         '
         'any
         '
-        Me.any.Location = New System.Drawing.Point(144, 135)
-        Me.any.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.any.Location = New System.Drawing.Point(108, 110)
         Me.any.Name = "any"
-        Me.any.Size = New System.Drawing.Size(132, 22)
+        Me.any.Size = New System.Drawing.Size(100, 20)
         Me.any.TabIndex = 18
         '
         'Label3
@@ -82,10 +78,9 @@ Partial Class crear_esdeveniments
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label3.Location = New System.Drawing.Point(57, 135)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(43, 110)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(51, 23)
+        Me.Label3.Size = New System.Drawing.Size(41, 19)
         Me.Label3.TabIndex = 17
         Me.Label3.Text = "Any:"
         '
@@ -94,20 +89,18 @@ Partial Class crear_esdeveniments
         Me.Crear.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Crear.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Crear.Font = New System.Drawing.Font("Calibri", 7.8!)
-        Me.Crear.Location = New System.Drawing.Point(268, 215)
-        Me.Crear.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Crear.Location = New System.Drawing.Point(201, 175)
         Me.Crear.Name = "Crear"
-        Me.Crear.Size = New System.Drawing.Size(129, 38)
+        Me.Crear.Size = New System.Drawing.Size(97, 31)
         Me.Crear.TabIndex = 16
         Me.Crear.Text = "Crear"
         Me.Crear.UseVisualStyleBackColor = False
         '
         'nom
         '
-        Me.nom.Location = New System.Drawing.Point(144, 86)
-        Me.nom.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.nom.Location = New System.Drawing.Point(108, 70)
         Me.nom.Name = "nom"
-        Me.nom.Size = New System.Drawing.Size(132, 22)
+        Me.nom.Size = New System.Drawing.Size(100, 20)
         Me.nom.TabIndex = 15
         '
         'Label2
@@ -115,10 +108,9 @@ Partial Class crear_esdeveniments
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label2.Location = New System.Drawing.Point(57, 86)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(43, 70)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(56, 23)
+        Me.Label2.Size = New System.Drawing.Size(46, 19)
         Me.Label2.TabIndex = 14
         Me.Label2.Text = "Nom:"
         '
@@ -127,10 +119,9 @@ Partial Class crear_esdeveniments
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label1.Location = New System.Drawing.Point(164, 11)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(123, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(328, 38)
+        Me.Label1.Size = New System.Drawing.Size(265, 31)
         Me.Label1.TabIndex = 13
         Me.Label1.Text = "Crear Esdeveniments"
         '
@@ -140,20 +131,18 @@ Partial Class crear_esdeveniments
         Me.inici.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.inici.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
         Me.inici.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.inici.Location = New System.Drawing.Point(605, 15)
-        Me.inici.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.inici.Location = New System.Drawing.Point(454, 12)
         Me.inici.Name = "inici"
-        Me.inici.Size = New System.Drawing.Size(50, 50)
+        Me.inici.Size = New System.Drawing.Size(38, 41)
         Me.inici.TabIndex = 23
         Me.inici.UseVisualStyleBackColor = True
         '
         'actiu
         '
         Me.actiu.AutoSize = True
-        Me.actiu.Location = New System.Drawing.Point(465, 86)
-        Me.actiu.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.actiu.Location = New System.Drawing.Point(349, 70)
         Me.actiu.Name = "actiu"
-        Me.actiu.Size = New System.Drawing.Size(18, 17)
+        Me.actiu.Size = New System.Drawing.Size(15, 14)
         Me.actiu.TabIndex = 24
         Me.actiu.UseVisualStyleBackColor = True
         '
@@ -163,19 +152,18 @@ Partial Class crear_esdeveniments
         Me.back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.back.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
         Me.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.back.Location = New System.Drawing.Point(551, 15)
-        Me.back.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.back.Location = New System.Drawing.Point(413, 12)
         Me.back.Name = "back"
-        Me.back.Size = New System.Drawing.Size(50, 50)
+        Me.back.Size = New System.Drawing.Size(38, 41)
         Me.back.TabIndex = 25
         Me.back.UseVisualStyleBackColor = True
         '
         'crear_esdeveniments
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SteelBlue
-        Me.ClientSize = New System.Drawing.Size(665, 289)
+        Me.ClientSize = New System.Drawing.Size(499, 235)
         Me.Controls.Add(Me.back)
         Me.Controls.Add(Me.actiu)
         Me.Controls.Add(Me.inici)
@@ -188,7 +176,6 @@ Partial Class crear_esdeveniments
         Me.Controls.Add(Me.nom)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "crear_esdeveniments"
         Me.Text = "Crear Esdeveniments"
         Me.ResumeLayout(False)

@@ -15,24 +15,24 @@ Public Class editar_categories
 
     Private Sub actualitzar_Click(sender As Object, e As EventArgs) Handles actualitzar.Click
         Connexions.connectar()
-        Dim id As String
-        id = identificador.Text
-        Dim name As String
-        name = nom.Text
-        If name.Contains("'") Then
-            name = nom.Text.Replace("'", "’")
-            query = $"Update Categoria SET nom=('{name}') where id = ('{id}');"
+        If String.IsNullOrEmpty(nom.Text) = True Then
+            MessageBox.Show("No hi poden haver-hi camps buits")
         Else
-            query = $"Update Categoria SET nom=('{name}') where id = ('{id}');"
+            Dim id As String
+            id = identificador.Text
+            Dim name As String
+            name = nom.Text
+            If name.Contains("'") Then
+                name = nom.Text.Replace("'", "’")
+                query = $"Update Categoria SET nom=('{name}') where id = ('{id}');"
+            Else
+                query = $"Update Categoria SET nom=('{name}') where id = ('{id}');"
+            End If
+            Dim comanda = New MySqlCommand(query, Connexions.connexio)
+            comanda.ExecuteNonQuery()
+            MessageBox.Show("Categoria actualitzada")
         End If
-
-        Dim comanda = New MySqlCommand(query, Connexions.connexio)
-        comanda.ExecuteNonQuery()
         Connexions.desconnectar()
-        MessageBox.Show("Categoria actualitzada")
-    End Sub
-
-    Private Sub editar_categories_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class
