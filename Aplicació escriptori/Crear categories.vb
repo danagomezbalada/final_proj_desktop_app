@@ -13,11 +13,16 @@ Public Class crear_categories
 
     Function Insertar()
         Connexions.connectar()
-        If String.IsNullOrEmpty(nom.Text) = True Then
+        Dim name As String
+        name = nom.Text
+        'Control d'error de que no hi hagui cap camp null
+        If String.IsNullOrEmpty(name) = True Then
             MessageBox.Show("No hi poden haver-hi camps buits")
         Else
+            'Controll d'errors dels apostrofs
             If name.Contains("'") Then
                 name = nom.Text.Replace("'", "’")
+                'Insert de les dades
                 query = $"INSERT INTO `categoria` (`nom`) VALUES ('{name}');"
             Else
                 query = $"INSERT INTO `categoria` (`nom`) VALUES ('{name}');"

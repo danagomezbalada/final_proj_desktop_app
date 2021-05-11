@@ -21,12 +21,12 @@ Public Class crear_esdeveniments
 
         name = nom.Text
         description = descripcio.Text
-        If IsNumeric(any.Text) = False Then
-            MessageBox.Show("El camp any ha de ser numèric")
-        Else
-            If String.IsNullOrEmpty(nom.Text) = True Or String.IsNullOrEmpty(any.Text) = True Or String.IsNullOrEmpty(descripcio.Text) = True Then
-                MessageBox.Show("No hi poden haver-hi camps buits")
 
+        If String.IsNullOrEmpty(nom.Text) = True Or String.IsNullOrEmpty(any.Text) = True Or String.IsNullOrEmpty(descripcio.Text) = True Then
+            MessageBox.Show("No hi poden haver-hi camps buits")
+        Else
+            If IsNumeric(any.Text) = False Then
+                MessageBox.Show("El camp any ha de ser numèric")
             Else
                 If actiu.Checked = True Then
                     active = 1
@@ -60,11 +60,7 @@ Public Class crear_esdeveniments
         Connexions.desconnectar()
     End Function
 
-    Private Sub actiu_CheckedChanged(sender As Object, e As EventArgs) Handles actiu.CheckedChanged
-        If actiu.Checked = True Then
 
-        End If
-    End Sub
 
     Private Sub back_Click(sender As Object, e As EventArgs) Handles back.Click
         Me.Hide()

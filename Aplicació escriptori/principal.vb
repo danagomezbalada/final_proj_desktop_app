@@ -1,10 +1,8 @@
 ﻿Imports System.IO
 Imports MySql.Data.MySqlClient
-
 Public Class principal
-
     Dim query As String
-        Private Sub administrar_activitats_Click(sender As Object, e As EventArgs) Handles activitats.Click
+    Private Sub administrar_activitats_Click(sender As Object, e As EventArgs) Handles activitats.Click
         Me.Hide()
         administrar_activitats.Show()
     End Sub
@@ -26,14 +24,22 @@ Public Class principal
 
     Private Sub generar_fitxer_Click(sender As Object, e As EventArgs) Handles generar_fitxer.Click
         Try
-            Dim ruta As String = "C:\Users\sergi\OneDrive\Escritorio\DAM2\projecte\dades.txt"
+            Dim carpeta As New FolderBrowserDialog
+            Dim ruta As String = String.Empty
+
+            'Creació del explorador d'archius
+            If carpeta.ShowDialog = Windows.Forms.DialogResult.OK Then
+                ruta = carpeta.SelectedPath + "\dades.txt"
+            End If
             Dim escritor As StreamWriter
+            'Comprovació de si el fitcher existeix, si existeix l'elimina per poder crear el nou
             If File.Exists(ruta) Then
                 File.Delete(ruta)
             End If
             escritor = File.AppendText(ruta)
             Connexions.connectar()
 
+            'Creació de les dades i el format de com crear el ficher 
             'CATEGORIES
             query = $"SELECT * FROM categoria"
             Dim comandaCategoria As New MySqlCommand(query, Connexions.connexio)
@@ -171,7 +177,6 @@ Public Class principal
                 Dim data As Date = conjunt_dadesReseva.Rows(i).Item(3)
                 Dim codiTransaccio As String = conjunt_dadesReseva.Rows(i).Item(4)
                 Dim estat As String = conjunt_dadesReseva.Rows(i).Item(5)
-
                 escritor.WriteLine("R#" & id & ";" & email & ";" & idActivitat & ";" & data.ToString("yyyy-MM-dd") & ";" & codiTransaccio & ";" & estat)
                 escritor.Flush()
             Next

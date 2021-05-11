@@ -20,11 +20,11 @@ Public Class editar_esdeveniments
         Dim name = nom.Text
         Dim description = descripcio.Text
 
-        If IsNumeric(any.Text) = False Then
-            MessageBox.Show("El camp any ha de ser numèric")
+        If String.IsNullOrEmpty(nom.Text) = True Or String.IsNullOrEmpty(any.Text) = True Or String.IsNullOrEmpty(descripcio.Text) = True Then
+            MessageBox.Show("No hi poden haver-hi camps buits")
         Else
-            If String.IsNullOrEmpty(nom.Text) = True Or String.IsNullOrEmpty(any.Text) = True Or String.IsNullOrEmpty(descripcio.Text) = True Then
-                MessageBox.Show("No hi poden haver-hi camps buits")
+            If IsNumeric(any.Text) = False Then
+                MessageBox.Show("El camp any ha de ser numèric")
             Else
                 If actiu.Checked = True Then
                     active = 1
