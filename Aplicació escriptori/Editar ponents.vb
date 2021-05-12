@@ -22,25 +22,33 @@ Public Class editar_ponents
         id = identificador.Text
 
         Connexions.connectar()
+        'Control d'error de que no hi hagui cap camp null
         If String.IsNullOrEmpty(name) = True Or String.IsNullOrEmpty(lastname) = True Or String.IsNullOrEmpty(email.Text) = True Or String.IsNullOrEmpty(telefon.Text) = True Then
             MessageBox.Show("No hi poden haver-hi camps buits")
         Else
+            'Control d'error de que no es pugui introduïr lletres en els camps on hi han d'haver números
             If IsNumeric(telefon.Text) = False Then
                 MessageBox.Show("El camp telèfon ha de ser numèric")
             Else
+                'Controll d'errors dels apostrofs
                 If name.Contains("'") Then
                     name = nom.Text.Replace("'", "’")
+                    'Update de les dades
                     query = $"Update ponent SET nom=('{nom.Text}'), cognoms = ('{cognom.Text}'), telefon = ('{telefon.Text}'), 
         email =('{email.Text}') where id = ('{id}')"
                 Else
+                    'Update de les dades
                     query = $"Update ponent SET nom=('{nom.Text}'), cognoms = ('{cognom.Text}'), telefon = ('{telefon.Text}'), 
         email =('{email.Text}') where id = ('{id}')"
                 End If
+                'Controll d'errors dels apostrofs
                 If lastname.Contains("'") Then
                     lastname = cognom.Text.Replace("'", "’")
+                    'Update de les dades
                     query = $"Update ponent SET nom=('{nom.Text}'), cognoms = ('{cognom.Text}'), telefon = ('{telefon.Text}'), 
         email =('{email.Text}') where id = ('{id}')"
                 Else
+                    'Update de les dades
                     query = $"Update ponent SET nom=('{nom.Text}'), cognoms = ('{cognom.Text}'), telefon = ('{telefon.Text}'), 
         email =('{email.Text}') where id = ('{id}')"
                 End If
@@ -50,9 +58,5 @@ Public Class editar_ponents
             End If
         End If
         Connexions.desconnectar()
-
-
-
-
     End Sub
 End Class

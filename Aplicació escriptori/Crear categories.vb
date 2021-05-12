@@ -8,7 +8,6 @@ Public Class crear_categories
 
     Private Sub Crear_Click(sender As Object, e As EventArgs) Handles Crear.Click
         Insertar()
-
     End Sub
 
     Function Insertar()
@@ -25,6 +24,7 @@ Public Class crear_categories
                 'Insert de les dades
                 query = $"INSERT INTO `categoria` (`nom`) VALUES ('{name}');"
             Else
+                'Insert de les dades
                 query = $"INSERT INTO `categoria` (`nom`) VALUES ('{name}');"
             End If
             Dim comanda = New MySqlCommand(query, Connexions.connexio)

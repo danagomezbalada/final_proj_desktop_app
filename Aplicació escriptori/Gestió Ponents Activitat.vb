@@ -19,9 +19,11 @@ Public Class gestio_ponents_activitat
         Dim id As String
         Dim Fila As Integer
         Dim missatge As MsgBoxResult = MsgBox("Vols eliminar el registre?", MsgBoxStyle.OkCancel, "Eliminar")
+        'Control de si estan segurs que volen eliminar el registre
         If missatge = MsgBoxResult.Ok Then
             Fila = taula_ponents_actuals.CurrentRow.Index
             id = taula_ponents_actuals.Rows(Fila).Cells(1).Value
+            'Delete del registre seleccionat
             query = $"DELETE FROM activitat_ponent where id_ponent = '{id}'"
             Connexions.connectar()
             Dim comanda As New MySqlCommand(query, Connexions.connexio)
@@ -32,11 +34,12 @@ Public Class gestio_ponents_activitat
     End Sub
     Function actualitzarTaula()
         Connexions.connectar()
+        'Select de les dades
         query = $"SELECT a.id ,p.id, p.nom AS `Nom`, p.cognoms AS 'Cognoms' 
         FROM activitat a LEFT OUTER JOIN activitat_ponent ap ON 
         a.id = ap.id_activitat LEFT OUTER JOIN ponent p ON ap.id_ponent = p.id 
         where a.id='{editar_activitats.identificador.Text}'"
-
+        'Select de les dades
         query1 = $"SELECT id,nom AS 'Nom',cognoms AS 'Cognoms' FROM ponent where id NOT IN 
         (SELECT id_ponent FROM activitat_ponent where id_activitat ='{editar_activitats.identificador.Text}')"
         Dim comanda As New MySqlCommand(query, Connexions.connexio)
@@ -47,6 +50,7 @@ Public Class gestio_ponents_activitat
         Dim conjunt_dades1 As New DataTable()
         adaptador.Fill(conjunt_dades)
         adaptador1.Fill(conjunt_dades1)
+        'Creació de la taula
         taula_ponents_actuals.AutoSizeColumnsMode = DataGridViewAutoSizeColumnMode.Fill
         taula_ponents_actuals.DataSource = conjunt_dades
         taula_ponents_disponibles.AutoSizeColumnsMode = DataGridViewAutoSizeColumnMode.Fill
@@ -54,6 +58,11 @@ Public Class gestio_ponents_activitat
         taula_ponents_disponibles.Columns(0).Visible = False
         taula_ponents_actuals.Columns(0).Visible = False
         taula_ponents_actuals.Columns(1).Visible = False
+        'Edició dels noms de la taula
+        taula_ponents_actuals.Columns(2).HeaderCell.Value = "NOM"
+        taula_ponents_actuals.Columns(3).HeaderCell.Value = "COGNOMS"
+        taula_ponents_disponibles.Columns(1).HeaderCell.Value = "NOM"
+        taula_ponents_disponibles.Columns(2).HeaderCell.Value = "COGNOMS"
         Connexions.desconnectar()
     End Function
 
@@ -61,6 +70,7 @@ Public Class gestio_ponents_activitat
         Connexions.connectar()
         Dim Fila As Integer
         Fila = taula_ponents_disponibles.CurrentRow.Index
+        'Insert de les dades
         query = $"INSERT INTO activitat_ponent (id_activitat,id_ponent) VALUES ('{editar_activitats.identificador.Text}', '{taula_ponents_disponibles.Rows(Fila).Cells(0).Value.ToString}')"
         Dim comanda As New MySqlCommand(query, Connexions.connexio)
         comanda.ExecuteNonQuery()

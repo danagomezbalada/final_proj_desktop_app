@@ -31,11 +31,13 @@ Public Class editar_activitats
     End Sub
     Function emplenarCamps()
         Connexions.connectar()
+        'Select de les dades
         query = $"Select * from activitat where id='{identificador.Text}'"
         Dim comanda As New MySqlCommand(query, Connexions.connexio)
         Dim adaptador As New MySqlDataAdapter(comanda)
         Dim conjunt_dades As New DataTable()
         adaptador.Fill(conjunt_dades)
+        'Agafem les dades de cada camp de la base de dades
         titol.Text = conjunt_dades.Rows(0).Item(1)
         data.Text = conjunt_dades.Rows(0).Item(2)
         descripcio.Text = conjunt_dades.Rows(0).Item(3)
@@ -52,6 +54,7 @@ Public Class editar_activitats
         carregarUbicacio()
         carregarDepartament()
     End Function
+    'Select dels desplegables
     Function carregarEsdeveniments()
         Connexions.connectar()
         query = $"SELECT id,nom FROM esdeveniment"
@@ -100,15 +103,19 @@ Public Class editar_activitats
     End Function
     Private Sub actualitzar_Click(sender As Object, e As EventArgs) Handles actualitzar.Click
         Connexions.connectar()
+        'Control d'error de que no hi hagui cap camp null
         If String.IsNullOrEmpty(titol.Text) = True Or String.IsNullOrEmpty(preu.Text) = True Or String.IsNullOrEmpty(descripcio.Text) = True Or String.IsNullOrEmpty(places_totals.Text) = True Or String.IsNullOrEmpty(places_actuals.Text) = True Then
             MessageBox.Show("No hi poden haver-hi camps buits")
         Else
+            'Control d'error de que no es pugui introduïr lletres en els camps on hi han d'haver números
             If IsNumeric(preu.Text) = False Or IsNumeric(places_totals.Text) = False Or IsNumeric(places_actuals.Text) = False Then
                 MessageBox.Show("Els camps preu, places totals i places actuals han de ser numèrics")
             Else
+                'Controll d'errors dels apostrofs
                 If titol.Text.Contains("'") Or descripcio.Text.Contains("'") Then
                     titol.Text = titol.Text.Replace("'", "’")
                     descripcio.Text = descripcio.Text.Replace("'", "’")
+                    'Update de les dades
                     query = $"UPDATE activitat SET titol = ('{titol.Text}'),data= ('{data.Value.ToString("yyyy-MM-dd")}'),
             descripcio = ('{descripcio.Text}'),preu = ('{preu.Text}'),places_totals = ('{places_totals.Text}'),
             places_actuals= ('{places_actuals.Text}'),id_esdeveniment= ('{esdeveniment.SelectedValue}'),
@@ -117,6 +124,7 @@ Public Class editar_activitats
             id_ubicacio = ('{ubicacio.SelectedValue}'),id_departament= ('{departament.SelectedValue}')
             where id = ('{identificador.Text}')"
                 Else
+                    'Update de les dades
                     query = $"Update activitat SET titol = ('{titol.Text}'),data= ('{data.Value.ToString("yyyy-MM-dd")}'),
             descripcio = ('{descripcio.Text}'),preu = ('{preu.Text}'),places_totals = ('{places_totals.Text}'),
             places_actuals= ('{places_actuals.Text}'),id_esdeveniment= ('{esdeveniment.SelectedValue}'),

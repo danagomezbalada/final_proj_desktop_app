@@ -35,9 +35,11 @@ Public Class gestio_departament
         Dim id As String
         Dim Fila As Integer
         Dim missatge As MsgBoxResult = MsgBox("Vols eliminar el registre?", MsgBoxStyle.OkCancel, "Eliminar")
+        'Control de si estan segurs que volen eliminar el registre
         If missatge = MsgBoxResult.Ok Then
             Fila = taula_departament.CurrentRow.Index
             id = taula_departament.Rows(Fila).Cells(0).Value
+            'Delete del registre
             query = $"DELETE FROM departament where id = '{id}'"
             Connexions.connectar()
             Dim comanda As New MySqlCommand(query, Connexions.connexio)
@@ -51,6 +53,7 @@ Public Class gestio_departament
         actualitzarTaula()
     End Sub
     Function actualitzarTaula()
+        'Control de que no hi hagui camps buits
         If String.IsNullOrEmpty(Nom.Text) = True Then
             query = $"SELECT * FROM departament"
         Else
@@ -61,10 +64,12 @@ Public Class gestio_departament
         Dim adaptador As New MySqlDataAdapter(comanda)
         Dim conjunt_dades As New DataTable()
         adaptador.Fill(conjunt_dades)
+        'Creació de la taula
         taula_departament.AutoSizeColumnsMode = DataGridViewAutoSizeColumnMode.Fill
         taula_departament.DataSource = conjunt_dades
         taula_departament.Columns(0).Visible = False
         Connexions.desconnectar()
+        'Edició dels noms de la taula
         taula_departament.Columns(1).HeaderCell.Value = "NOM"
     End Function
 End Class

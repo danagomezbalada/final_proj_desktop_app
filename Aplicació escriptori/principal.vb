@@ -103,6 +103,24 @@ Public Class principal
                 escritor.Flush()
             Next
 
+            'PONENTS
+            query = $"SELECT * FROM ponent"
+            Dim comandaPonent As New MySqlCommand(query, Connexions.connexio)
+            Dim adaptadorPonent As New MySqlDataAdapter(comandaPonent)
+            Dim conjunt_dadesPonent As New DataTable()
+            adaptadorPonent.Fill(conjunt_dadesPonent)
+
+            For i As Integer = 0 To (conjunt_dadesPonent.Rows.Count - 1)
+                Dim id As Int32 = conjunt_dadesPonent.Rows(i).Item(0)
+                Dim nom As String = conjunt_dadesPonent.Rows(i).Item(1)
+                Dim cognoms As String = conjunt_dadesPonent.Rows(i).Item(2)
+                Dim telefon As String = conjunt_dadesPonent.Rows(i).Item(3)
+                Dim email As String = conjunt_dadesPonent.Rows(i).Item(4)
+
+                escritor.WriteLine("P#" & id & ";" & nom & ";" & cognoms & ";" & telefon & ";" & email)
+                escritor.Flush()
+            Next
+
             'ACTIVITATS
             query = $"SELECT * FROM activitat"
             Dim comandaActivitat As New MySqlCommand(query, Connexions.connexio)
@@ -139,11 +157,10 @@ Public Class principal
             adaptadorActivitatPonent.Fill(conjunt_dadesActivitatPonent)
 
             For i As Integer = 0 To (conjunt_dadesActivitatPonent.Rows.Count - 1)
-                Dim id As Int32 = conjunt_dadesActivitatPonent.Rows(i).Item(0)
+
                 Dim activitat As String = conjunt_dadesActivitatPonent.Rows(i).Item(1)
                 Dim ponent As String = conjunt_dadesActivitatPonent.Rows(i).Item(2)
-
-                escritor.WriteLine("AP#" & id & ";" & activitat & ";" & ponent)
+                escritor.WriteLine("AP#" & activitat & ";" & ponent)
                 escritor.Flush()
             Next
 
@@ -155,11 +172,10 @@ Public Class principal
             adaptadorActivitatCategoria.Fill(conjunt_dadesActivitatCategoria)
 
             For i As Integer = 0 To (conjunt_dadesActivitatCategoria.Rows.Count - 1)
-                Dim id As Int32 = conjunt_dadesActivitatCategoria.Rows(i).Item(0)
                 Dim activitat As String = conjunt_dadesActivitatCategoria.Rows(i).Item(1)
                 Dim categoria As String = conjunt_dadesActivitatCategoria.Rows(i).Item(2)
 
-                escritor.WriteLine("AC#" & id & ";" & activitat & ";" & categoria)
+                escritor.WriteLine("AC#" & activitat & ";" & categoria)
                 escritor.Flush()
             Next
 

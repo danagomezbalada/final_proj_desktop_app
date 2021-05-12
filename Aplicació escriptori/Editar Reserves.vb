@@ -8,15 +8,14 @@ Public Class editar_reserves
         Me.Hide()
         gestio_reserves.Show()
     End Sub
-
     Private Sub inici_Click(sender As Object, e As EventArgs) Handles inici.Click
         Me.Hide()
         principal.Show()
     End Sub
-
     Private Sub actualitzar_Click(sender As Object, e As EventArgs) Handles actualitzar.Click
         Connexions.connectar()
         Dim estatSeleccionat As String
+        'Mirem l'estat de la reserva
         If pendent.Checked = True Then
             estatSeleccionat = 0
         ElseIf confirmada.Checked = True Then
@@ -24,6 +23,7 @@ Public Class editar_reserves
         Else
             estatSeleccionat = 2
         End If
+        'Update de les dades
         query = $"Update reserva SET estat = ('{estatSeleccionat}') 
             WHERE id = ('{identificador.Text}')"
         Dim comanda As New MySqlCommand(query, Connexions.connexio)
@@ -34,16 +34,14 @@ Public Class editar_reserves
     End Sub
     Function emplenarCamps()
         Connexions.connectar()
+        'Update de les dades
+        'Select de les dades
         query = $"Select * from reserva where id='{identificador.Text}'"
         Dim comanda As New MySqlCommand(query, Connexions.connexio)
         Dim adaptador As New MySqlDataAdapter(comanda)
         Dim conjunt_dades As New DataTable()
         adaptador.Fill(conjunt_dades)
-        'usuari.Text = conjunt_dades.Rows(0).Item(1)
-        'activitat.Text = conjunt_dades.Rows(0).Item(2)
-        data.Text = conjunt_dades.Rows(0).Item(3)
-        codi_transaccio.Text = conjunt_dades.Rows(0).Item(4)
-        codi_estat = conjunt_dades.Rows(0).Item(5)
+        'Update de les dades
         If codi_estat = 0 Then
             pendent.Checked = True
         ElseIf codi_estat = 1 Then

@@ -19,32 +19,39 @@ Public Class editar_esdeveniments
         Dim active As Int32
         Dim name = nom.Text
         Dim description = descripcio.Text
-
+        'Control d'error de que no hi hagui cap camp null
         If String.IsNullOrEmpty(nom.Text) = True Or String.IsNullOrEmpty(any.Text) = True Or String.IsNullOrEmpty(descripcio.Text) = True Then
             MessageBox.Show("No hi poden haver-hi camps buits")
         Else
+            'Control d'error de que no es pugui introduïr lletres en els camps on hi han d'haver números
             If IsNumeric(any.Text) = False Then
                 MessageBox.Show("El camp any ha de ser numèric")
             Else
+                'Comprovacio del camp actiu
                 If actiu.Checked = True Then
                     active = 1
                 Else
                     active = 0
                 End If
+                'Controll d'errors dels apostrofs
                 If nom.Text.Contains("'") Then
                     nom.Text = nom.Text.Replace("'", "’")
+                    'Update de les dades
                     query = $"Update esdeveniment SET any = ('{any.Text}'),nom=('{nom.Text}'),  descripcio = ('{descripcio.Text}'),actiu = ('{active}') 
         where id = ('{id}')"
                 Else
+                    'Update de les dades
                     query = $"Update esdeveniment SET any = ('{any.Text}'),nom=('{nom.Text}'),  descripcio = ('{descripcio.Text}'),actiu = ('{active}') 
         where id = ('{id}')"
                 End If
-
+                'Controll d'errors dels apostrofs
                 If descripcio.Text.Contains("'") Then
                     descripcio.Text = descripcio.Text.Replace("'", "’")
+                    'Update de les dades
                     query = $"Update esdeveniment SET any = ('{any.Text}'),nom=('{nom.Text}'),  descripcio = ('{descripcio.Text}'),actiu = ('{active}') 
         where id = ('{id}')"
                 Else
+                    'Update de les dades
                     query = $"Update esdeveniment SET any = ('{any.Text}'),nom=('{nom.Text}'),  descripcio = ('{descripcio.Text}'),actiu = ('{active}') 
         where id = ('{id}')"
                 End If

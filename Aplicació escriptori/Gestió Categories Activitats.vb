@@ -17,18 +17,15 @@ Public Class gestio_categories_activitat
         Me.Hide()
         principal.Show()
     End Sub
-
-    Private Sub gestio_categories_activitat_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
     Private Sub eliminar_Click(sender As Object, e As EventArgs) Handles eliminar.Click
         Dim id As String
         Dim Fila As Integer
         Dim missatge As MsgBoxResult = MsgBox("Vols eliminar el registre?", MsgBoxStyle.OkCancel, "Eliminar")
+        'Control de si estan segurs que volen eliminar el registre
         If missatge = MsgBoxResult.Ok Then
             Fila = taula_categoria_actuals.CurrentRow.Index
             id = taula_categoria_actuals.Rows(Fila).Cells(1).Value
+            'Delete del registre
             query = $"DELETE FROM activitat_categoria where id_categoria = '{id}'"
             Connexions.connectar()
             Dim comanda As New MySqlCommand(query, Connexions.connexio)
@@ -39,10 +36,12 @@ Public Class gestio_categories_activitat
     End Sub
     Function actualitzarTaula()
         Connexions.connectar()
+        'Select de les dades
         query = $"SELECT a.id ,c.id, c.nom AS `Nom` 
         FROM activitat a LEFT OUTER JOIN activitat_categoria ac ON 
         a.id = ac.id_activitat LEFT OUTER JOIN categoria c ON ac.id_categoria = c.id 
         where a.id='{editar_activitats.identificador.Text}'"
+        'Select de les dades
         query1 = $"SELECT id,nom AS 'Nom'FROM categoria where id NOT IN 
         (SELECT id_categoria FROM activitat_categoria where id_activitat ='{editar_activitats.identificador.Text}')"
         Dim comanda As New MySqlCommand(query, Connexions.connexio)
@@ -60,6 +59,9 @@ Public Class gestio_categories_activitat
         taula_categoria_disponibles.Columns(0).Visible = False
         taula_categoria_actuals.Columns(0).Visible = False
         taula_categoria_actuals.Columns(1).Visible = False
+        'Edició dels noms de la taula
+        taula_categoria_actuals.Columns(2).HeaderCell.Value = "NOM"
+        taula_categoria_disponibles.Columns(1).HeaderCell.Value = "NOM"
         Connexions.desconnectar()
     End Function
 
@@ -67,6 +69,7 @@ Public Class gestio_categories_activitat
         Connexions.connectar()
         Dim Fila As Integer
         Fila = taula_categoria_disponibles.CurrentRow.Index
+        'Insert de les dades
         query = $"INSERT INTO activitat_categoria (id_activitat,id_categoria) VALUES ('{editar_activitats.identificador.Text}', '{taula_categoria_disponibles.Rows(Fila).Cells(0).Value.ToString}')"
         Dim comanda As New MySqlCommand(query, Connexions.connexio)
         comanda.ExecuteNonQuery()
