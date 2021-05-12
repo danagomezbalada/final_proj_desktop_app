@@ -16,6 +16,10 @@ Public Class gestio_reserves
         editar_reserves.identificador.Text = id
         editar_reserves.usuari.Text = taula_reserves.Rows(Fila).Cells(1).Value.ToString
         editar_reserves.activitat.Text = taula_reserves.Rows(Fila).Cells(2).Value.ToString
+
+        editar_reserves.codi_transaccio.Text = taula_reserves.Rows(Fila).Cells(4).Value.ToString
+        editar_reserves.estat_text.Text = taula_reserves.Rows(Fila).Cells(5).Value.ToString
+
         editar_reserves.emplenarCamps()
     End Sub
     Private Sub Cercar_Click(sender As Object, e As EventArgs) Handles Cercar.Click

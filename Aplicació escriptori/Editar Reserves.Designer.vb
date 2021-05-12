@@ -37,7 +37,7 @@ Partial Class editar_reserves
         Me.identificador = New System.Windows.Forms.TextBox()
         Me.codi_transaccio = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.prova = New System.Windows.Forms.TextBox()
+        Me.estat_text = New System.Windows.Forms.TextBox()
         Me.confirmada = New System.Windows.Forms.RadioButton()
         Me.estat = New System.Windows.Forms.GroupBox()
         Me.rebutjada = New System.Windows.Forms.RadioButton()
@@ -187,13 +187,13 @@ Partial Class editar_reserves
         Me.Label4.TabIndex = 44
         Me.Label4.Text = "Codi Transacció:"
         '
-        'prova
+        'estat_text
         '
-        Me.prova.Location = New System.Drawing.Point(429, 203)
-        Me.prova.Name = "prova"
-        Me.prova.Size = New System.Drawing.Size(26, 20)
-        Me.prova.TabIndex = 46
-        Me.prova.Visible = False
+        Me.estat_text.Location = New System.Drawing.Point(429, 203)
+        Me.estat_text.Name = "estat_text"
+        Me.estat_text.Size = New System.Drawing.Size(26, 20)
+        Me.estat_text.TabIndex = 46
+        Me.estat_text.Visible = False
         '
         'confirmada
         '
@@ -250,7 +250,7 @@ Partial Class editar_reserves
         Me.BackColor = System.Drawing.Color.SteelBlue
         Me.ClientSize = New System.Drawing.Size(508, 235)
         Me.Controls.Add(Me.estat)
-        Me.Controls.Add(Me.prova)
+        Me.Controls.Add(Me.estat_text)
         Me.Controls.Add(Me.codi_transaccio)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.identificador)
@@ -288,7 +288,7 @@ Partial Class editar_reserves
     Friend WithEvents identificador As TextBox
     Friend WithEvents codi_transaccio As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents prova As TextBox
+    Friend WithEvents estat_text As TextBox
     Friend WithEvents confirmada As RadioButton
     Friend WithEvents estat As GroupBox
     Friend WithEvents rebutjada As RadioButton
