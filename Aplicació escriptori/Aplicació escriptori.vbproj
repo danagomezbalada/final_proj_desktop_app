@@ -47,7 +47,14 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo %282%29.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.22.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 8.0.22\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -73,17 +80,158 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
+    <Compile Include="Categoria.vb" />
+    <Compile Include="Connexions.vb" />
+    <Compile Include="Crear ubicacions.Designer.vb">
+      <DependentUpon>Crear ubicacions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Crear ubicacions.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="Crear activitats.Designer.vb">
+      <DependentUpon>Crear activitats.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Crear activitats.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Crear categories.Designer.vb">
+      <DependentUpon>Crear categories.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Crear categories.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Crear departaments.Designer.vb">
+      <DependentUpon>Crear departaments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Crear departaments.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Crear ponents.Designer.vb">
+      <DependentUpon>Crear ponents.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Crear ponents.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Crear esdeveniments.Designer.vb">
+      <DependentUpon>Crear esdeveniments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Crear esdeveniments.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editar esdeveniments.Designer.vb">
+      <DependentUpon>Editar esdeveniments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Editar esdeveniments.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editar activitats.Designer.vb">
+      <DependentUpon>Editar activitats.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Editar activitats.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editar categories.Designer.vb">
+      <DependentUpon>Editar categories.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Editar categories.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editar departaments.Designer.vb">
+      <DependentUpon>Editar departaments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Editar departaments.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editar ubicacions.Designer.vb">
+      <DependentUpon>Editar ubicacions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Editar ubicacions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editar ponents.Designer.vb">
+      <DependentUpon>Editar ponents.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Editar ponents.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editar Reserves.Designer.vb">
+      <DependentUpon>Editar Reserves.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Editar Reserves.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestió Categories Activitats.Designer.vb">
+      <DependentUpon>Gestió Categories Activitats.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gestió Categories Activitats.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestió Ponents Activitat.Designer.vb">
+      <DependentUpon>Gestió Ponents Activitat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gestió Ponents Activitat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="principal.Designer.vb">
+      <DependentUpon>principal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="principal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestio reserves.Designer.vb">
+      <DependentUpon>Gestio reserves.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gestio reserves.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestio esdeveniments.Designer.vb">
+      <DependentUpon>Gestio esdeveniments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gestio esdeveniments.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestio ponents.Designer.vb">
+      <DependentUpon>Gestio ponents.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gestio ponents.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestio ubicacions.Designer.vb">
+      <DependentUpon>Gestio ubicacions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gestio ubicacions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestio departaments.Designer.vb">
+      <DependentUpon>Gestio departaments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gestio departaments.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrar activitats.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrar activitats.Designer.vb">
+      <DependentUpon>Administrar activitats.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestio activitats.Designer.vb">
+      <DependentUpon>Gestio activitats.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gestio activitats.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestio categories.Designer.vb">
+      <DependentUpon>Gestio categories.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gestio categories.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -97,11 +245,83 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Crear ubicacions.resx">
+      <DependentUpon>Crear ubicacions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crear activitats.resx">
+      <DependentUpon>Crear activitats.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crear categories.resx">
+      <DependentUpon>Crear categories.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crear departaments.resx">
+      <DependentUpon>Crear departaments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crear ponents.resx">
+      <DependentUpon>Crear ponents.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crear esdeveniments.resx">
+      <DependentUpon>Crear esdeveniments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editar esdeveniments.resx">
+      <DependentUpon>Editar esdeveniments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editar activitats.resx">
+      <DependentUpon>Editar activitats.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editar categories.resx">
+      <DependentUpon>Editar categories.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editar departaments.resx">
+      <DependentUpon>Editar departaments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editar Reserves.resx">
+      <DependentUpon>Editar Reserves.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editar ubicacions.resx">
+      <DependentUpon>Editar ubicacions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editar ponents.resx">
+      <DependentUpon>Editar ponents.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestió Categories Activitats.resx">
+      <DependentUpon>Gestió Categories Activitats.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestió Ponents Activitat.resx">
+      <DependentUpon>Gestió Ponents Activitat.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestio reserves.resx">
+      <DependentUpon>Gestio reserves.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestio esdeveniments.resx">
+      <DependentUpon>Gestio esdeveniments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestio ponents.resx">
+      <DependentUpon>Gestio ponents.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestio ubicacions.resx">
+      <DependentUpon>Gestio ubicacions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestio departaments.resx">
+      <DependentUpon>Gestio departaments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrar activitats.resx">
+      <DependentUpon>Administrar activitats.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestio activitats.resx">
+      <DependentUpon>Gestio activitats.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestio categories.resx">
+      <DependentUpon>Gestio categories.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="principal.resx">
+      <DependentUpon>principal.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -115,6 +335,9 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo %282%29.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
