@@ -38,10 +38,9 @@ Partial Class administrar_activitats
         Me.Categories.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Categories.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Categories.Font = New System.Drawing.Font("Calibri", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Categories.Location = New System.Drawing.Point(54, 73)
-        Me.Categories.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Categories.Location = New System.Drawing.Point(40, 59)
         Me.Categories.Name = "Categories"
-        Me.Categories.Size = New System.Drawing.Size(183, 40)
+        Me.Categories.Size = New System.Drawing.Size(137, 32)
         Me.Categories.TabIndex = 1
         Me.Categories.Text = "Gestionar Categories"
         Me.Categories.UseVisualStyleBackColor = False
@@ -51,10 +50,9 @@ Partial Class administrar_activitats
         Me.Ubicacions.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Ubicacions.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Ubicacions.Font = New System.Drawing.Font("Calibri", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Ubicacions.Location = New System.Drawing.Point(54, 132)
-        Me.Ubicacions.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Ubicacions.Location = New System.Drawing.Point(40, 107)
         Me.Ubicacions.Name = "Ubicacions"
-        Me.Ubicacions.Size = New System.Drawing.Size(183, 40)
+        Me.Ubicacions.Size = New System.Drawing.Size(137, 32)
         Me.Ubicacions.TabIndex = 2
         Me.Ubicacions.Text = "Gestionar Ubicacions"
         Me.Ubicacions.UseVisualStyleBackColor = False
@@ -64,10 +62,9 @@ Partial Class administrar_activitats
         Me.Departaments.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Departaments.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Departaments.Font = New System.Drawing.Font("Calibri", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Departaments.Location = New System.Drawing.Point(54, 193)
-        Me.Departaments.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Departaments.Location = New System.Drawing.Point(40, 157)
         Me.Departaments.Name = "Departaments"
-        Me.Departaments.Size = New System.Drawing.Size(183, 40)
+        Me.Departaments.Size = New System.Drawing.Size(137, 32)
         Me.Departaments.TabIndex = 3
         Me.Departaments.Text = "Gestionar Departaments"
         Me.Departaments.UseVisualStyleBackColor = False
@@ -77,10 +74,9 @@ Partial Class administrar_activitats
         Me.Ponents.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Ponents.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Ponents.Font = New System.Drawing.Font("Calibri", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Ponents.Location = New System.Drawing.Point(54, 250)
-        Me.Ponents.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Ponents.Location = New System.Drawing.Point(40, 203)
         Me.Ponents.Name = "Ponents"
-        Me.Ponents.Size = New System.Drawing.Size(183, 40)
+        Me.Ponents.Size = New System.Drawing.Size(137, 32)
         Me.Ponents.TabIndex = 5
         Me.Ponents.Text = "Gestionar Ponents"
         Me.Ponents.UseVisualStyleBackColor = False
@@ -90,20 +86,18 @@ Partial Class administrar_activitats
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label1.Location = New System.Drawing.Point(73, 16)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(55, 13)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(340, 38)
+        Me.Label1.Size = New System.Drawing.Size(278, 31)
         Me.Label1.TabIndex = 6
         Me.Label1.Text = "Administrar Activitats"
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(264, 73)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox1.Location = New System.Drawing.Point(198, 59)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(239, 239)
+        Me.PictureBox1.Size = New System.Drawing.Size(179, 194)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 7
         Me.PictureBox1.TabStop = False
@@ -114,19 +108,18 @@ Partial Class administrar_activitats
         Me.inici.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.inici.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
         Me.inici.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.inici.Location = New System.Drawing.Point(605, 16)
-        Me.inici.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.inici.Location = New System.Drawing.Point(454, 13)
         Me.inici.Name = "inici"
-        Me.inici.Size = New System.Drawing.Size(50, 50)
+        Me.inici.Size = New System.Drawing.Size(38, 41)
         Me.inici.TabIndex = 24
         Me.inici.UseVisualStyleBackColor = True
         '
         'administrar_activitats
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SteelBlue
-        Me.ClientSize = New System.Drawing.Size(688, 382)
+        Me.ClientSize = New System.Drawing.Size(516, 310)
         Me.Controls.Add(Me.inici)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label1)
@@ -134,7 +127,7 @@ Partial Class administrar_activitats
         Me.Controls.Add(Me.Departaments)
         Me.Controls.Add(Me.Ubicacions)
         Me.Controls.Add(Me.Categories)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "administrar_activitats"
         Me.Text = "Administrar Activitats"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

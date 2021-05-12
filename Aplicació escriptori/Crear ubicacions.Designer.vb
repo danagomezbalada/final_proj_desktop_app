@@ -108,6 +108,7 @@ Partial Class crear_ubicacio
         Me.Controls.Add(Me.Crear)
         Me.Controls.Add(Me.Nom)
         Me.Controls.Add(Me.label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "crear_ubicacio"
         Me.Text = "Crear Ubicació"
         Me.ResumeLayout(False)

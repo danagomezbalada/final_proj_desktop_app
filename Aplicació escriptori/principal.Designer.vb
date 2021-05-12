@@ -140,6 +140,7 @@ Partial Class principal
         Me.Controls.Add(Me.gestionar_activitats)
         Me.Controls.Add(Me.activitats)
         Me.Controls.Add(Me.administrar_esdeveniments)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "principal"
         Me.Text = "Principal"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

@@ -41,19 +41,17 @@ Partial Class gestio_ubicacions
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label1.Location = New System.Drawing.Point(40, 16)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(30, 13)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(275, 38)
+        Me.Label1.Size = New System.Drawing.Size(225, 31)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Gestió Ubicacions"
         '
         'Nom
         '
-        Me.Nom.Location = New System.Drawing.Point(121, 76)
-        Me.Nom.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Nom.Location = New System.Drawing.Point(91, 62)
         Me.Nom.Name = "Nom"
-        Me.Nom.Size = New System.Drawing.Size(132, 22)
+        Me.Nom.Size = New System.Drawing.Size(100, 20)
         Me.Nom.TabIndex = 1
         '
         'Cercar
@@ -61,10 +59,9 @@ Partial Class gestio_ubicacions
         Me.Cercar.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Cercar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Cercar.Font = New System.Drawing.Font("Calibri", 7.8!)
-        Me.Cercar.Location = New System.Drawing.Point(277, 76)
-        Me.Cercar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Cercar.Location = New System.Drawing.Point(208, 62)
         Me.Cercar.Name = "Cercar"
-        Me.Cercar.Size = New System.Drawing.Size(97, 30)
+        Me.Cercar.Size = New System.Drawing.Size(73, 24)
         Me.Cercar.TabIndex = 2
         Me.Cercar.Text = "Cercar"
         Me.Cercar.UseVisualStyleBackColor = False
@@ -74,11 +71,10 @@ Partial Class gestio_ubicacions
         Me.taula_ubicacions.BackgroundColor = System.Drawing.Color.SteelBlue
         Me.taula_ubicacions.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.taula_ubicacions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.taula_ubicacions.Location = New System.Drawing.Point(40, 123)
-        Me.taula_ubicacions.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.taula_ubicacions.Location = New System.Drawing.Point(30, 100)
         Me.taula_ubicacions.Name = "taula_ubicacions"
         Me.taula_ubicacions.RowHeadersWidth = 51
-        Me.taula_ubicacions.Size = New System.Drawing.Size(800, 369)
+        Me.taula_ubicacions.Size = New System.Drawing.Size(600, 300)
         Me.taula_ubicacions.TabIndex = 13
         '
         'Afegir
@@ -86,10 +82,9 @@ Partial Class gestio_ubicacions
         Me.Afegir.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Afegir.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Afegir.Font = New System.Drawing.Font("Calibri", 7.8!)
-        Me.Afegir.Location = New System.Drawing.Point(181, 508)
-        Me.Afegir.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Afegir.Location = New System.Drawing.Point(136, 413)
         Me.Afegir.Name = "Afegir"
-        Me.Afegir.Size = New System.Drawing.Size(111, 33)
+        Me.Afegir.Size = New System.Drawing.Size(83, 27)
         Me.Afegir.TabIndex = 14
         Me.Afegir.Text = "Afegir"
         Me.Afegir.UseVisualStyleBackColor = False
@@ -99,10 +94,9 @@ Partial Class gestio_ubicacions
         Me.Editar.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Editar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Editar.Font = New System.Drawing.Font("Calibri", 7.8!)
-        Me.Editar.Location = New System.Drawing.Point(393, 508)
-        Me.Editar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Editar.Location = New System.Drawing.Point(295, 413)
         Me.Editar.Name = "Editar"
-        Me.Editar.Size = New System.Drawing.Size(111, 33)
+        Me.Editar.Size = New System.Drawing.Size(83, 27)
         Me.Editar.TabIndex = 15
         Me.Editar.Text = "Editar"
         Me.Editar.UseVisualStyleBackColor = False
@@ -112,10 +106,9 @@ Partial Class gestio_ubicacions
         Me.Eliminar.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Eliminar.Font = New System.Drawing.Font("Calibri", 7.8!)
-        Me.Eliminar.Location = New System.Drawing.Point(612, 508)
-        Me.Eliminar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Eliminar.Location = New System.Drawing.Point(459, 413)
         Me.Eliminar.Name = "Eliminar"
-        Me.Eliminar.Size = New System.Drawing.Size(111, 33)
+        Me.Eliminar.Size = New System.Drawing.Size(83, 27)
         Me.Eliminar.TabIndex = 16
         Me.Eliminar.Text = "Eliminar"
         Me.Eliminar.UseVisualStyleBackColor = False
@@ -125,10 +118,9 @@ Partial Class gestio_ubicacions
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label2.Location = New System.Drawing.Point(44, 76)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(33, 62)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(56, 23)
+        Me.Label2.Size = New System.Drawing.Size(46, 19)
         Me.Label2.TabIndex = 17
         Me.Label2.Text = "Nom:"
         '
@@ -138,10 +130,9 @@ Partial Class gestio_ubicacions
         Me.inici.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.inici.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
         Me.inici.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.inici.Location = New System.Drawing.Point(803, 15)
-        Me.inici.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.inici.Location = New System.Drawing.Point(602, 12)
         Me.inici.Name = "inici"
-        Me.inici.Size = New System.Drawing.Size(50, 50)
+        Me.inici.Size = New System.Drawing.Size(38, 41)
         Me.inici.TabIndex = 23
         Me.inici.UseVisualStyleBackColor = True
         '
@@ -151,19 +142,18 @@ Partial Class gestio_ubicacions
         Me.back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.back.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
         Me.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.back.Location = New System.Drawing.Point(741, 15)
-        Me.back.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.back.Location = New System.Drawing.Point(556, 12)
         Me.back.Name = "back"
-        Me.back.Size = New System.Drawing.Size(50, 50)
+        Me.back.Size = New System.Drawing.Size(38, 41)
         Me.back.TabIndex = 29
         Me.back.UseVisualStyleBackColor = True
         '
         'gestio_ubicacions
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SteelBlue
-        Me.ClientSize = New System.Drawing.Size(887, 554)
+        Me.ClientSize = New System.Drawing.Size(665, 450)
         Me.Controls.Add(Me.back)
         Me.Controls.Add(Me.inici)
         Me.Controls.Add(Me.Label2)
@@ -174,7 +164,7 @@ Partial Class gestio_ubicacions
         Me.Controls.Add(Me.Cercar)
         Me.Controls.Add(Me.Nom)
         Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "gestio_ubicacions"
         Me.Text = "Gestio Ubicacions"
         CType(Me.taula_ubicacions, System.ComponentModel.ISupportInitialize).EndInit()

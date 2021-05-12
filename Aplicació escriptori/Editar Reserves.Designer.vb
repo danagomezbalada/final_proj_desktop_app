@@ -265,6 +265,7 @@ Partial Class editar_reserves
         Me.Controls.Add(Me.usuari)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "editar_reserves"
         Me.Text = "Editar Reserves"
         Me.estat.ResumeLayout(False)

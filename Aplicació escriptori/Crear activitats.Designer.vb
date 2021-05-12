@@ -341,6 +341,7 @@ Partial Class crear_activitat
         Me.Controls.Add(Me.titol)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "crear_activitat"
         Me.Text = "Crear Activitats"
         Me.ResumeLayout(False)

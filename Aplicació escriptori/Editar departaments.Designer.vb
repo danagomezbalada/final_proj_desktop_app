@@ -118,6 +118,7 @@ Partial Class editar_departaments
         Me.Controls.Add(Me.nom)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "editar_departaments"
         Me.Text = "Editar departaments"
         Me.ResumeLayout(False)

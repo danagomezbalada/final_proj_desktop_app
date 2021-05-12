@@ -108,6 +108,7 @@ Partial Class crear_departaments
         Me.Controls.Add(Me.nom)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "crear_departaments"
         Me.Text = "Crear departaments"
         Me.ResumeLayout(False)

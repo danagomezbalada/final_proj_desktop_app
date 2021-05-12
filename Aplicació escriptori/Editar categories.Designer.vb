@@ -38,20 +38,18 @@ Partial Class editar_categories
         Me.actualitzar.Cursor = System.Windows.Forms.Cursors.Default
         Me.actualitzar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.actualitzar.Font = New System.Drawing.Font("Calibri", 7.8!)
-        Me.actualitzar.Location = New System.Drawing.Point(161, 159)
-        Me.actualitzar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.actualitzar.Location = New System.Drawing.Point(121, 129)
         Me.actualitzar.Name = "actualitzar"
-        Me.actualitzar.Size = New System.Drawing.Size(115, 37)
+        Me.actualitzar.Size = New System.Drawing.Size(86, 30)
         Me.actualitzar.TabIndex = 8
         Me.actualitzar.Text = "Actualitzar"
         Me.actualitzar.UseVisualStyleBackColor = False
         '
         'nom
         '
-        Me.nom.Location = New System.Drawing.Point(187, 87)
-        Me.nom.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.nom.Location = New System.Drawing.Point(140, 71)
         Me.nom.Name = "nom"
-        Me.nom.Size = New System.Drawing.Size(132, 22)
+        Me.nom.Size = New System.Drawing.Size(100, 20)
         Me.nom.TabIndex = 7
         '
         'Label2
@@ -59,10 +57,9 @@ Partial Class editar_categories
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label2.Location = New System.Drawing.Point(112, 87)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(84, 71)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(56, 23)
+        Me.Label2.Size = New System.Drawing.Size(46, 19)
         Me.Label2.TabIndex = 6
         Me.Label2.Text = "Nom:"
         '
@@ -71,10 +68,9 @@ Partial Class editar_categories
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label1.Location = New System.Drawing.Point(32, 16)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(24, 13)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(273, 38)
+        Me.Label1.Size = New System.Drawing.Size(222, 31)
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "Editar Categories"
         '
@@ -84,10 +80,9 @@ Partial Class editar_categories
         Me.inici.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.inici.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
         Me.inici.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.inici.Location = New System.Drawing.Point(384, 15)
-        Me.inici.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.inici.Location = New System.Drawing.Point(288, 12)
         Me.inici.Name = "inici"
-        Me.inici.Size = New System.Drawing.Size(50, 50)
+        Me.inici.Size = New System.Drawing.Size(38, 41)
         Me.inici.TabIndex = 19
         Me.inici.UseVisualStyleBackColor = True
         '
@@ -97,28 +92,26 @@ Partial Class editar_categories
         Me.back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.back.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
         Me.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.back.Location = New System.Drawing.Point(335, 15)
-        Me.back.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.back.Location = New System.Drawing.Point(251, 12)
         Me.back.Name = "back"
-        Me.back.Size = New System.Drawing.Size(50, 50)
+        Me.back.Size = New System.Drawing.Size(38, 41)
         Me.back.TabIndex = 29
         Me.back.UseVisualStyleBackColor = True
         '
         'identificador
         '
-        Me.identificador.Location = New System.Drawing.Point(384, 197)
-        Me.identificador.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.identificador.Location = New System.Drawing.Point(288, 160)
         Me.identificador.Name = "identificador"
-        Me.identificador.Size = New System.Drawing.Size(39, 22)
+        Me.identificador.Size = New System.Drawing.Size(30, 20)
         Me.identificador.TabIndex = 30
         Me.identificador.Visible = False
         '
         'editar_categories
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SteelBlue
-        Me.ClientSize = New System.Drawing.Size(440, 236)
+        Me.ClientSize = New System.Drawing.Size(330, 192)
         Me.Controls.Add(Me.identificador)
         Me.Controls.Add(Me.back)
         Me.Controls.Add(Me.inici)
@@ -126,9 +119,9 @@ Partial Class editar_categories
         Me.Controls.Add(Me.nom)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "editar_categories"
-        Me.Text = "editar_categories"
+        Me.Text = "Editar categories"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

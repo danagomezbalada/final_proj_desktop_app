@@ -386,8 +386,9 @@ Partial Class editar_activitats
         Me.Controls.Add(Me.titol)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "editar_activitats"
-        Me.Text = "editar_activitats"
+        Me.Text = "Editar activitats"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

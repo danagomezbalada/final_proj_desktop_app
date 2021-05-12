@@ -174,6 +174,7 @@ Partial Class crear_ponents
         Me.Controls.Add(Me.nom)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "crear_ponents"
         Me.Text = "Crear ponents"
         Me.ResumeLayout(False)
