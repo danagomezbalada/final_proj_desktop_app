@@ -41,6 +41,7 @@ Partial Class crear_ponents
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.Control
         Me.Label1.Location = New System.Drawing.Point(151, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(184, 31)
@@ -51,6 +52,7 @@ Partial Class crear_ponents
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.Control
         Me.Label2.Location = New System.Drawing.Point(43, 70)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(46, 19)
@@ -66,17 +68,21 @@ Partial Class crear_ponents
         '
         'Crear
         '
+        Me.Crear.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.Crear.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Crear.Font = New System.Drawing.Font("Calibri", 7.8!)
         Me.Crear.Location = New System.Drawing.Point(201, 175)
         Me.Crear.Name = "Crear"
-        Me.Crear.Size = New System.Drawing.Size(75, 23)
+        Me.Crear.Size = New System.Drawing.Size(97, 31)
         Me.Crear.TabIndex = 6
         Me.Crear.Text = "Crear"
-        Me.Crear.UseVisualStyleBackColor = True
+        Me.Crear.UseVisualStyleBackColor = False
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.Control
         Me.Label3.Location = New System.Drawing.Point(43, 110)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(52, 19)
@@ -101,6 +107,7 @@ Partial Class crear_ponents
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.SystemColors.Control
         Me.Label4.Location = New System.Drawing.Point(263, 70)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(69, 19)
@@ -118,6 +125,7 @@ Partial Class crear_ponents
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.SystemColors.Control
         Me.Label5.Location = New System.Drawing.Point(263, 110)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(64, 19)
@@ -132,7 +140,7 @@ Partial Class crear_ponents
         Me.inici.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.inici.Location = New System.Drawing.Point(438, 12)
         Me.inici.Name = "inici"
-        Me.inici.Size = New System.Drawing.Size(40, 35)
+        Me.inici.Size = New System.Drawing.Size(38, 41)
         Me.inici.TabIndex = 19
         Me.inici.UseVisualStyleBackColor = True
         '
@@ -144,7 +152,7 @@ Partial Class crear_ponents
         Me.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.back.Location = New System.Drawing.Point(392, 12)
         Me.back.Name = "back"
-        Me.back.Size = New System.Drawing.Size(40, 35)
+        Me.back.Size = New System.Drawing.Size(38, 41)
         Me.back.TabIndex = 20
         Me.back.UseVisualStyleBackColor = True
         '
@@ -152,7 +160,7 @@ Partial Class crear_ponents
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.DodgerBlue
+        Me.BackColor = System.Drawing.Color.SteelBlue
         Me.ClientSize = New System.Drawing.Size(499, 235)
         Me.Controls.Add(Me.back)
         Me.Controls.Add(Me.inici)
@@ -166,6 +174,7 @@ Partial Class crear_ponents
         Me.Controls.Add(Me.nom)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "crear_ponents"
         Me.Text = "Crear ponents"
         Me.ResumeLayout(False)

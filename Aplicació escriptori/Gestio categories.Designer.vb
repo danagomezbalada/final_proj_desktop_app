@@ -40,6 +40,7 @@ Partial Class gestio_categoria
         '
         Me.Categories.AutoSize = True
         Me.Categories.Font = New System.Drawing.Font("Times New Roman", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Categories.ForeColor = System.Drawing.SystemColors.Control
         Me.Categories.Location = New System.Drawing.Point(30, 13)
         Me.Categories.Name = "Categories"
         Me.Categories.Size = New System.Drawing.Size(221, 31)
@@ -55,54 +56,68 @@ Partial Class gestio_categoria
         '
         'Cercar
         '
-        Me.Cercar.Location = New System.Drawing.Point(208, 62)
+        Me.Cercar.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.Cercar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Cercar.Font = New System.Drawing.Font("Calibri", 7.8!)
+        Me.Cercar.Location = New System.Drawing.Point(208, 58)
         Me.Cercar.Name = "Cercar"
-        Me.Cercar.Size = New System.Drawing.Size(75, 20)
+        Me.Cercar.Size = New System.Drawing.Size(73, 24)
         Me.Cercar.TabIndex = 2
         Me.Cercar.Text = "Cercar"
-        Me.Cercar.UseVisualStyleBackColor = True
+        Me.Cercar.UseVisualStyleBackColor = False
         '
         'taula_categoria
         '
-        Me.taula_categoria.BackgroundColor = System.Drawing.Color.DodgerBlue
+        Me.taula_categoria.BackgroundColor = System.Drawing.Color.SteelBlue
         Me.taula_categoria.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.taula_categoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.taula_categoria.Location = New System.Drawing.Point(30, 100)
         Me.taula_categoria.Name = "taula_categoria"
+        Me.taula_categoria.RowHeadersWidth = 51
         Me.taula_categoria.Size = New System.Drawing.Size(600, 300)
         Me.taula_categoria.TabIndex = 13
         '
         'Afegir
         '
+        Me.Afegir.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.Afegir.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Afegir.Font = New System.Drawing.Font("Calibri", 7.8!)
         Me.Afegir.Location = New System.Drawing.Point(136, 413)
         Me.Afegir.Name = "Afegir"
-        Me.Afegir.Size = New System.Drawing.Size(75, 23)
+        Me.Afegir.Size = New System.Drawing.Size(83, 27)
         Me.Afegir.TabIndex = 14
         Me.Afegir.Text = "Afegir"
-        Me.Afegir.UseVisualStyleBackColor = True
+        Me.Afegir.UseVisualStyleBackColor = False
         '
         'Editar
         '
+        Me.Editar.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.Editar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Editar.Font = New System.Drawing.Font("Calibri", 7.8!)
         Me.Editar.Location = New System.Drawing.Point(295, 413)
         Me.Editar.Name = "Editar"
-        Me.Editar.Size = New System.Drawing.Size(75, 23)
+        Me.Editar.Size = New System.Drawing.Size(83, 27)
         Me.Editar.TabIndex = 15
         Me.Editar.Text = "Editar"
-        Me.Editar.UseVisualStyleBackColor = True
+        Me.Editar.UseVisualStyleBackColor = False
         '
         'Eliminar
         '
+        Me.Eliminar.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Eliminar.Font = New System.Drawing.Font("Calibri", 7.8!)
         Me.Eliminar.Location = New System.Drawing.Point(459, 413)
         Me.Eliminar.Name = "Eliminar"
-        Me.Eliminar.Size = New System.Drawing.Size(75, 23)
+        Me.Eliminar.Size = New System.Drawing.Size(83, 27)
         Me.Eliminar.TabIndex = 16
         Me.Eliminar.Text = "Eliminar"
-        Me.Eliminar.UseVisualStyleBackColor = True
+        Me.Eliminar.UseVisualStyleBackColor = False
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.Control
         Me.Label1.Location = New System.Drawing.Point(33, 62)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(46, 19)
@@ -117,7 +132,7 @@ Partial Class gestio_categoria
         Me.inici.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.inici.Location = New System.Drawing.Point(602, 12)
         Me.inici.Name = "inici"
-        Me.inici.Size = New System.Drawing.Size(40, 35)
+        Me.inici.Size = New System.Drawing.Size(38, 41)
         Me.inici.TabIndex = 18
         Me.inici.UseVisualStyleBackColor = True
         '
@@ -129,7 +144,7 @@ Partial Class gestio_categoria
         Me.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.back.Location = New System.Drawing.Point(556, 12)
         Me.back.Name = "back"
-        Me.back.Size = New System.Drawing.Size(40, 35)
+        Me.back.Size = New System.Drawing.Size(38, 41)
         Me.back.TabIndex = 29
         Me.back.UseVisualStyleBackColor = True
         '
@@ -137,7 +152,7 @@ Partial Class gestio_categoria
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.DodgerBlue
+        Me.BackColor = System.Drawing.Color.SteelBlue
         Me.ClientSize = New System.Drawing.Size(665, 450)
         Me.Controls.Add(Me.back)
         Me.Controls.Add(Me.inici)
@@ -149,8 +164,9 @@ Partial Class gestio_categoria
         Me.Controls.Add(Me.Cercar)
         Me.Controls.Add(Me.Nom)
         Me.Controls.Add(Me.Categories)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "gestio_categoria"
-        Me.Text = "gestio categories"
+        Me.Text = "Gestió categories"
         CType(Me.taula_categoria, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

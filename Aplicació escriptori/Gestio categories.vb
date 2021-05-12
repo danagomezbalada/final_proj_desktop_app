@@ -17,6 +17,7 @@ Public Class gestio_categoria
         Dim Fila As Integer
         Dim Id As String
         Fila = taula_categoria.CurrentRow.Index
+        'Agafem la id
         Id = taula_categoria.Rows(Fila).Cells(0).Value.ToString
         editar_categories.nom.Text = taula_categoria.Rows(Fila).Cells(1).Value
         editar_categories.identificador.Text = Id
@@ -34,9 +35,11 @@ Public Class gestio_categoria
         Dim id As String
         Dim Fila As Integer
         Dim missatge As MsgBoxResult = MsgBox("Vols eliminar el registre?", MsgBoxStyle.OkCancel, "Eliminar")
+        'Control de si estan segurs que volen eliminar el registre
         If missatge = MsgBoxResult.Ok Then
             Fila = taula_categoria.CurrentRow.Index
             id = taula_categoria.Rows(Fila).Cells(0).Value
+            'Delete del registre
             query = $"DELETE FROM categoria where id = '{id}'"
             Connexions.connectar()
             Dim comanda As New MySqlCommand(query, Connexions.connexio)
@@ -48,8 +51,10 @@ Public Class gestio_categoria
 
     Function actualitzarTaula()
         If String.IsNullOrEmpty(Nom.Text) = True Then
+            'Select de les dades
             query = $"SELECT * FROM categoria"
         Else
+            'Select de les dades
             query = $"SELECT * FROM categoria where nom LIKE '%{Nom.Text}%'"
         End If
         Connexions.connectar()
@@ -57,10 +62,12 @@ Public Class gestio_categoria
         Dim adaptador As New MySqlDataAdapter(comanda)
         Dim conjunt_dades As New DataTable()
         adaptador.Fill(conjunt_dades)
+        'Creació de la taula
         taula_categoria.AutoSizeColumnsMode = DataGridViewAutoSizeColumnMode.Fill
         taula_categoria.DataSource = conjunt_dades
         taula_categoria.Columns(0).Visible = False
         Connexions.desconnectar()
+        'Edició dels noms de la taula
         taula_categoria.Columns(1).HeaderCell.Value = "NOM"
     End Function
     Private Sub gestio_categoria_Load(sender As Object, e As EventArgs) Handles MyBase.Load

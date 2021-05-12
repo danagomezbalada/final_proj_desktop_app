@@ -40,6 +40,7 @@ Partial Class gestio_departament
         '
         Me.Gestio_departaments.AutoSize = True
         Me.Gestio_departaments.Font = New System.Drawing.Font("Times New Roman", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Gestio_departaments.ForeColor = System.Drawing.SystemColors.Control
         Me.Gestio_departaments.Location = New System.Drawing.Point(30, 13)
         Me.Gestio_departaments.Name = "Gestio_departaments"
         Me.Gestio_departaments.Size = New System.Drawing.Size(261, 31)
@@ -55,54 +56,68 @@ Partial Class gestio_departament
         '
         'Cerca
         '
-        Me.Cerca.Location = New System.Drawing.Point(208, 62)
+        Me.Cerca.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.Cerca.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Cerca.Font = New System.Drawing.Font("Calibri", 7.8!)
+        Me.Cerca.Location = New System.Drawing.Point(208, 58)
         Me.Cerca.Name = "Cerca"
-        Me.Cerca.Size = New System.Drawing.Size(75, 20)
+        Me.Cerca.Size = New System.Drawing.Size(73, 24)
         Me.Cerca.TabIndex = 2
         Me.Cerca.Text = "Cerca"
-        Me.Cerca.UseVisualStyleBackColor = True
+        Me.Cerca.UseVisualStyleBackColor = False
         '
         'taula_departament
         '
-        Me.taula_departament.BackgroundColor = System.Drawing.Color.DodgerBlue
+        Me.taula_departament.BackgroundColor = System.Drawing.Color.SteelBlue
         Me.taula_departament.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.taula_departament.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.taula_departament.Location = New System.Drawing.Point(30, 100)
         Me.taula_departament.Name = "taula_departament"
+        Me.taula_departament.RowHeadersWidth = 51
         Me.taula_departament.Size = New System.Drawing.Size(600, 300)
         Me.taula_departament.TabIndex = 13
         '
         'Afegir
         '
+        Me.Afegir.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.Afegir.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Afegir.Font = New System.Drawing.Font("Calibri", 7.8!)
         Me.Afegir.Location = New System.Drawing.Point(136, 413)
         Me.Afegir.Name = "Afegir"
-        Me.Afegir.Size = New System.Drawing.Size(75, 23)
+        Me.Afegir.Size = New System.Drawing.Size(83, 27)
         Me.Afegir.TabIndex = 14
         Me.Afegir.Text = "Afegir"
-        Me.Afegir.UseVisualStyleBackColor = True
+        Me.Afegir.UseVisualStyleBackColor = False
         '
         'Editar
         '
+        Me.Editar.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.Editar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Editar.Font = New System.Drawing.Font("Calibri", 7.8!)
         Me.Editar.Location = New System.Drawing.Point(295, 413)
         Me.Editar.Name = "Editar"
-        Me.Editar.Size = New System.Drawing.Size(75, 23)
+        Me.Editar.Size = New System.Drawing.Size(83, 27)
         Me.Editar.TabIndex = 15
         Me.Editar.Text = "Editar"
-        Me.Editar.UseVisualStyleBackColor = True
+        Me.Editar.UseVisualStyleBackColor = False
         '
         'Eliminar
         '
+        Me.Eliminar.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Eliminar.Font = New System.Drawing.Font("Calibri", 7.8!)
         Me.Eliminar.Location = New System.Drawing.Point(459, 413)
         Me.Eliminar.Name = "Eliminar"
-        Me.Eliminar.Size = New System.Drawing.Size(75, 23)
+        Me.Eliminar.Size = New System.Drawing.Size(83, 27)
         Me.Eliminar.TabIndex = 16
         Me.Eliminar.Text = "Eliminar"
-        Me.Eliminar.UseVisualStyleBackColor = True
+        Me.Eliminar.UseVisualStyleBackColor = False
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.Control
         Me.Label1.Location = New System.Drawing.Point(33, 62)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(46, 19)
@@ -117,7 +132,7 @@ Partial Class gestio_departament
         Me.inici.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.inici.Location = New System.Drawing.Point(602, 12)
         Me.inici.Name = "inici"
-        Me.inici.Size = New System.Drawing.Size(40, 35)
+        Me.inici.Size = New System.Drawing.Size(38, 41)
         Me.inici.TabIndex = 19
         Me.inici.UseVisualStyleBackColor = True
         '
@@ -129,7 +144,7 @@ Partial Class gestio_departament
         Me.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.back.Location = New System.Drawing.Point(556, 12)
         Me.back.Name = "back"
-        Me.back.Size = New System.Drawing.Size(40, 35)
+        Me.back.Size = New System.Drawing.Size(38, 41)
         Me.back.TabIndex = 29
         Me.back.UseVisualStyleBackColor = True
         '
@@ -137,7 +152,7 @@ Partial Class gestio_departament
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.DodgerBlue
+        Me.BackColor = System.Drawing.Color.SteelBlue
         Me.ClientSize = New System.Drawing.Size(665, 450)
         Me.Controls.Add(Me.back)
         Me.Controls.Add(Me.inici)
@@ -149,8 +164,9 @@ Partial Class gestio_departament
         Me.Controls.Add(Me.Cerca)
         Me.Controls.Add(Me.Nom)
         Me.Controls.Add(Me.Gestio_departaments)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "gestio_departament"
-        Me.Text = "gestio departaments"
+        Me.Text = "Gestió departaments"
         CType(Me.taula_departament, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

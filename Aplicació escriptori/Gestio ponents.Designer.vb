@@ -42,6 +42,7 @@ Partial Class gestio_ponent
         '
         Me.Gestio_ponents.AutoSize = True
         Me.Gestio_ponents.Font = New System.Drawing.Font("Times New Roman", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Gestio_ponents.ForeColor = System.Drawing.SystemColors.Control
         Me.Gestio_ponents.Location = New System.Drawing.Point(30, 13)
         Me.Gestio_ponents.Name = "Gestio_ponents"
         Me.Gestio_ponents.Size = New System.Drawing.Size(189, 31)
@@ -58,45 +59,58 @@ Partial Class gestio_ponent
         '
         'taula_ponent
         '
-        Me.taula_ponent.BackgroundColor = System.Drawing.Color.DodgerBlue
+        Me.taula_ponent.BackgroundColor = System.Drawing.Color.SteelBlue
         Me.taula_ponent.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.taula_ponent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.taula_ponent.Location = New System.Drawing.Point(30, 100)
         Me.taula_ponent.Name = "taula_ponent"
+        Me.taula_ponent.RowHeadersWidth = 51
         Me.taula_ponent.Size = New System.Drawing.Size(600, 300)
         Me.taula_ponent.TabIndex = 14
         '
         'Cerca
         '
+        Me.Cerca.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.Cerca.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Cerca.Font = New System.Drawing.Font("Calibri", 7.8!)
         Me.Cerca.Location = New System.Drawing.Point(440, 62)
         Me.Cerca.Name = "Cerca"
-        Me.Cerca.Size = New System.Drawing.Size(75, 23)
+        Me.Cerca.Size = New System.Drawing.Size(73, 24)
         Me.Cerca.TabIndex = 15
         Me.Cerca.Text = "Cerca"
-        Me.Cerca.UseVisualStyleBackColor = True
+        Me.Cerca.UseVisualStyleBackColor = False
         '
         'Editar
         '
+        Me.Editar.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.Editar.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Editar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Editar.Font = New System.Drawing.Font("Calibri", 7.8!)
         Me.Editar.Location = New System.Drawing.Point(295, 413)
         Me.Editar.Name = "Editar"
-        Me.Editar.Size = New System.Drawing.Size(75, 23)
+        Me.Editar.Size = New System.Drawing.Size(83, 27)
         Me.Editar.TabIndex = 17
         Me.Editar.Text = "Editar"
-        Me.Editar.UseVisualStyleBackColor = True
+        Me.Editar.UseVisualStyleBackColor = False
         '
         'Eliminar
         '
+        Me.Eliminar.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.Eliminar.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Eliminar.Font = New System.Drawing.Font("Calibri", 7.8!)
         Me.Eliminar.Location = New System.Drawing.Point(459, 413)
         Me.Eliminar.Name = "Eliminar"
-        Me.Eliminar.Size = New System.Drawing.Size(75, 23)
+        Me.Eliminar.Size = New System.Drawing.Size(83, 27)
         Me.Eliminar.TabIndex = 18
         Me.Eliminar.Text = "Eliminar"
-        Me.Eliminar.UseVisualStyleBackColor = True
+        Me.Eliminar.UseVisualStyleBackColor = False
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.Control
         Me.Label1.Location = New System.Drawing.Point(33, 62)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(50, 19)
@@ -107,6 +121,7 @@ Partial Class gestio_ponent
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.Control
         Me.Label2.Location = New System.Drawing.Point(220, 62)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(76, 19)
@@ -129,7 +144,7 @@ Partial Class gestio_ponent
         Me.inici.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.inici.Location = New System.Drawing.Point(602, 12)
         Me.inici.Name = "inici"
-        Me.inici.Size = New System.Drawing.Size(40, 35)
+        Me.inici.Size = New System.Drawing.Size(38, 41)
         Me.inici.TabIndex = 22
         Me.inici.UseVisualStyleBackColor = True
         '
@@ -141,24 +156,28 @@ Partial Class gestio_ponent
         Me.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.back.Location = New System.Drawing.Point(556, 12)
         Me.back.Name = "back"
-        Me.back.Size = New System.Drawing.Size(40, 35)
+        Me.back.Size = New System.Drawing.Size(38, 41)
         Me.back.TabIndex = 29
         Me.back.UseVisualStyleBackColor = True
         '
         'Afegir
         '
+        Me.Afegir.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.Afegir.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Afegir.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Afegir.Font = New System.Drawing.Font("Calibri", 7.8!)
         Me.Afegir.Location = New System.Drawing.Point(136, 413)
         Me.Afegir.Name = "Afegir"
-        Me.Afegir.Size = New System.Drawing.Size(75, 23)
+        Me.Afegir.Size = New System.Drawing.Size(83, 27)
         Me.Afegir.TabIndex = 16
         Me.Afegir.Text = "Afegir"
-        Me.Afegir.UseVisualStyleBackColor = True
+        Me.Afegir.UseVisualStyleBackColor = False
         '
         'gestio_ponent
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.DodgerBlue
+        Me.BackColor = System.Drawing.Color.SteelBlue
         Me.ClientSize = New System.Drawing.Size(665, 450)
         Me.Controls.Add(Me.back)
         Me.Controls.Add(Me.inici)
@@ -172,8 +191,9 @@ Partial Class gestio_ponent
         Me.Controls.Add(Me.taula_ponent)
         Me.Controls.Add(Me.Nom)
         Me.Controls.Add(Me.Gestio_ponents)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "gestio_ponent"
-        Me.Text = "gestio ponents"
+        Me.Text = "Gestió ponents"
         CType(Me.taula_ponent, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

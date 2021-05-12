@@ -55,6 +55,7 @@ Partial Class crear_activitat
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.Control
         Me.Label1.Location = New System.Drawing.Point(187, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(203, 31)
@@ -65,6 +66,7 @@ Partial Class crear_activitat
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.Control
         Me.Label2.Location = New System.Drawing.Point(43, 70)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(45, 19)
@@ -73,15 +75,16 @@ Partial Class crear_activitat
         '
         'titol
         '
-        Me.titol.Location = New System.Drawing.Point(99, 70)
+        Me.titol.Location = New System.Drawing.Point(119, 70)
         Me.titol.Name = "titol"
-        Me.titol.Size = New System.Drawing.Size(100, 20)
+        Me.titol.Size = New System.Drawing.Size(170, 20)
         Me.titol.TabIndex = 3
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.Control
         Me.Label3.Location = New System.Drawing.Point(43, 150)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(45, 19)
@@ -92,6 +95,7 @@ Partial Class crear_activitat
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.SystemColors.Control
         Me.Label4.Location = New System.Drawing.Point(43, 231)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(85, 19)
@@ -102,6 +106,7 @@ Partial Class crear_activitat
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.SystemColors.Control
         Me.Label5.Location = New System.Drawing.Point(43, 110)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(47, 19)
@@ -112,6 +117,7 @@ Partial Class crear_activitat
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.SystemColors.Control
         Me.Label7.Location = New System.Drawing.Point(302, 149)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(128, 19)
@@ -122,6 +128,7 @@ Partial Class crear_activitat
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.SystemColors.Control
         Me.Label8.Location = New System.Drawing.Point(302, 189)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(110, 19)
@@ -132,6 +139,7 @@ Partial Class crear_activitat
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.SystemColors.Control
         Me.Label9.Location = New System.Drawing.Point(302, 70)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(98, 19)
@@ -140,30 +148,33 @@ Partial Class crear_activitat
         '
         'preu
         '
-        Me.preu.Location = New System.Drawing.Point(99, 150)
+        Me.preu.Location = New System.Drawing.Point(119, 152)
         Me.preu.Name = "preu"
-        Me.preu.Size = New System.Drawing.Size(100, 20)
+        Me.preu.Size = New System.Drawing.Size(170, 20)
         Me.preu.TabIndex = 13
         '
         'places_totals
         '
-        Me.places_totals.Location = New System.Drawing.Point(417, 70)
+        Me.places_totals.Location = New System.Drawing.Point(428, 71)
         Me.places_totals.Name = "places_totals"
-        Me.places_totals.Size = New System.Drawing.Size(100, 20)
+        Me.places_totals.Size = New System.Drawing.Size(170, 20)
         Me.places_totals.TabIndex = 14
         '
         'crear
         '
+        Me.crear.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.crear.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.crear.Font = New System.Drawing.Font("Calibri", 7.8!)
         Me.crear.Location = New System.Drawing.Point(393, 334)
         Me.crear.Name = "crear"
         Me.crear.Size = New System.Drawing.Size(97, 31)
         Me.crear.TabIndex = 17
         Me.crear.Text = "Crear"
-        Me.crear.UseVisualStyleBackColor = True
+        Me.crear.UseVisualStyleBackColor = False
         '
         'inici
         '
-        Me.inici.BackColor = System.Drawing.Color.DodgerBlue
+        Me.inici.BackColor = System.Drawing.Color.SteelBlue
         Me.inici.BackgroundImage = CType(resources.GetObject("inici.BackgroundImage"), System.Drawing.Image)
         Me.inici.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.inici.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
@@ -171,7 +182,7 @@ Partial Class crear_activitat
         Me.inici.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.inici.Location = New System.Drawing.Point(546, 12)
         Me.inici.Name = "inici"
-        Me.inici.Size = New System.Drawing.Size(40, 35)
+        Me.inici.Size = New System.Drawing.Size(38, 41)
         Me.inici.TabIndex = 18
         Me.inici.UseVisualStyleBackColor = False
         '
@@ -179,6 +190,7 @@ Partial Class crear_activitat
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.SystemColors.Control
         Me.Label6.Location = New System.Drawing.Point(302, 229)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(108, 19)
@@ -189,6 +201,7 @@ Partial Class crear_activitat
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.SystemColors.Control
         Me.Label10.Location = New System.Drawing.Point(43, 189)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(71, 19)
@@ -199,6 +212,7 @@ Partial Class crear_activitat
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.SystemColors.Control
         Me.Label11.Location = New System.Drawing.Point(302, 269)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(94, 19)
@@ -209,7 +223,7 @@ Partial Class crear_activitat
         '
         Me.data.CalendarFont = New System.Drawing.Font("Times New Roman", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.data.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.data.Location = New System.Drawing.Point(99, 110)
+        Me.data.Location = New System.Drawing.Point(119, 110)
         Me.data.Name = "data"
         Me.data.Size = New System.Drawing.Size(170, 18)
         Me.data.TabIndex = 25
@@ -234,51 +248,53 @@ Partial Class crear_activitat
         '
         'back
         '
+        Me.back.BackColor = System.Drawing.Color.SteelBlue
         Me.back.BackgroundImage = CType(resources.GetObject("back.BackgroundImage"), System.Drawing.Image)
         Me.back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.back.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
         Me.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.back.Location = New System.Drawing.Point(500, 12)
         Me.back.Name = "back"
-        Me.back.Size = New System.Drawing.Size(40, 35)
+        Me.back.Size = New System.Drawing.Size(38, 41)
         Me.back.TabIndex = 28
-        Me.back.UseVisualStyleBackColor = True
+        Me.back.UseVisualStyleBackColor = False
         '
         'ubicacio
         '
         Me.ubicacio.FormattingEnabled = True
-        Me.ubicacio.Location = New System.Drawing.Point(140, 189)
+        Me.ubicacio.Location = New System.Drawing.Point(119, 189)
         Me.ubicacio.Name = "ubicacio"
-        Me.ubicacio.Size = New System.Drawing.Size(121, 21)
+        Me.ubicacio.Size = New System.Drawing.Size(170, 21)
         Me.ubicacio.TabIndex = 46
         '
         'esdeveniment
         '
         Me.esdeveniment.FormattingEnabled = True
-        Me.esdeveniment.Location = New System.Drawing.Point(437, 229)
+        Me.esdeveniment.Location = New System.Drawing.Point(428, 228)
         Me.esdeveniment.Name = "esdeveniment"
-        Me.esdeveniment.Size = New System.Drawing.Size(121, 21)
+        Me.esdeveniment.Size = New System.Drawing.Size(168, 21)
         Me.esdeveniment.TabIndex = 47
         '
         'departament
         '
         Me.departament.FormattingEnabled = True
-        Me.departament.Location = New System.Drawing.Point(437, 269)
+        Me.departament.Location = New System.Drawing.Point(428, 269)
         Me.departament.Name = "departament"
-        Me.departament.Size = New System.Drawing.Size(121, 21)
+        Me.departament.Size = New System.Drawing.Size(168, 21)
         Me.departament.TabIndex = 48
         '
         'places_actuals
         '
-        Me.places_actuals.Location = New System.Drawing.Point(417, 109)
+        Me.places_actuals.Location = New System.Drawing.Point(428, 109)
         Me.places_actuals.Name = "places_actuals"
-        Me.places_actuals.Size = New System.Drawing.Size(100, 20)
+        Me.places_actuals.Size = New System.Drawing.Size(168, 20)
         Me.places_actuals.TabIndex = 52
         '
         'Label12
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.SystemColors.Control
         Me.Label12.Location = New System.Drawing.Point(302, 109)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(108, 19)
@@ -287,9 +303,9 @@ Partial Class crear_activitat
         '
         'descripcio
         '
-        Me.descripcio.Location = New System.Drawing.Point(134, 229)
+        Me.descripcio.Location = New System.Drawing.Point(119, 228)
         Me.descripcio.Name = "descripcio"
-        Me.descripcio.Size = New System.Drawing.Size(155, 96)
+        Me.descripcio.Size = New System.Drawing.Size(170, 96)
         Me.descripcio.TabIndex = 55
         Me.descripcio.Text = ""
         '
@@ -297,7 +313,7 @@ Partial Class crear_activitat
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.DodgerBlue
+        Me.BackColor = System.Drawing.Color.SteelBlue
         Me.ClientSize = New System.Drawing.Size(609, 387)
         Me.Controls.Add(Me.descripcio)
         Me.Controls.Add(Me.places_actuals)
@@ -325,6 +341,7 @@ Partial Class crear_activitat
         Me.Controls.Add(Me.titol)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "crear_activitat"
         Me.Text = "Crear Activitats"
         Me.ResumeLayout(False)

@@ -40,6 +40,7 @@ Partial Class gestio_categories_activitat
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.Control
         Me.Label2.Location = New System.Drawing.Point(470, 67)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(151, 31)
@@ -50,6 +51,7 @@ Partial Class gestio_categories_activitat
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.Control
         Me.Label1.Location = New System.Drawing.Point(99, 67)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(102, 31)
@@ -58,39 +60,47 @@ Partial Class gestio_categories_activitat
         '
         'taula_categoria_disponibles
         '
-        Me.taula_categoria_disponibles.BackgroundColor = System.Drawing.Color.DodgerBlue
+        Me.taula_categoria_disponibles.BackgroundColor = System.Drawing.Color.SteelBlue
         Me.taula_categoria_disponibles.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.taula_categoria_disponibles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.taula_categoria_disponibles.Location = New System.Drawing.Point(411, 101)
         Me.taula_categoria_disponibles.Name = "taula_categoria_disponibles"
+        Me.taula_categoria_disponibles.RowHeadersWidth = 51
         Me.taula_categoria_disponibles.Size = New System.Drawing.Size(264, 300)
         Me.taula_categoria_disponibles.TabIndex = 29
         '
         'eliminar
         '
+        Me.eliminar.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.eliminar.Font = New System.Drawing.Font("Calibri", 7.8!)
         Me.eliminar.Location = New System.Drawing.Point(105, 415)
         Me.eliminar.Name = "eliminar"
-        Me.eliminar.Size = New System.Drawing.Size(75, 23)
+        Me.eliminar.Size = New System.Drawing.Size(83, 27)
         Me.eliminar.TabIndex = 28
         Me.eliminar.Text = "Eliminar"
-        Me.eliminar.UseVisualStyleBackColor = True
+        Me.eliminar.UseVisualStyleBackColor = False
         '
         'afegir
         '
+        Me.afegir.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.afegir.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.afegir.Font = New System.Drawing.Font("Calibri", 7.8!)
         Me.afegir.Location = New System.Drawing.Point(515, 415)
         Me.afegir.Name = "afegir"
-        Me.afegir.Size = New System.Drawing.Size(75, 23)
+        Me.afegir.Size = New System.Drawing.Size(83, 27)
         Me.afegir.TabIndex = 27
         Me.afegir.Text = "Afegir"
-        Me.afegir.UseVisualStyleBackColor = True
+        Me.afegir.UseVisualStyleBackColor = False
         '
         'taula_categoria_actuals
         '
-        Me.taula_categoria_actuals.BackgroundColor = System.Drawing.Color.DodgerBlue
+        Me.taula_categoria_actuals.BackgroundColor = System.Drawing.Color.SteelBlue
         Me.taula_categoria_actuals.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.taula_categoria_actuals.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.taula_categoria_actuals.Location = New System.Drawing.Point(22, 101)
         Me.taula_categoria_actuals.Name = "taula_categoria_actuals"
+        Me.taula_categoria_actuals.RowHeadersWidth = 51
         Me.taula_categoria_actuals.Size = New System.Drawing.Size(264, 300)
         Me.taula_categoria_actuals.TabIndex = 26
         '
@@ -98,6 +108,7 @@ Partial Class gestio_categories_activitat
         '
         Me.Gestio_ponents.AutoSize = True
         Me.Gestio_ponents.Font = New System.Drawing.Font("Times New Roman", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Gestio_ponents.ForeColor = System.Drawing.SystemColors.Control
         Me.Gestio_ponents.Location = New System.Drawing.Point(30, 13)
         Me.Gestio_ponents.Name = "Gestio_ponents"
         Me.Gestio_ponents.Size = New System.Drawing.Size(380, 31)
@@ -112,7 +123,7 @@ Partial Class gestio_categories_activitat
         Me.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.back.Location = New System.Drawing.Point(590, 13)
         Me.back.Name = "back"
-        Me.back.Size = New System.Drawing.Size(40, 35)
+        Me.back.Size = New System.Drawing.Size(38, 41)
         Me.back.TabIndex = 45
         Me.back.UseVisualStyleBackColor = True
         '
@@ -124,7 +135,7 @@ Partial Class gestio_categories_activitat
         Me.inici.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.inici.Location = New System.Drawing.Point(635, 13)
         Me.inici.Name = "inici"
-        Me.inici.Size = New System.Drawing.Size(40, 35)
+        Me.inici.Size = New System.Drawing.Size(38, 41)
         Me.inici.TabIndex = 44
         Me.inici.UseVisualStyleBackColor = True
         '
@@ -132,7 +143,7 @@ Partial Class gestio_categories_activitat
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.DodgerBlue
+        Me.BackColor = System.Drawing.Color.SteelBlue
         Me.ClientSize = New System.Drawing.Size(699, 450)
         Me.Controls.Add(Me.back)
         Me.Controls.Add(Me.inici)
@@ -143,6 +154,7 @@ Partial Class gestio_categories_activitat
         Me.Controls.Add(Me.eliminar)
         Me.Controls.Add(Me.afegir)
         Me.Controls.Add(Me.taula_categoria_actuals)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "gestio_categories_activitat"
         Me.Text = "Gestió Categories de l'Activitat"
         CType(Me.taula_categoria_disponibles, System.ComponentModel.ISupportInitialize).EndInit()

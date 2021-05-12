@@ -8,56 +8,57 @@ Public Class crear_esdeveniments
 
     Private Sub Crear_Click(sender As Object, e As EventArgs) Handles Crear.Click
         Insertar()
-        MessageBox.Show("Valor afegit")
+        gestio_esdeveniment.actualitzarTaula()
     End Sub
-
     Function Insertar()
         Connexions.connectar()
         Dim name As String
-        Dim year As Int32
         Dim active As Int32
         Dim description As String
-
         name = nom.Text
-        year = any.Text
         description = descripcio.Text
-
-        If actiu.Checked = True Then
-            active = 1
+        'Control d'error de que no hi hagui cap camp null
+        If String.IsNullOrEmpty(nom.Text) = True Or String.IsNullOrEmpty(any.Text) = True Or String.IsNullOrEmpty(descripcio.Text) = True Then
+            MessageBox.Show("No hi poden haver-hi camps buits")
         Else
-            active = 0
+            'Control d'error de que no es pugui introduïr lletres en els camps on hi han d'haver números
+            If IsNumeric(any.Text) = False Then
+                MessageBox.Show("El camp any ha de ser numèric")
+            Else
+                'Comprobar el camp actiu
+                If actiu.Checked = True Then
+                    active = 1
+                Else
+                    active = 0
+                End If
+                'Controll d'errors dels apostrofs
+                If name.Contains("'") Then
+                    name = nom.Text.Replace("'", "’")
+                    'Insert de les dades
+                    query = $"INSERT INTO `esdeveniment` (`any`,`nom`,`descripcio`,`actiu`)
+        VALUES ('{any.Text}','{name}','{description}','{active}');"
+                Else
+                    query = $"INSERT INTO `esdeveniment` (`any`,`nom`,`descripcio`,`actiu`)
+        VALUES ('{any.Text}','{name}','{description}','{active}');"
+                End If
+                'Controll d'errors dels apostrofs
+                If description.Contains("'") Then
+                    description = descripcio.Text.Replace("'", "’")
+                    'Insert de les dades
+                    query = $"INSERT INTO `esdeveniment` (`any`,`nom`,`descripcio`,`actiu`)
+        VALUES ('{any.Text}','{name}','{description}','{active}');"
+                Else
+                    query = $"INSERT INTO `esdeveniment` (`any`,`nom`,`descripcio`,`actiu`)
+        VALUES ('{any.Text}','{name}','{description}','{active}');"
+                End If
+                Dim comanda = New MySqlCommand(query, Connexions.connexio)
+                comanda.ExecuteNonQuery()
+                MessageBox.Show("Valor afegit")
+            End If
         End If
-        If name.Contains("'") Then
-            name = nom.Text.Replace("'", "’")
-            query = $"INSERT INTO `esdeveniment` (`any`,`nom`,`descripcio`,`actiu`)
-        VALUES ('{year}','{name}','{description}','{active}');"
-        Else
-            query = $"INSERT INTO `esdeveniment` (`any`,`nom`,`descripcio`,`actiu`)
-        VALUES ('{year}','{name}','{description}','{active}');"
-        End If
 
-        If description.Contains("'") Then
-            description = descripcio.Text.Replace("'", "’")
-            query = $"INSERT INTO `esdeveniment` (`any`,`nom`,`descripcio`,`actiu`)
-        VALUES ('{year}','{name}','{description}','{active}');"
-        Else
-            query = $"INSERT INTO `esdeveniment` (`any`,`nom`,`descripcio`,`actiu`)
-        VALUES ('{year}','{name}','{description}','{active}');"
-        End If
-
-
-
-        Dim comanda = New MySqlCommand(query, Connexions.connexio)
-        comanda.ExecuteNonQuery()
         Connexions.desconnectar()
     End Function
-
-    Private Sub actiu_CheckedChanged(sender As Object, e As EventArgs) Handles actiu.CheckedChanged
-        If actiu.Checked = True Then
-
-        End If
-    End Sub
-
     Private Sub back_Click(sender As Object, e As EventArgs) Handles back.Click
         Me.Hide()
         gestio_esdeveniment.Show()

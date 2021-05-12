@@ -44,7 +44,7 @@ Partial Class gestio_reserves
         Me.inici.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.inici.Location = New System.Drawing.Point(602, 12)
         Me.inici.Name = "inici"
-        Me.inici.Size = New System.Drawing.Size(40, 35)
+        Me.inici.Size = New System.Drawing.Size(38, 41)
         Me.inici.TabIndex = 24
         Me.inici.UseVisualStyleBackColor = True
         '
@@ -52,6 +52,7 @@ Partial Class gestio_reserves
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.Control
         Me.Label2.Location = New System.Drawing.Point(33, 62)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(47, 19)
@@ -62,6 +63,7 @@ Partial Class gestio_reserves
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.Control
         Me.Label1.Location = New System.Drawing.Point(30, 13)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(200, 31)
@@ -70,36 +72,44 @@ Partial Class gestio_reserves
         '
         'taula_reserves
         '
-        Me.taula_reserves.BackgroundColor = System.Drawing.Color.DodgerBlue
+        Me.taula_reserves.BackgroundColor = System.Drawing.Color.SteelBlue
         Me.taula_reserves.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.taula_reserves.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.taula_reserves.Location = New System.Drawing.Point(30, 100)
         Me.taula_reserves.Name = "taula_reserves"
+        Me.taula_reserves.RowHeadersWidth = 51
         Me.taula_reserves.Size = New System.Drawing.Size(600, 300)
         Me.taula_reserves.TabIndex = 21
         '
         'Editar
         '
+        Me.Editar.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.Editar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Editar.Font = New System.Drawing.Font("Calibri", 7.8!)
         Me.Editar.Location = New System.Drawing.Point(291, 415)
         Me.Editar.Name = "Editar"
-        Me.Editar.Size = New System.Drawing.Size(75, 23)
+        Me.Editar.Size = New System.Drawing.Size(83, 27)
         Me.Editar.TabIndex = 19
         Me.Editar.Text = "Editar"
-        Me.Editar.UseVisualStyleBackColor = True
+        Me.Editar.UseVisualStyleBackColor = False
         '
         'Cercar
         '
+        Me.Cercar.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.Cercar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Cercar.Font = New System.Drawing.Font("Calibri", 7.8!)
         Me.Cercar.Location = New System.Drawing.Point(571, 62)
         Me.Cercar.Name = "Cercar"
-        Me.Cercar.Size = New System.Drawing.Size(75, 20)
+        Me.Cercar.Size = New System.Drawing.Size(73, 24)
         Me.Cercar.TabIndex = 17
         Me.Cercar.Text = "Cercar"
-        Me.Cercar.UseVisualStyleBackColor = True
+        Me.Cercar.UseVisualStyleBackColor = False
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.Control
         Me.Label3.Location = New System.Drawing.Point(387, 62)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(49, 19)
@@ -124,6 +134,7 @@ Partial Class gestio_reserves
         '
         Me.cercar_per_data.AutoSize = True
         Me.cercar_per_data.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cercar_per_data.ForeColor = System.Drawing.SystemColors.Control
         Me.cercar_per_data.Location = New System.Drawing.Point(291, 64)
         Me.cercar_per_data.Name = "cercar_per_data"
         Me.cercar_per_data.Size = New System.Drawing.Size(101, 18)
@@ -135,7 +146,7 @@ Partial Class gestio_reserves
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.DodgerBlue
+        Me.BackColor = System.Drawing.Color.SteelBlue
         Me.ClientSize = New System.Drawing.Size(665, 450)
         Me.Controls.Add(Me.cercar_per_data)
         Me.Controls.Add(Me.data)
@@ -147,6 +158,7 @@ Partial Class gestio_reserves
         Me.Controls.Add(Me.taula_reserves)
         Me.Controls.Add(Me.Editar)
         Me.Controls.Add(Me.Cercar)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "gestio_reserves"
         Me.Text = "Gestió Reserves"
         CType(Me.taula_reserves, System.ComponentModel.ISupportInitialize).EndInit()

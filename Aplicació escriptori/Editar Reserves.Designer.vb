@@ -37,7 +37,7 @@ Partial Class editar_reserves
         Me.identificador = New System.Windows.Forms.TextBox()
         Me.codi_transaccio = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.prova = New System.Windows.Forms.TextBox()
+        Me.estat_text = New System.Windows.Forms.TextBox()
         Me.confirmada = New System.Windows.Forms.RadioButton()
         Me.estat = New System.Windows.Forms.GroupBox()
         Me.rebutjada = New System.Windows.Forms.RadioButton()
@@ -53,7 +53,7 @@ Partial Class editar_reserves
         Me.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.back.Location = New System.Drawing.Point(392, 12)
         Me.back.Name = "back"
-        Me.back.Size = New System.Drawing.Size(40, 35)
+        Me.back.Size = New System.Drawing.Size(38, 41)
         Me.back.TabIndex = 38
         Me.back.UseVisualStyleBackColor = True
         '
@@ -65,7 +65,7 @@ Partial Class editar_reserves
         Me.inici.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.inici.Location = New System.Drawing.Point(438, 12)
         Me.inici.Name = "inici"
-        Me.inici.Size = New System.Drawing.Size(40, 35)
+        Me.inici.Size = New System.Drawing.Size(38, 41)
         Me.inici.TabIndex = 37
         Me.inici.UseVisualStyleBackColor = True
         '
@@ -73,6 +73,7 @@ Partial Class editar_reserves
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.SystemColors.Control
         Me.Label5.Location = New System.Drawing.Point(248, 110)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(49, 19)
@@ -82,7 +83,7 @@ Partial Class editar_reserves
         'activitat
         '
         Me.activitat.Enabled = False
-        Me.activitat.Location = New System.Drawing.Point(120, 110)
+        Me.activitat.Location = New System.Drawing.Point(143, 110)
         Me.activitat.Name = "activitat"
         Me.activitat.Size = New System.Drawing.Size(100, 20)
         Me.activitat.TabIndex = 32
@@ -91,6 +92,7 @@ Partial Class editar_reserves
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.Control
         Me.Label3.Location = New System.Drawing.Point(43, 110)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(71, 19)
@@ -99,17 +101,20 @@ Partial Class editar_reserves
         '
         'actualitzar
         '
+        Me.actualitzar.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.actualitzar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.actualitzar.Font = New System.Drawing.Font("Calibri", 7.8!)
         Me.actualitzar.Location = New System.Drawing.Point(196, 198)
         Me.actualitzar.Name = "actualitzar"
-        Me.actualitzar.Size = New System.Drawing.Size(75, 23)
+        Me.actualitzar.Size = New System.Drawing.Size(86, 30)
         Me.actualitzar.TabIndex = 30
         Me.actualitzar.Text = "Actualitzar"
-        Me.actualitzar.UseVisualStyleBackColor = True
+        Me.actualitzar.UseVisualStyleBackColor = False
         '
         'usuari
         '
         Me.usuari.Enabled = False
-        Me.usuari.Location = New System.Drawing.Point(120, 70)
+        Me.usuari.Location = New System.Drawing.Point(143, 70)
         Me.usuari.Name = "usuari"
         Me.usuari.Size = New System.Drawing.Size(100, 20)
         Me.usuari.TabIndex = 29
@@ -118,6 +123,7 @@ Partial Class editar_reserves
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.Control
         Me.Label2.Location = New System.Drawing.Point(43, 70)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(52, 19)
@@ -128,6 +134,7 @@ Partial Class editar_reserves
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.Control
         Me.Label1.Location = New System.Drawing.Point(151, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(201, 31)
@@ -138,6 +145,7 @@ Partial Class editar_reserves
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.SystemColors.Control
         Me.Label6.Location = New System.Drawing.Point(248, 69)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(47, 19)
@@ -163,31 +171,34 @@ Partial Class editar_reserves
         'codi_transaccio
         '
         Me.codi_transaccio.Enabled = False
-        Me.codi_transaccio.Location = New System.Drawing.Point(168, 152)
+        Me.codi_transaccio.Location = New System.Drawing.Point(156, 152)
         Me.codi_transaccio.Name = "codi_transaccio"
-        Me.codi_transaccio.Size = New System.Drawing.Size(100, 20)
+        Me.codi_transaccio.Size = New System.Drawing.Size(87, 20)
         Me.codi_transaccio.TabIndex = 45
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.SystemColors.Control
         Me.Label4.Location = New System.Drawing.Point(43, 152)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(121, 19)
         Me.Label4.TabIndex = 44
         Me.Label4.Text = "Codi Transacció:"
         '
-        'prova
+        'estat_text
         '
-        Me.prova.Location = New System.Drawing.Point(375, 200)
-        Me.prova.Name = "prova"
-        Me.prova.Size = New System.Drawing.Size(26, 20)
-        Me.prova.TabIndex = 46
+        Me.estat_text.Location = New System.Drawing.Point(429, 203)
+        Me.estat_text.Name = "estat_text"
+        Me.estat_text.Size = New System.Drawing.Size(26, 20)
+        Me.estat_text.TabIndex = 46
+        Me.estat_text.Visible = False
         '
         'confirmada
         '
         Me.confirmada.AutoSize = True
+        Me.confirmada.ForeColor = System.Drawing.SystemColors.Control
         Me.confirmada.Location = New System.Drawing.Point(6, 16)
         Me.confirmada.Name = "confirmada"
         Me.confirmada.Size = New System.Drawing.Size(78, 17)
@@ -211,6 +222,7 @@ Partial Class editar_reserves
         'rebutjada
         '
         Me.rebutjada.AutoSize = True
+        Me.rebutjada.ForeColor = System.Drawing.SystemColors.Control
         Me.rebutjada.Location = New System.Drawing.Point(6, 58)
         Me.rebutjada.Name = "rebutjada"
         Me.rebutjada.Size = New System.Drawing.Size(74, 17)
@@ -222,6 +234,7 @@ Partial Class editar_reserves
         'pendent
         '
         Me.pendent.AutoSize = True
+        Me.pendent.ForeColor = System.Drawing.SystemColors.Control
         Me.pendent.Location = New System.Drawing.Point(6, 37)
         Me.pendent.Name = "pendent"
         Me.pendent.Size = New System.Drawing.Size(65, 17)
@@ -234,10 +247,10 @@ Partial Class editar_reserves
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.DodgerBlue
+        Me.BackColor = System.Drawing.Color.SteelBlue
         Me.ClientSize = New System.Drawing.Size(508, 235)
         Me.Controls.Add(Me.estat)
-        Me.Controls.Add(Me.prova)
+        Me.Controls.Add(Me.estat_text)
         Me.Controls.Add(Me.codi_transaccio)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.identificador)
@@ -252,6 +265,7 @@ Partial Class editar_reserves
         Me.Controls.Add(Me.usuari)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "editar_reserves"
         Me.Text = "Editar Reserves"
         Me.estat.ResumeLayout(False)
@@ -275,7 +289,7 @@ Partial Class editar_reserves
     Friend WithEvents identificador As TextBox
     Friend WithEvents codi_transaccio As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents prova As TextBox
+    Friend WithEvents estat_text As TextBox
     Friend WithEvents confirmada As RadioButton
     Friend WithEvents estat As GroupBox
     Friend WithEvents rebutjada As RadioButton
