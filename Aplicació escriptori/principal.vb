@@ -197,9 +197,9 @@ Public Class principal
                 escritor.Flush()
             Next
             escritor.Close()
-            MessageBox.Show("Escritura realizada con éxito")
+            MessageBox.Show("Escriptura realitzada amb èxit")
         Catch ex As Exception
-            MessageBox.Show("Escritura realizada incorrectamente")
+            MessageBox.Show("Error d'escriptura")
         End Try
     End Sub
 End Class
